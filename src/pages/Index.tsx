@@ -102,24 +102,48 @@ const Index = () => {
 
   const experiences = [
     {
-      company: "PharmEasy, Bengaluru",
+      company: "PharmEasy",
       role: "Data Science Intern",
-      period: "Jun 2025–Present",
+      period: "Jun 2025 - Present • 2 mos",
+      location: "Bengaluru, Karnataka, India • Hybrid",
       description: "Developed a chatbot using Dify to recommend diagnostic tests and health packages based on user-reported issues, built a WhatsApp chatbot that brought key app features directly into the chat experience, and created an AI-powered content pipeline that generates short-form content weekly while identifying trending topics.",
+      skills: "Application Programming Interfaces (API), Chatbot Development and +4 skills",
       logo: "/lovable-uploads/fd6c3dad-b180-4cfa-a02e-87b22cd159d2.png"
     },
     {
-      company: "ifYK, New York",
-      role: "Machine Learning Intern", 
-      period: "Sep–Oct 2024",
+      company: "Data Science Community SRM",
+      role: "AI/ML Technical Team Member",
+      period: "Dec 2024 - Present • 8 mos",
+      location: "Chennai, Tamil Nadu, India • On-site",
+      description: "",
+      skills: "",
+      logo: "/lovable-uploads/0514ae2e-4cb9-46c0-a718-5bd83dd0c1bf.png"
+    },
+    {
+      company: "IEEE SRMIST Student Branch",
+      role: "Research & Development Member", 
+      period: "Nov 2024 - Present • 9 mos",
+      location: "Chennai, Tamil Nadu, India • On-site",
+      description: "",
+      skills: "",
+      logo: "/lovable-uploads/ea9139e1-3664-456e-a42f-e38ba734d92b.png"
+    },
+    {
+      company: "ifYK",
+      role: "Machine Learning Intern",
+      period: "Sep 2024 - Oct 2024 • 2 mos",
+      location: "New York, United States • Remote",
       description: "Engineered a chatbot powered by Hugging Face's Llama 3.1 (8B) model to efficiently extract event-specific data, leveraging NLP capabilities for accurate information retrieval. Designed and implemented web scraping pipelines to preprocess raw HTML into clean, structured text, optimizing data preparation for NLP tasks. Deployed the solution using FastAPI on Render, enabling real-time query handling and seamless user interaction. This system reduced manual effort in event information extraction, streamlining data processing workflows.",
+      skills: "FastAPI, Large Language Models (LLM) and +5 skills",
       logo: "/lovable-uploads/1e76810f-7c22-4aa7-8cea-0fed648cd697.png"
     },
     {
-      company: "Accuracy, Hyderabad",
+      company: "Accuracy",
       role: "Python Developer",
-      period: "Jun–Jul 2024", 
+      period: "Jun 2024 - Jul 2024 • 2 mos",
+      location: "Hyderabad, Telangana, India • Remote",
       description: "Streamlined data extraction from paginated, infinite scroll, and detail view pages into a unified script. Conducted textual analysis on over 1,000 extracted job postings to uncover in-demand and least sought-after roles, identify top required skills, and analyze geographic trends, providing actionable insights to enhance hiring strategies.",
+      skills: "",
       logo: "/lovable-uploads/9e65c59f-7d17-4627-a0f9-cd664c99bde6.png"
     }
   ];
@@ -132,17 +156,70 @@ const Index = () => {
   };
 
   const certifications = [
-    "Google – Crash Course on Python",
-    "IBM – Machine Learning with Python", 
-    "IBM – Introduction to Computer Vision and Image Processing",
-    "DeepLearning.AI – Neural Networks and Deep Learning",
-    "Great Learning – Artificial Intelligence with Python"
+    {
+      title: "DBMS Course - Master the Fundamentals and Advanced Concepts",
+      provider: "Scaler",
+      date: "Issued Feb 2025",
+      skills: "SQL • Database Management System (DBMS)",
+      logo: "/lovable-uploads/3c301d09-c1de-44b1-9b02-a0a548cbbaa6.png"
+    },
+    {
+      title: "Neural Networks and Deep Learning",
+      provider: "DeepLearning.AI",
+      date: "Issued Dec 2024",
+      skills: "Neural Networks • Convolutional Neural Networks (CNN) • Deep Learning • TensorFlow • Keras • PyTorch",
+      logo: "/lovable-uploads/3c301d09-c1de-44b1-9b02-a0a548cbbaa6.png"
+    },
+    {
+      title: "Introduction to Computer Vision and Image Processing",
+      provider: "IBM",
+      date: "Issued Nov 2024",
+      skills: "Computer Vision • OpenCV • Image Processing • Object Detection • YOLO",
+      logo: "/lovable-uploads/3c301d09-c1de-44b1-9b02-a0a548cbbaa6.png"
+    },
+    {
+      title: "Programming in Java",
+      provider: "NPTEL",
+      date: "Issued Nov 2024",
+      skills: "Java • Java Database Connectivity (JDBC) • JavaServer Faces (JSF) • Java Applets • Servlets",
+      logo: "/lovable-uploads/3c301d09-c1de-44b1-9b02-a0a548cbbaa6.png"
+    },
+    {
+      title: "Artificial Intelligence with Python",
+      provider: "Great Learning",
+      date: "Issued Oct 2024",
+      skills: "Artificial Intelligence (AI) • Artificial Neural Networks",
+      logo: "/lovable-uploads/3c301d09-c1de-44b1-9b02-a0a548cbbaa6.png"
+    },
+    {
+      title: "Machine Learning with Python",
+      provider: "IBM",
+      date: "Issued Jun 2024",
+      skills: "Machine Learning • K-Nearest Neighbors (KNN) • Scikit-Learn • NumPy • pandas • Matplotlib",
+      logo: "/lovable-uploads/3c301d09-c1de-44b1-9b02-a0a548cbbaa6.png"
+    },
+    {
+      title: "Crash Course on Python",
+      provider: "Google",
+      date: "Issued May 2024",
+      skills: "Python (Programming Language) • Object-Oriented Programming (OOP) • Debugging",
+      logo: "/lovable-uploads/3c301d09-c1de-44b1-9b02-a0a548cbbaa6.png"
+    },
+    {
+      title: "Accelerated Computer Science Fundamentals",
+      provider: "University of Illinois Urbana-Champaign",
+      date: "Issued Mar 2024",
+      skills: "C++ • Object-Oriented Programming (OOP) • Data Structures",
+      logo: "/lovable-uploads/3c301d09-c1de-44b1-9b02-a0a548cbbaa6.png"
+    }
   ];
 
   const achievements = [
-    "Winner: Temenos Tem-E-thon 2025 Hackathon (Won MacBook Air M3)",
-    "Member: IEEE SRMIST (R&D)",
-    "Member: Data Science Community SRM (AI/ML)"
+    {
+      title: "Temenos Tem-E-thon 2025 Hackathon Winner",
+      description: "Won MacBook Air M3 for developing an innovative fintech solution",
+      logo: "/lovable-uploads/27c43e0b-3168-4c93-9cf3-4112332b0f78.png"
+    }
   ];
 
   return (
@@ -195,10 +272,10 @@ const Index = () => {
               Krishna Somani
             </h1>
             <p className="text-xl md:text-2xl mb-4 text-cyan-200">
-              AI/ML & Data Science Enthusiast
+              Artificial Intelligence, Machine Learning and Data Science Enthusiast
             </p>
             <p className="text-lg mb-8 text-white/80 max-w-4xl mx-auto leading-relaxed">
-              I am an undergraduate student with a strong passion for Artificial Intelligence, Machine Learning, and Data Science. I actively explore these fields by combining a solid foundation in theoretical concepts with hands-on experience through projects, coursework, and independent learning. My goal is to apply these skills to solve real-world problems and contribute to the advancement of intelligent systems.
+              I'm passionate about Artificial Intelligence & Machine Learning, with a strong focus on solving real-world problems through intelligent, automated systems. I'm especially interested in AI-driven innovation, scalable solutions, and their impact across industries—from security to sustainability. I thrive in environments that challenge me to learn and build meaningful technology. Always open to discussions on artificial intelligence/machine learning and emerging tech.
             </p>
             
             <div className="flex flex-wrap justify-center gap-4 mb-8">
@@ -346,7 +423,7 @@ const Index = () => {
             Experience Timeline
           </motion.h2>
           
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-4xl mx-auto space-y-8">
             {experiences.map((exp, index) => (
               <motion.div
                 key={index}
@@ -354,9 +431,9 @@ const Index = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.2 }}
-                className="relative mb-8 last:mb-0"
+                className="bg-slate-800/30 backdrop-blur-lg border border-cyan-500/20 rounded-lg p-6 hover:border-cyan-400/40 transition-all shadow-lg"
               >
-                <div className="flex items-start mb-4">
+                <div className="flex items-start">
                   <div className="w-16 h-16 rounded-lg bg-slate-800/50 backdrop-blur-lg border border-cyan-500/30 flex items-center justify-center mr-4 flex-shrink-0 p-2">
                     <img 
                       src={exp.logo} 
@@ -365,15 +442,23 @@ const Index = () => {
                     />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-bold text-white">{exp.role}</h3>
-                    <p className="text-cyan-300 font-medium">{exp.company}</p>
+                    <h3 className="text-xl font-bold text-white mb-1">{exp.role}</h3>
+                    <p className="text-cyan-300 font-medium mb-1">{exp.company} • {exp.period.includes('Internship') ? 'Internship' : exp.period.includes('Part-time') ? 'Part-time' : 'Full-time'}</p>
                     <p className="text-white/60 text-sm mb-3">{exp.period}</p>
-                    <p className="text-white/80 text-base leading-relaxed">{exp.description}</p>
+                    {exp.location && (
+                      <p className="text-white/60 text-sm mb-3">{exp.location}</p>
+                    )}
+                    {exp.description && (
+                      <p className="text-white/80 text-sm leading-relaxed mb-3">{exp.description}</p>
+                    )}
+                    {exp.skills && (
+                      <p className="text-cyan-300 text-sm">
+                        <span className="mr-2 text-white/60">⚡</span>
+                        {exp.skills}
+                      </p>
+                    )}
                   </div>
                 </div>
-                {index < experiences.length - 1 && (
-                  <div className="w-px h-8 bg-gradient-to-b from-cyan-500/50 to-transparent ml-8 mt-4"></div>
-                )}
               </motion.div>
             ))}
           </div>
@@ -433,7 +518,7 @@ const Index = () => {
             Courses & Certifications
           </motion.h2>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="max-w-4xl mx-auto space-y-6">
             {certifications.map((cert, index) => (
               <motion.div
                 key={index}
@@ -442,9 +527,25 @@ const Index = () => {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
               >
-                <Card className="bg-slate-800/50 backdrop-blur-lg border-cyan-500/20 hover:bg-slate-800/70 hover:border-cyan-400/40 transition-all duration-300 shadow-lg">
+                <Card className="bg-slate-800/30 backdrop-blur-lg border border-cyan-500/20 hover:border-cyan-400/40 transition-all shadow-lg">
                   <CardContent className="p-6">
-                    <p className="text-white/90">{cert}</p>
+                    <div className="flex items-start">
+                      <div className="w-12 h-12 rounded-lg bg-slate-800/50 backdrop-blur-lg border border-cyan-500/30 flex items-center justify-center mr-4 flex-shrink-0 p-1">
+                        <img 
+                          src={cert.logo} 
+                          alt={`${cert.provider} logo`} 
+                          className="w-full h-full object-contain"
+                        />
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-lg font-bold text-white mb-1">{cert.title}</h3>
+                        <p className="text-cyan-300 font-medium mb-1">{cert.provider}</p>
+                        <p className="text-white/60 text-sm mb-2">{cert.date}</p>
+                        <p className="text-white/70 text-sm">
+                          <span className="font-medium">Skills:</span> {cert.skills}
+                        </p>
+                      </div>
+                    </div>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -462,23 +563,34 @@ const Index = () => {
             viewport={{ once: true }}
             className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent"
           >
-            Achievements & Involvements
+            Achievements & Awards
           </motion.h2>
           
           <div className="max-w-2xl mx-auto">
             {achievements.map((achievement, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.2 }}
-                className="mb-6 last:mb-0"
               >
-                <Card className="bg-slate-800/50 backdrop-blur-lg border-cyan-500/20 hover:border-cyan-400/40 transition-all shadow-lg">
-                  <CardContent className="p-6">
-                    <p className="text-white/90">{achievement}</p>
-                  </CardContent>
+                <Card className="bg-slate-800/50 backdrop-blur-lg border-cyan-500/20 hover:bg-slate-800/70 hover:border-cyan-400/40 transition-all duration-300 group shadow-lg hover:shadow-cyan-500/10">
+                  <div className="relative overflow-hidden rounded-t-lg bg-gradient-to-br from-blue-600/20 to-purple-600/20 p-8">
+                    <div className="flex items-center justify-center">
+                      <img
+                        src={achievement.logo}
+                        alt={achievement.title}
+                        className="w-20 h-20 object-contain group-hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                  </div>
+                  <CardHeader>
+                    <CardTitle className="text-white text-center">{achievement.title}</CardTitle>
+                    <CardDescription className="text-white/70 text-center">
+                      {achievement.description}
+                    </CardDescription>
+                  </CardHeader>
                 </Card>
               </motion.div>
             ))}
