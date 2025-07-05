@@ -15,7 +15,7 @@ const Index = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'projects', 'education', 'experience', 'skills', 'certifications', 'achievements', 'contact'];
+      const sections = ['home', 'about', 'experience', 'education', 'certifications', 'projects', 'skills', 'achievements', 'contact'];
       const current = sections.find(section => {
         const element = document.getElementById(section);
         if (element) {
@@ -107,7 +107,6 @@ const Index = () => {
       period: "Jun 2025 - Present • 2 mos",
       location: "Bengaluru, Karnataka, India • Hybrid",
       description: "Developed a chatbot using Dify to recommend diagnostic tests and health packages based on user-reported issues, built a WhatsApp chatbot that brought key app features directly into the chat experience, and created an AI-powered content pipeline that generates short-form content weekly while identifying trending topics.",
-      skills: "Application Programming Interfaces (API), Chatbot Development and +4 skills",
       logo: "/lovable-uploads/fd6c3dad-b180-4cfa-a02e-87b22cd159d2.png"
     },
     {
@@ -116,7 +115,6 @@ const Index = () => {
       period: "Dec 2024 - Present • 8 mos",
       location: "Chennai, Tamil Nadu, India • On-site",
       description: "",
-      skills: "",
       logo: "/lovable-uploads/0514ae2e-4cb9-46c0-a718-5bd83dd0c1bf.png"
     },
     {
@@ -125,7 +123,6 @@ const Index = () => {
       period: "Nov 2024 - Present • 9 mos",
       location: "Chennai, Tamil Nadu, India • On-site",
       description: "",
-      skills: "",
       logo: "/lovable-uploads/ea9139e1-3664-456e-a42f-e38ba734d92b.png"
     },
     {
@@ -134,7 +131,6 @@ const Index = () => {
       period: "Sep 2024 - Oct 2024 • 2 mos",
       location: "New York, United States • Remote",
       description: "Engineered a chatbot powered by Hugging Face's Llama 3.1 (8B) model to efficiently extract event-specific data, leveraging NLP capabilities for accurate information retrieval. Designed and implemented web scraping pipelines to preprocess raw HTML into clean, structured text, optimizing data preparation for NLP tasks. Deployed the solution using FastAPI on Render, enabling real-time query handling and seamless user interaction. This system reduced manual effort in event information extraction, streamlining data processing workflows.",
-      skills: "FastAPI, Large Language Models (LLM) and +5 skills",
       logo: "/lovable-uploads/1e76810f-7c22-4aa7-8cea-0fed648cd697.png"
     },
     {
@@ -143,7 +139,6 @@ const Index = () => {
       period: "Jun 2024 - Jul 2024 • 2 mos",
       location: "Hyderabad, Telangana, India • Remote",
       description: "Streamlined data extraction from paginated, infinite scroll, and detail view pages into a unified script. Conducted textual analysis on over 1,000 extracted job postings to uncover in-demand and least sought-after roles, identify top required skills, and analyze geographic trends, providing actionable insights to enhance hiring strategies.",
-      skills: "",
       logo: "/lovable-uploads/9e65c59f-7d17-4627-a0f9-cd664c99bde6.png"
     }
   ];
@@ -160,57 +155,49 @@ const Index = () => {
       title: "DBMS Course - Master the Fundamentals and Advanced Concepts",
       provider: "Scaler",
       date: "Issued Feb 2025",
-      skills: "SQL • Database Management System (DBMS)",
-      logo: "/lovable-uploads/3c301d09-c1de-44b1-9b02-a0a548cbbaa6.png"
+      logo: "/lovable-uploads/29d087cb-3685-4551-a4ba-8d6ad368a4f6.png"
     },
     {
       title: "Neural Networks and Deep Learning",
       provider: "DeepLearning.AI",
       date: "Issued Dec 2024",
-      skills: "Neural Networks • Convolutional Neural Networks (CNN) • Deep Learning • TensorFlow • Keras • PyTorch",
-      logo: "/lovable-uploads/3c301d09-c1de-44b1-9b02-a0a548cbbaa6.png"
+      logo: "/lovable-uploads/4597d5ab-e9a1-4cc2-a228-2cfd3c9643fb.png"
     },
     {
       title: "Introduction to Computer Vision and Image Processing",
       provider: "IBM",
       date: "Issued Nov 2024",
-      skills: "Computer Vision • OpenCV • Image Processing • Object Detection • YOLO",
-      logo: "/lovable-uploads/3c301d09-c1de-44b1-9b02-a0a548cbbaa6.png"
+      logo: "/lovable-uploads/8e0955d6-c265-4747-acc7-e12500adf0bb.png"
     },
     {
       title: "Programming in Java",
       provider: "NPTEL",
       date: "Issued Nov 2024",
-      skills: "Java • Java Database Connectivity (JDBC) • JavaServer Faces (JSF) • Java Applets • Servlets",
-      logo: "/lovable-uploads/3c301d09-c1de-44b1-9b02-a0a548cbbaa6.png"
+      logo: "/lovable-uploads/6f2e2224-f9c0-4e0b-ad95-39f9d71d221d.png"
     },
     {
       title: "Artificial Intelligence with Python",
       provider: "Great Learning",
       date: "Issued Oct 2024",
-      skills: "Artificial Intelligence (AI) • Artificial Neural Networks",
-      logo: "/lovable-uploads/3c301d09-c1de-44b1-9b02-a0a548cbbaa6.png"
+      logo: "/lovable-uploads/a7c46861-960a-49b6-bcb9-3f76b323256a.png"
     },
     {
       title: "Machine Learning with Python",
       provider: "IBM",
       date: "Issued Jun 2024",
-      skills: "Machine Learning • K-Nearest Neighbors (KNN) • Scikit-Learn • NumPy • pandas • Matplotlib",
-      logo: "/lovable-uploads/3c301d09-c1de-44b1-9b02-a0a548cbbaa6.png"
+      logo: "/lovable-uploads/b6bf63d5-04db-421b-bb14-301fb87ec120.png"
     },
     {
       title: "Crash Course on Python",
       provider: "Google",
       date: "Issued May 2024",
-      skills: "Python (Programming Language) • Object-Oriented Programming (OOP) • Debugging",
-      logo: "/lovable-uploads/3c301d09-c1de-44b1-9b02-a0a548cbbaa6.png"
+      logo: "/lovable-uploads/a7c46861-960a-49b6-bcb9-3f76b323256a.png"
     },
     {
       title: "Accelerated Computer Science Fundamentals",
       provider: "University of Illinois Urbana-Champaign",
       date: "Issued Mar 2024",
-      skills: "C++ • Object-Oriented Programming (OOP) • Data Structures",
-      logo: "/lovable-uploads/3c301d09-c1de-44b1-9b02-a0a548cbbaa6.png"
+      logo: "/lovable-uploads/7c0a365f-499f-4bd8-b18d-911dc065fe5d.png"
     }
   ];
 
@@ -244,7 +231,7 @@ const Index = () => {
               Krishna Somani
             </motion.div>
             <div className="hidden md:flex space-x-8">
-              {['Home', 'Projects', 'Education', 'Experience', 'Skills', 'Contact'].map((item) => (
+              {['Home', 'About', 'Experience', 'Education', 'Certifications', 'Projects', 'Skills', 'Achievements', 'Contact'].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}
@@ -280,10 +267,10 @@ const Index = () => {
             
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               <Button
-                onClick={() => scrollToSection('projects')}
+                onClick={() => scrollToSection('about')}
                 className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-3 rounded-full shadow-lg hover:shadow-cyan-500/25 transition-all"
               >
-                View Projects
+                Learn More
               </Button>
               <Button
                 variant="outline"
@@ -320,8 +307,8 @@ const Index = () => {
         </motion.div>
       </section>
 
-      {/* Projects Section */}
-      <section id="projects" className="py-20 relative z-10">
+      {/* About Section */}
+      <section id="about" className="py-20 bg-slate-900/30 backdrop-blur-sm relative z-10">
         <div className="container mx-auto px-6">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -329,37 +316,67 @@ const Index = () => {
             viewport={{ once: true }}
             className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent"
           >
-            Featured Projects
+            About Me
           </motion.h2>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project, index) => (
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-lg text-white/80 leading-relaxed"
+            >
+              I'm passionate about Artificial Intelligence & Machine Learning, with a strong focus on solving real-world problems through intelligent, automated systems. I'm especially interested in AI-driven innovation, scalable solutions, and their impact across industries—from security to sustainability. I thrive in environments that challenge me to learn and build meaningful technology. Always open to discussions on artificial intelligence/machine learning and emerging tech.
+            </motion.p>
+          </div>
+        </div>
+      </section>
+
+      {/* Experience Section */}
+      <section id="experience" className="py-20 relative z-10">
+        <div className="container mx-auto px-6">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent"
+          >
+            Experience
+          </motion.h2>
+          
+          <div className="max-w-4xl mx-auto">
+            {experiences.map((exp, index) => (
               <motion.div
-                key={project.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                key={index}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
+                transition={{ delay: index * 0.2 }}
+                className="relative mb-8 last:mb-0"
               >
-                <Card className="bg-slate-800/50 backdrop-blur-lg border-cyan-500/20 hover:bg-slate-800/70 hover:border-cyan-400/40 transition-all duration-300 group shadow-lg hover:shadow-cyan-500/10">
-                  <div className="relative overflow-hidden rounded-t-lg">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                <div className="flex items-start mb-4">
+                  <div className="w-16 h-16 rounded-lg bg-slate-800/50 backdrop-blur-lg border border-cyan-500/30 flex items-center justify-center mr-4 flex-shrink-0 p-2">
+                    <img 
+                      src={exp.logo} 
+                      alt={`${exp.company} logo`} 
+                      className="w-full h-full object-contain"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
                   </div>
-                  <CardHeader>
-                    <CardTitle className="text-white flex items-center justify-between">
-                      {project.title}
-                      <ExternalLink size={16} className="opacity-0 group-hover:opacity-100 transition-opacity text-cyan-400" />
-                    </CardTitle>
-                    <CardDescription className="text-white/70">
-                      {project.description}
-                    </CardDescription>
-                  </CardHeader>
-                </Card>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold text-white">{exp.role}</h3>
+                    <p className="text-cyan-300 font-medium mb-1">{exp.company}</p>
+                    <p className="text-white/60 text-sm mb-2">{exp.period}</p>
+                    {exp.location && (
+                      <p className="text-white/60 text-sm mb-2">{exp.location}</p>
+                    )}
+                    {exp.description && (
+                      <p className="text-white/80 text-sm leading-relaxed">{exp.description}</p>
+                    )}
+                  </div>
+                </div>
+                {index < experiences.length - 1 && (
+                  <div className="w-px h-8 bg-gradient-to-b from-cyan-500/50 to-transparent ml-8 mt-4"></div>
+                )}
               </motion.div>
             ))}
           </div>
@@ -411,101 +428,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Experience Section */}
-      <section id="experience" className="py-20 relative z-10">
-        <div className="container mx-auto px-6">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent"
-          >
-            Experience Timeline
-          </motion.h2>
-          
-          <div className="max-w-4xl mx-auto space-y-8">
-            {experiences.map((exp, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.2 }}
-                className="bg-slate-800/30 backdrop-blur-lg border border-cyan-500/20 rounded-lg p-6 hover:border-cyan-400/40 transition-all shadow-lg"
-              >
-                <div className="flex items-start">
-                  <div className="w-16 h-16 rounded-lg bg-slate-800/50 backdrop-blur-lg border border-cyan-500/30 flex items-center justify-center mr-4 flex-shrink-0 p-2">
-                    <img 
-                      src={exp.logo} 
-                      alt={`${exp.company} logo`} 
-                      className="w-full h-full object-contain"
-                    />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold text-white mb-1">{exp.role}</h3>
-                    <p className="text-cyan-300 font-medium mb-1">{exp.company} • {exp.period.includes('Internship') ? 'Internship' : exp.period.includes('Part-time') ? 'Part-time' : 'Full-time'}</p>
-                    <p className="text-white/60 text-sm mb-3">{exp.period}</p>
-                    {exp.location && (
-                      <p className="text-white/60 text-sm mb-3">{exp.location}</p>
-                    )}
-                    {exp.description && (
-                      <p className="text-white/80 text-sm leading-relaxed mb-3">{exp.description}</p>
-                    )}
-                    {exp.skills && (
-                      <p className="text-cyan-300 text-sm">
-                        <span className="mr-2 text-white/60">⚡</span>
-                        {exp.skills}
-                      </p>
-                    )}
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Skills Section */}
-      <section id="skills" className="py-20 bg-slate-900/30 backdrop-blur-sm relative z-10">
-        <div className="container mx-auto px-6">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent"
-          >
-            Skills & Technologies
-          </motion.h2>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {Object.entries(skills).map(([category, items], index) => (
-              <motion.div
-                key={category}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-              >
-                <Card className="bg-slate-800/50 backdrop-blur-lg border-cyan-500/20 hover:border-cyan-400/40 transition-all h-full shadow-lg">
-                  <CardHeader>
-                    <CardTitle className="text-white text-center">{category}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="flex flex-wrap gap-2">
-                      {items.map((skill) => (
-                        <Badge key={skill} className="bg-blue-500/20 text-blue-300 border-blue-500/30 hover:bg-blue-500/30">
-                          {skill}
-                        </Badge>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Certifications Section */}
       <section id="certifications" className="py-20 relative z-10">
         <div className="container mx-auto px-6">
@@ -540,11 +462,95 @@ const Index = () => {
                       <div className="flex-1">
                         <h3 className="text-lg font-bold text-white mb-1">{cert.title}</h3>
                         <p className="text-cyan-300 font-medium mb-1">{cert.provider}</p>
-                        <p className="text-white/60 text-sm mb-2">{cert.date}</p>
-                        <p className="text-white/70 text-sm">
-                          <span className="font-medium">Skills:</span> {cert.skills}
-                        </p>
+                        <p className="text-white/60 text-sm">{cert.date}</p>
                       </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Projects Section */}
+      <section id="projects" className="py-20 bg-slate-900/30 backdrop-blur-sm relative z-10">
+        <div className="container mx-auto px-6">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent"
+          >
+            Projects
+          </motion.h2>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {projects.map((project, index) => (
+              <motion.div
+                key={project.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+              >
+                <Card className="bg-slate-800/50 backdrop-blur-lg border-cyan-500/20 hover:bg-slate-800/70 hover:border-cyan-400/40 transition-all duration-300 group shadow-lg hover:shadow-cyan-500/10">
+                  <div className="relative overflow-hidden rounded-t-lg">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
+                  </div>
+                  <CardHeader>
+                    <CardTitle className="text-white flex items-center justify-between">
+                      {project.title}
+                      <ExternalLink size={16} className="opacity-0 group-hover:opacity-100 transition-opacity text-cyan-400" />
+                    </CardTitle>
+                    <CardDescription className="text-white/70">
+                      {project.description}
+                    </CardDescription>
+                  </CardHeader>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Skills Section */}
+      <section id="skills" className="py-20 relative z-10">
+        <div className="container mx-auto px-6">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent"
+          >
+            Skills
+          </motion.h2>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {Object.entries(skills).map(([category, items], index) => (
+              <motion.div
+                key={category}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+              >
+                <Card className="bg-slate-800/50 backdrop-blur-lg border-cyan-500/20 hover:border-cyan-400/40 transition-all h-full shadow-lg">
+                  <CardHeader>
+                    <CardTitle className="text-white text-center">{category}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="flex flex-wrap gap-2">
+                      {items.map((skill) => (
+                        <Badge key={skill} className="bg-blue-500/20 text-blue-300 border-blue-500/30 hover:bg-blue-500/30">
+                          {skill}
+                        </Badge>
+                      ))}
                     </div>
                   </CardContent>
                 </Card>
@@ -576,14 +582,12 @@ const Index = () => {
                 transition={{ delay: index * 0.2 }}
               >
                 <Card className="bg-slate-800/50 backdrop-blur-lg border-cyan-500/20 hover:bg-slate-800/70 hover:border-cyan-400/40 transition-all duration-300 group shadow-lg hover:shadow-cyan-500/10">
-                  <div className="relative overflow-hidden rounded-t-lg bg-gradient-to-br from-blue-600/20 to-purple-600/20 p-8">
-                    <div className="flex items-center justify-center">
-                      <img
-                        src={achievement.logo}
-                        alt={achievement.title}
-                        className="w-20 h-20 object-contain group-hover:scale-105 transition-transform duration-300"
-                      />
-                    </div>
+                  <div className="relative overflow-hidden rounded-t-lg bg-gradient-to-br from-blue-600/20 to-purple-600/20 p-4">
+                    <img
+                      src={achievement.logo}
+                      alt={achievement.title}
+                      className="w-full h-32 object-contain group-hover:scale-105 transition-transform duration-300"
+                    />
                   </div>
                   <CardHeader>
                     <CardTitle className="text-white text-center">{achievement.title}</CardTitle>
@@ -662,11 +666,11 @@ const Index = () => {
       {/* Footer */}
       <footer className="py-8 border-t border-cyan-500/20 bg-slate-900/50 backdrop-blur-sm relative z-10">
         <div className="container mx-auto px-6">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-white/60 mb-4 md:mb-0">
-              © 2025 Krishna Somani. All rights reserved.
+          <div className="text-center">
+            <p className="text-white/80 mb-4">
+              Made with ❤️ by Krishna Somani
             </p>
-            <div className="flex space-x-6">
+            <div className="flex justify-center space-x-6">
               <a href="#" className="text-white/60 hover:text-cyan-400 transition-colors">
                 <Github size={20} />
               </a>
