@@ -15,7 +15,7 @@ const Index = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'about', 'projects', 'experience', 'skills', 'certifications', 'achievements', 'contact'];
+      const sections = ['home', 'projects', 'education', 'experience', 'skills', 'certifications', 'achievements', 'contact'];
       const current = sections.find(section => {
         const element = document.getElementById(section);
         if (element) {
@@ -51,31 +51,52 @@ const Index = () => {
       title: "BloodPrint",
       description: "Blood group prediction from fingerprints using deep learning with PyTorch, EfficientNetB0, and ResNet50",
       tech: ["PyTorch", "EfficientNetB0", "ResNet50", "Deep Learning"],
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&h=400&fit=crop"
+      image: "/lovable-uploads/ce9f07a9-e7b0-433c-8536-990fbf35c5ab.png"
     },
     {
       title: "CaptionCraft",
       description: "Image caption generator using DenseNet201 + LSTM architecture for automated image understanding",
       tech: ["TensorFlow", "Keras", "DenseNet201", "LSTM"],
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&h=400&fit=crop"
+      image: "/lovable-uploads/8e746e46-8b0a-409a-b356-e565c59eb2a8.png"
     },
     {
       title: "SpeedVision",
       description: "Vehicle detection and speed estimation system using YOLOv8 and OpenCV for traffic monitoring",
       tech: ["YOLOv8", "OpenCV", "Computer Vision", "Python"],
-      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=600&h=400&fit=crop"
+      image: "/lovable-uploads/07dfd706-2a40-495a-8e65-8f37f0d499c3.png"
     },
     {
       title: "ToneSense",
       description: "Speech emotion recognition system achieving 98%+ accuracy using TensorFlow and Librosa",
       tech: ["TensorFlow", "Librosa", "NLP", "Audio Processing"],
-      image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=600&h=400&fit=crop"
+      image: "/lovable-uploads/2d227abc-4cde-4bd9-8d77-4a50eb0a9000.png"
     },
     {
       title: "Sportiq",
       description: "Player and ball tracking system for tennis using Mediapipe and custom TrackNet implementation",
       tech: ["Mediapipe", "TrackNet", "Computer Vision", "Sports Analytics"],
-      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=600&h=400&fit=crop"
+      image: "/lovable-uploads/4126598b-6733-4a96-974e-2b9adf11ee6d.png"
+    }
+  ];
+
+  const education = [
+    {
+      institution: "SRM IST Chennai",
+      period: "Aug 2023 - Apr 2027",
+      grade: "CGPA: 8.97",
+      logo: "/lovable-uploads/3c301d09-c1de-44b1-9b02-a0a548cbbaa6.png"
+    },
+    {
+      institution: "St. John's Public School - India",
+      period: "Jun 2021 - May 2023",
+      grade: "Grade: 83.6%",
+      logo: "/lovable-uploads/864fd82d-826c-4093-80da-e90d6adf53a4.png"
+    },
+    {
+      institution: "The PSBB Millennium School",
+      period: "Jun 2011 - Mar 2021",
+      grade: "Grade: 87.6%",
+      logo: "/lovable-uploads/4fa761cb-54dc-429e-bee8-0ea38a29a7ed.png"
     }
   ];
 
@@ -125,7 +146,7 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-slate-900 to-purple-950 text-white relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-slate-900 to-purple-950 text-white relative overflow-hidden font-apple">
       {/* Enhanced background with animated elements */}
       <div className="fixed inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/5 to-purple-500/10 animate-pulse"></div>
@@ -146,7 +167,7 @@ const Index = () => {
               Krishna Somani
             </motion.div>
             <div className="hidden md:flex space-x-8">
-              {['Home', 'About', 'Projects', 'Experience', 'Skills', 'Contact'].map((item) => (
+              {['Home', 'Projects', 'Education', 'Experience', 'Skills', 'Contact'].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}
@@ -174,10 +195,10 @@ const Index = () => {
               Krishna Somani
             </h1>
             <p className="text-xl md:text-2xl mb-4 text-cyan-200">
-              Aspiring AI/ML Engineer | Data Scientist | Developer
+              AI/ML & Data Science Enthusiast
             </p>
-            <p className="text-lg mb-8 text-white/80 max-w-2xl mx-auto">
-              I blend deep theoretical knowledge with hands-on expertise to build intelligent systems that solve real-world problems.
+            <p className="text-lg mb-8 text-white/80 max-w-4xl mx-auto leading-relaxed">
+              I am an undergraduate student with a strong passion for Artificial Intelligence, Machine Learning, and Data Science. I actively explore these fields by combining a solid foundation in theoretical concepts with hands-on experience through projects, coursework, and independent learning. My goal is to apply these skills to solve real-world problems and contribute to the advancement of intelligent systems.
             </p>
             
             <div className="flex flex-wrap justify-center gap-4 mb-8">
@@ -222,29 +243,6 @@ const Index = () => {
         </motion.div>
       </section>
 
-      {/* About Section */}
-      <section id="about" className="py-20 bg-slate-900/30 backdrop-blur-sm relative z-10">
-        <div className="container mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-              About Me
-            </h2>
-            <p className="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
-              I'm a passionate tech enthusiast specializing in Artificial Intelligence, Machine Learning, and Data Science. 
-              Currently pursuing my education at <strong>SRM University</strong> with a CGPA of <strong>8.97</strong>, 
-              I combine strong theoretical foundations with practical problem-solving skills. 
-              My expertise spans deep learning, computer vision, and natural language processing, 
-              with a focus on building intelligent systems that create real-world impact.
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
       {/* Projects Section */}
       <section id="projects" className="py-20 relative z-10">
         <div className="container mx-auto px-6">
@@ -284,15 +282,6 @@ const Index = () => {
                       {project.description}
                     </CardDescription>
                   </CardHeader>
-                  <CardContent>
-                    <div className="flex flex-wrap gap-2">
-                      {project.tech.map((tech) => (
-                        <Badge key={tech} className="bg-cyan-500/20 text-cyan-300 border-cyan-500/30 hover:bg-cyan-500/30">
-                          {tech}
-                        </Badge>
-                      ))}
-                    </div>
-                  </CardContent>
                 </Card>
               </motion.div>
             ))}
@@ -300,8 +289,53 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Education Section */}
+      <section id="education" className="py-20 bg-slate-900/30 backdrop-blur-sm relative z-10">
+        <div className="container mx-auto px-6">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent"
+          >
+            Education
+          </motion.h2>
+          
+          <div className="max-w-4xl mx-auto">
+            {education.map((edu, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.2 }}
+                className="relative mb-8 last:mb-0"
+              >
+                <div className="flex items-start mb-4">
+                  <div className="w-16 h-16 rounded-lg bg-slate-800/50 backdrop-blur-lg border border-cyan-500/30 flex items-center justify-center mr-4 flex-shrink-0 p-2">
+                    <img 
+                      src={edu.logo} 
+                      alt={`${edu.institution} logo`} 
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold text-white">{edu.institution}</h3>
+                    <p className="text-white/60 text-sm mb-2">{edu.period}</p>
+                    <p className="text-cyan-300 font-medium">{edu.grade}</p>
+                  </div>
+                </div>
+                {index < education.length - 1 && (
+                  <div className="w-px h-8 bg-gradient-to-b from-cyan-500/50 to-transparent ml-8 mt-4"></div>
+                )}
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Experience Section */}
-      <section id="experience" className="py-20 bg-slate-900/30 backdrop-blur-sm relative z-10">
+      <section id="experience" className="py-20 relative z-10">
         <div className="container mx-auto px-6">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -323,11 +357,11 @@ const Index = () => {
                 className="relative mb-8 last:mb-0"
               >
                 <div className="flex items-start mb-4">
-                  <div className="w-12 h-12 rounded-full bg-slate-800/50 backdrop-blur-lg border border-cyan-500/30 flex items-center justify-center mr-4 flex-shrink-0">
+                  <div className="w-16 h-16 rounded-lg bg-slate-800/50 backdrop-blur-lg border border-cyan-500/30 flex items-center justify-center mr-4 flex-shrink-0 p-2">
                     <img 
                       src={exp.logo} 
                       alt={`${exp.company} logo`} 
-                      className="w-8 h-8 object-contain"
+                      className="w-full h-full object-contain"
                     />
                   </div>
                   <div className="flex-1">
@@ -338,7 +372,7 @@ const Index = () => {
                   </div>
                 </div>
                 {index < experiences.length - 1 && (
-                  <div className="w-px h-8 bg-gradient-to-b from-cyan-500/50 to-transparent ml-6 mt-4"></div>
+                  <div className="w-px h-8 bg-gradient-to-b from-cyan-500/50 to-transparent ml-8 mt-4"></div>
                 )}
               </motion.div>
             ))}
@@ -347,7 +381,7 @@ const Index = () => {
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="py-20 relative z-10">
+      <section id="skills" className="py-20 bg-slate-900/30 backdrop-blur-sm relative z-10">
         <div className="container mx-auto px-6">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -388,7 +422,7 @@ const Index = () => {
       </section>
 
       {/* Certifications Section */}
-      <section id="certifications" className="py-20 bg-slate-900/30 backdrop-blur-sm relative z-10">
+      <section id="certifications" className="py-20 relative z-10">
         <div className="container mx-auto px-6">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -420,7 +454,7 @@ const Index = () => {
       </section>
 
       {/* Achievements Section */}
-      <section id="achievements" className="py-20 relative z-10">
+      <section id="achievements" className="py-20 bg-slate-900/30 backdrop-blur-sm relative z-10">
         <div className="container mx-auto px-6">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -453,7 +487,7 @@ const Index = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 bg-slate-900/30 backdrop-blur-sm relative z-10">
+      <section id="contact" className="py-20 relative z-10">
         <div className="container mx-auto px-6">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
