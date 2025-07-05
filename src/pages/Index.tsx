@@ -290,7 +290,7 @@ const Index = () => {
                     <p className="text-white/60 text-sm">{exp.period}</p>
                   </div>
                 </div>
-                <p className="text-white/80 ml-8">{exp.description}</p>
+                <p className="text-white/80 ml-8 text-base font-normal">{exp.description}</p>
                 {index < experiences.length - 1 && <div className="w-px h-8 bg-white/20 ml-2 mt-4"></div>}
               </motion.div>)}
           </div>
