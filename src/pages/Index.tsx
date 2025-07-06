@@ -15,7 +15,7 @@ const Index = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'about', 'experience', 'education', 'certifications', 'projects', 'skills', 'achievements', 'contact'];
+      const sections = ['home', 'experience', 'education', 'certifications', 'projects', 'skills', 'achievements'];
       const current = sections.find(section => {
         const element = document.getElementById(section);
         if (element) {
@@ -36,14 +36,6 @@ const Index = () => {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
-  };
-
-  const handleContactSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for reaching out. I'll get back to you soon!"
-    });
   };
 
   const projects = [
@@ -104,7 +96,7 @@ const Index = () => {
     {
       company: "PharmEasy",
       role: "Data Science Intern",
-      period: "Jun 2025 - Present • 2 mos",
+      period: "Jun 2025 - Present",
       location: "Bengaluru, Karnataka, India • Hybrid",
       description: "Developed a chatbot using Dify to recommend diagnostic tests and health packages based on user-reported issues, built a WhatsApp chatbot that brought key app features directly into the chat experience, and created an AI-powered content pipeline that generates short-form content weekly while identifying trending topics.",
       logo: "/lovable-uploads/fd6c3dad-b180-4cfa-a02e-87b22cd159d2.png"
@@ -112,7 +104,7 @@ const Index = () => {
     {
       company: "Data Science Community SRM",
       role: "AI/ML Technical Team Member",
-      period: "Dec 2024 - Present • 8 mos",
+      period: "Dec 2024 - Present",
       location: "Chennai, Tamil Nadu, India • On-site",
       description: "",
       logo: "/lovable-uploads/0514ae2e-4cb9-46c0-a718-5bd83dd0c1bf.png"
@@ -120,7 +112,7 @@ const Index = () => {
     {
       company: "IEEE SRMIST Student Branch",
       role: "Research & Development Member", 
-      period: "Nov 2024 - Present • 9 mos",
+      period: "Nov 2024 - Present",
       location: "Chennai, Tamil Nadu, India • On-site",
       description: "",
       logo: "/lovable-uploads/ea9139e1-3664-456e-a42f-e38ba734d92b.png"
@@ -128,7 +120,7 @@ const Index = () => {
     {
       company: "ifYK",
       role: "Machine Learning Intern",
-      period: "Sep 2024 - Oct 2024 • 2 mos",
+      period: "Sep 2024 - Oct 2024",
       location: "New York, United States • Remote",
       description: "Engineered a chatbot powered by Hugging Face's Llama 3.1 (8B) model to efficiently extract event-specific data, leveraging NLP capabilities for accurate information retrieval. Designed and implemented web scraping pipelines to preprocess raw HTML into clean, structured text, optimizing data preparation for NLP tasks. Deployed the solution using FastAPI on Render, enabling real-time query handling and seamless user interaction. This system reduced manual effort in event information extraction, streamlining data processing workflows.",
       logo: "/lovable-uploads/1e76810f-7c22-4aa7-8cea-0fed648cd697.png"
@@ -136,7 +128,7 @@ const Index = () => {
     {
       company: "Accuracy",
       role: "Python Developer",
-      period: "Jun 2024 - Jul 2024 • 2 mos",
+      period: "Jun 2024 - Jul 2024",
       location: "Hyderabad, Telangana, India • Remote",
       description: "Streamlined data extraction from paginated, infinite scroll, and detail view pages into a unified script. Conducted textual analysis on over 1,000 extracted job postings to uncover in-demand and least sought-after roles, identify top required skills, and analyze geographic trends, providing actionable insights to enhance hiring strategies.",
       logo: "/lovable-uploads/9e65c59f-7d17-4627-a0f9-cd664c99bde6.png"
@@ -191,7 +183,7 @@ const Index = () => {
       title: "Crash Course on Python",
       provider: "Google",
       date: "Issued May 2024",
-      logo: "/lovable-uploads/a7c46861-960a-49b6-bcb9-3f76b323256a.png"
+      logo: "/lovable-uploads/f08d310e-c1a1-4819-83d2-bd74284cb5e1.png"
     },
     {
       title: "Accelerated Computer Science Fundamentals",
@@ -204,7 +196,7 @@ const Index = () => {
   const achievements = [
     {
       title: "Temenos Tem-E-thon 2025 Hackathon Winner",
-      description: "Won MacBook Air M3 for developing an innovative fintech solution",
+      description: "Won 15 inch MacBook Air M3 (16GB RAM/256GB SSD)",
       logo: "/lovable-uploads/27c43e0b-3168-4c93-9cf3-4112332b0f78.png"
     }
   ];
@@ -231,7 +223,7 @@ const Index = () => {
               Krishna Somani
             </motion.div>
             <div className="hidden md:flex space-x-8">
-              {['Home', 'About', 'Experience', 'Education', 'Certifications', 'Projects', 'Skills', 'Achievements', 'Contact'].map((item) => (
+              {['Home', 'Experience', 'Education', 'Certifications', 'Projects', 'Skills', 'Achievements'].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}
@@ -267,32 +259,31 @@ const Index = () => {
             
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               <Button
-                onClick={() => scrollToSection('about')}
+                onClick={() => scrollToSection('experience')}
                 className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-3 rounded-full shadow-lg hover:shadow-cyan-500/25 transition-all"
               >
                 Learn More
               </Button>
               <Button
-                variant="outline"
-                className="border-cyan-400/30 text-white hover:bg-cyan-400/10 hover:border-cyan-400/50 px-8 py-3 rounded-full transition-all"
+                className="bg-slate-700 hover:bg-slate-600 text-white border border-cyan-400/30 hover:border-cyan-400/50 px-8 py-3 rounded-full transition-all shadow-lg"
               >
                 <Download className="mr-2 h-4 w-4" />
                 Download Resume
               </Button>
             </div>
 
-            <div className="flex justify-center space-x-6">
-              <a href="mailto:krishna@example.com" className="text-white/60 hover:text-cyan-400 transition-colors">
-                <Mail size={24} />
+            <div className="flex justify-center space-x-8">
+              <a href="mailto:krishnasomani272005@gmail.com" className="text-white/60 hover:text-cyan-400 transition-colors transform hover:scale-110">
+                <Mail size={32} />
               </a>
-              <a href="tel:+1234567890" className="text-white/60 hover:text-cyan-400 transition-colors">
-                <Phone size={24} />
+              <a href="tel:+919940520537" className="text-white/60 hover:text-cyan-400 transition-colors transform hover:scale-110">
+                <Phone size={32} />
               </a>
-              <a href="#" className="text-white/60 hover:text-cyan-400 transition-colors">
-                <Github size={24} />
+              <a href="https://github.com/kr1shnasomani" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-cyan-400 transition-colors transform hover:scale-110">
+                <Github size={32} />
               </a>
-              <a href="#" className="text-white/60 hover:text-cyan-400 transition-colors">
-                <Linkedin size={24} />
+              <a href="https://www.linkedin.com/in/kr1shnasomani" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-cyan-400 transition-colors transform hover:scale-110">
+                <Linkedin size={32} />
               </a>
             </div>
           </motion.div>
@@ -305,31 +296,6 @@ const Index = () => {
         >
           <ChevronDown size={32} className="text-white/60" />
         </motion.div>
-      </section>
-
-      {/* About Section */}
-      <section id="about" className="py-20 bg-slate-900/30 backdrop-blur-sm relative z-10">
-        <div className="container mx-auto px-6">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent"
-          >
-            About Me
-          </motion.h2>
-          
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-lg text-white/80 leading-relaxed"
-            >
-              I'm passionate about Artificial Intelligence & Machine Learning, with a strong focus on solving real-world problems through intelligent, automated systems. I'm especially interested in AI-driven innovation, scalable solutions, and their impact across industries—from security to sustainability. I thrive in environments that challenge me to learn and build meaningful technology. Always open to discussions on artificial intelligence/machine learning and emerging tech.
-            </motion.p>
-          </div>
-        </div>
       </section>
 
       {/* Experience Section */}
@@ -355,7 +321,7 @@ const Index = () => {
                 className="relative mb-8 last:mb-0"
               >
                 <div className="flex items-start mb-4">
-                  <div className="w-16 h-16 rounded-lg bg-slate-800/50 backdrop-blur-lg border border-cyan-500/30 flex items-center justify-center mr-4 flex-shrink-0 p-2">
+                  <div className="w-20 h-20 rounded-lg bg-slate-800/50 backdrop-blur-lg border border-cyan-500/30 flex items-center justify-center mr-6 flex-shrink-0 p-2">
                     <img 
                       src={exp.logo} 
                       alt={`${exp.company} logo`} 
@@ -363,19 +329,16 @@ const Index = () => {
                     />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-bold text-white">{exp.role}</h3>
-                    <p className="text-cyan-300 font-medium mb-1">{exp.company}</p>
-                    <p className="text-white/60 text-sm mb-2">{exp.period}</p>
-                    {exp.location && (
-                      <p className="text-white/60 text-sm mb-2">{exp.location}</p>
-                    )}
+                    <h3 className="text-xl font-bold text-white leading-tight">{exp.role}</h3>
+                    <p className="text-cyan-300 font-medium leading-tight">{exp.period}</p>
+                    <p className="text-white/80 leading-tight">{exp.company}, {exp.location.split(',')[0]}</p>
                     {exp.description && (
-                      <p className="text-white/80 text-sm leading-relaxed">{exp.description}</p>
+                      <p className="text-white/70 text-sm leading-relaxed mt-4">{exp.description}</p>
                     )}
                   </div>
                 </div>
                 {index < experiences.length - 1 && (
-                  <div className="w-px h-8 bg-gradient-to-b from-cyan-500/50 to-transparent ml-8 mt-4"></div>
+                  <div className="w-px h-8 bg-gradient-to-b from-cyan-500/50 to-transparent ml-10 mt-4"></div>
                 )}
               </motion.div>
             ))}
@@ -399,28 +362,28 @@ const Index = () => {
             {education.map((edu, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.2 }}
                 className="relative mb-8 last:mb-0"
               >
-                <div className="flex items-start mb-4">
-                  <div className="w-16 h-16 rounded-lg bg-slate-800/50 backdrop-blur-lg border border-cyan-500/30 flex items-center justify-center mr-4 flex-shrink-0 p-2">
+                <div className="flex items-start justify-center mb-4">
+                  <div className="w-20 h-20 rounded-lg bg-slate-800/50 backdrop-blur-lg border border-cyan-500/30 flex items-center justify-center mr-6 flex-shrink-0 p-2">
                     <img 
                       src={edu.logo} 
                       alt={`${edu.institution} logo`} 
                       className="w-full h-full object-contain"
                     />
                   </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold text-white">{edu.institution}</h3>
-                    <p className="text-white/60 text-sm mb-2">{edu.period}</p>
-                    <p className="text-cyan-300 font-medium">{edu.grade}</p>
+                  <div className="text-center">
+                    <h3 className="text-xl font-bold text-white leading-tight">{edu.institution}</h3>
+                    <p className="text-white/60 text-sm leading-tight">{edu.period}</p>
+                    <p className="text-cyan-300 font-medium leading-tight">{edu.grade}</p>
                   </div>
                 </div>
                 {index < education.length - 1 && (
-                  <div className="w-px h-8 bg-gradient-to-b from-cyan-500/50 to-transparent ml-8 mt-4"></div>
+                  <div className="w-px h-8 bg-gradient-to-b from-cyan-500/50 to-transparent mx-auto mt-4"></div>
                 )}
               </motion.div>
             ))}
@@ -437,7 +400,7 @@ const Index = () => {
             viewport={{ once: true }}
             className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent"
           >
-            Courses & Certifications
+            Certifications
           </motion.h2>
           
           <div className="max-w-4xl mx-auto space-y-6">
@@ -452,7 +415,7 @@ const Index = () => {
                 <Card className="bg-slate-800/30 backdrop-blur-lg border border-cyan-500/20 hover:border-cyan-400/40 transition-all shadow-lg">
                   <CardContent className="p-6">
                     <div className="flex items-start">
-                      <div className="w-12 h-12 rounded-lg bg-slate-800/50 backdrop-blur-lg border border-cyan-500/30 flex items-center justify-center mr-4 flex-shrink-0 p-1">
+                      <div className="w-20 h-20 rounded-lg bg-slate-800/50 backdrop-blur-lg border border-cyan-500/30 flex items-center justify-center mr-6 flex-shrink-0 p-2">
                         <img 
                           src={cert.logo} 
                           alt={`${cert.provider} logo`} 
@@ -460,9 +423,9 @@ const Index = () => {
                         />
                       </div>
                       <div className="flex-1">
-                        <h3 className="text-lg font-bold text-white mb-1">{cert.title}</h3>
-                        <p className="text-cyan-300 font-medium mb-1">{cert.provider}</p>
-                        <p className="text-white/60 text-sm">{cert.date}</p>
+                        <h3 className="text-lg font-bold text-white leading-tight">{cert.title}</h3>
+                        <p className="text-cyan-300 font-medium leading-tight">{cert.provider}</p>
+                        <p className="text-white/60 text-sm leading-tight">{cert.date}</p>
                       </div>
                     </div>
                   </CardContent>
@@ -569,7 +532,7 @@ const Index = () => {
             viewport={{ once: true }}
             className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent"
           >
-            Achievements & Awards
+            Achievements
           </motion.h2>
           
           <div className="max-w-2xl mx-auto">
@@ -602,85 +565,13 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section id="contact" className="py-20 relative z-10">
-        <div className="container mx-auto px-6">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent"
-          >
-            Get In Touch
-          </motion.h2>
-          
-          <div className="max-w-2xl mx-auto">
-            <motion.form
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              onSubmit={handleContactSubmit}
-              className="space-y-6"
-            >
-              <div className="grid md:grid-cols-2 gap-6">
-                <Input
-                  placeholder="Your Name"
-                  className="bg-slate-800/50 border-cyan-500/20 text-white placeholder:text-white/50 focus:border-cyan-400/50"
-                />
-                <Input
-                  type="email"
-                  placeholder="Your Email"
-                  className="bg-slate-800/50 border-cyan-500/20 text-white placeholder:text-white/50 focus:border-cyan-400/50"
-                />
-              </div>
-              <Textarea
-                placeholder="Your Message"
-                rows={6}
-                className="bg-slate-800/50 border-cyan-500/20 text-white placeholder:text-white/50 focus:border-cyan-400/50"
-              />
-              <Button
-                type="submit"
-                className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white py-3 shadow-lg hover:shadow-cyan-500/25 transition-all"
-              >
-                Send Message
-              </Button>
-            </motion.form>
-
-            <div className="text-center mt-12">
-              <p className="text-white/80 mb-4">Or reach out directly:</p>
-              <div className="flex justify-center space-x-8">
-                <div className="text-center">
-                  <Mail className="mx-auto mb-2 text-cyan-400" size={24} />
-                  <p className="text-white/80">krishna@example.com</p>
-                </div>
-                <div className="text-center">
-                  <Phone className="mx-auto mb-2 text-cyan-400" size={24} />
-                  <p className="text-white/80">+1 (234) 567-8901</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Footer */}
       <footer className="py-8 border-t border-cyan-500/20 bg-slate-900/50 backdrop-blur-sm relative z-10">
         <div className="container mx-auto px-6">
           <div className="text-center">
-            <p className="text-white/80 mb-4">
+            <p className="text-white/80">
               Made with ❤️ by Krishna Somani
             </p>
-            <div className="flex justify-center space-x-6">
-              <a href="#" className="text-white/60 hover:text-cyan-400 transition-colors">
-                <Github size={20} />
-              </a>
-              <a href="#" className="text-white/60 hover:text-cyan-400 transition-colors">
-                <Linkedin size={20} />
-              </a>
-              <a href="mailto:krishna@example.com" className="text-white/60 hover:text-cyan-400 transition-colors">
-                <Mail size={20} />
-              </a>
-            </div>
           </div>
         </div>
       </footer>
