@@ -30,32 +30,32 @@ const ProjectCarousel = ({ projects }: ProjectCarouselProps) => {
     setCurrentSlide(index);
   };
 
-  // Auto-play functionality
+  // Auto-play functionality with 7-second interval
   useEffect(() => {
-    const interval = setInterval(nextSlide, 5000);
+    const interval = setInterval(nextSlide, 7000);
     return () => clearInterval(interval);
   }, []);
 
   return (
     <div className="relative w-full max-w-[1100px] mx-auto">
       {/* Main Carousel Container */}
-      <div className="relative h-[600px] rounded-2xl overflow-hidden shadow-2xl bg-slate-900/50 backdrop-blur-lg border border-cyan-500/20">
+      <div className="relative h-[600px] rounded-3xl overflow-hidden shadow-2xl bg-white/95 backdrop-blur-xl border border-gray-200/50">
         
         {/* Navigation Arrows */}
         <Button 
           onClick={prevSlide} 
-          className="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-black/30 hover:bg-black/50 border border-white/20 backdrop-blur-sm transition-all" 
+          className="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white/90 hover:bg-white border border-gray-200/50 backdrop-blur-xl transition-all shadow-lg hover:shadow-xl" 
           size="icon"
         >
-          <ChevronLeft className="h-6 w-6 text-white" />
+          <ChevronLeft className="h-6 w-6 text-gray-800" />
         </Button>
 
         <Button 
           onClick={nextSlide} 
-          className="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-black/30 hover:bg-black/50 border border-white/20 backdrop-blur-sm transition-all" 
+          className="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white/90 hover:bg-white border border-gray-200/50 backdrop-blur-xl transition-all shadow-lg hover:shadow-xl" 
           size="icon"
         >
-          <ChevronRight className="h-6 w-6 text-white" />
+          <ChevronRight className="h-6 w-6 text-gray-800" />
         </Button>
 
         {/* Slides */}
@@ -65,7 +65,7 @@ const ProjectCarousel = ({ projects }: ProjectCarouselProps) => {
             initial={{ opacity: 0, x: 300 }} 
             animate={{ opacity: 1, x: 0 }} 
             exit={{ opacity: 0, x: -300 }} 
-            transition={{ duration: 0.5, ease: "easeInOut" }} 
+            transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }} 
             className="absolute inset-0"
           >
             {/* Background Image */}
@@ -75,30 +75,30 @@ const ProjectCarousel = ({ projects }: ProjectCarouselProps) => {
             />
             
             {/* Dark Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/50 to-black/20" />
             
             {/* Content Overlay */}
             <div className="absolute bottom-0 left-0 p-8 z-10 max-w-2xl">
               <motion.div 
                 initial={{ opacity: 0, y: 30 }} 
                 animate={{ opacity: 1, y: 0 }} 
-                transition={{ delay: 0.2, duration: 0.6 }}
+                transition={{ delay: 0.3, duration: 0.6 }}
               >
-                <h3 className="text-4xl font-bold text-white mb-3 leading-tight">
+                <h3 className="text-4xl font-bold text-white mb-4 leading-tight">
                   {projects[currentSlide].title}
                 </h3>
-                <p className="text-xl text-white/90 mb-6 leading-relaxed">
+                <p className="text-lg text-white/95 mb-6 leading-relaxed">
                   {projects[currentSlide].description}
                 </p>
                 <Button 
-                  className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-3 rounded-full font-semibold transition-all shadow-lg hover:shadow-cyan-500/25" 
+                  className="bg-black hover:bg-gray-800 text-white px-6 py-3 rounded-full font-semibold transition-all shadow-lg hover:shadow-xl border border-gray-700/30" 
                   onClick={() => {
                     if (projects[currentSlide].githubUrl) {
                       window.open(projects[currentSlide].githubUrl, '_blank');
                     }
                   }}
                 >
-                  <Github className="mr-2 h-5 w-5" />
+                  <Github className="mr-2 h-5 w-5 fill-white" />
                   GitHub
                 </Button>
               </motion.div>
@@ -113,7 +113,7 @@ const ProjectCarousel = ({ projects }: ProjectCarouselProps) => {
               key={index} 
               onClick={() => goToSlide(index)} 
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentSlide ? 'bg-cyan-400 scale-125' : 'bg-white/40 hover:bg-white/60'
+                index === currentSlide ? 'bg-white scale-125 shadow-lg' : 'bg-white/50 hover:bg-white/70'
               }`} 
             />
           ))}

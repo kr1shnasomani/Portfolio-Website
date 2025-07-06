@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Download, Mail, Phone, Github, Linkedin } from 'lucide-react';
@@ -41,31 +40,31 @@ const Index = () => {
   const projects = [
     {
       title: "BloodPrint",
-      description: "Blood group prediction from fingerprints using deep learning with PyTorch, EfficientNetB0, and ResNet50",
+      description: "Developed a deep learning model using PyTorch and TensorFlow to predict blood groups from fingerprint patterns, achieving up to 85% accuracy.",
       image: "/lovable-uploads/ce9f07a9-e7b0-433c-8536-990fbf35c5ab.png",
       githubUrl: "https://github.com/kr1shnasomani/BloodPrint"
     },
     {
       title: "CaptionCraft", 
-      description: "Image caption generator using DenseNet201 + LSTM architecture for automated image understanding",
+      description: "Built an image captioning system using DenseNet201 and LSTM to generate natural language descriptions from images with TensorFlow and Keras.",
       image: "/lovable-uploads/8e746e46-8b0a-409a-b356-e565c59eb2a8.png",
       githubUrl: "https://github.com/kr1shnasomani/CaptionCraft"
     },
     {
       title: "SpeedVision",
-      description: "Vehicle detection and speed estimation system using YOLOv8 and OpenCV for traffic monitoring",
+      description: "Created a real-time vehicle speed detection system using YOLOv8, ByteTrack, and OpenCV to analyze and annotate traffic footage.",
       image: "/lovable-uploads/07dfd706-2a40-495a-8e65-8f37f0d499c3.png",
       githubUrl: "https://github.com/kr1shnasomani/SpeedVision"
     },
     {
       title: "ToneSense",
-      description: "Speech emotion recognition system achieving 98%+ accuracy using TensorFlow and Librosa",
+      description: "Implemented a speech emotion recognition model with 98% accuracy using MFCC features and spectrograms for real-time audio emotion analysis.",
       image: "/lovable-uploads/2d227abc-4cde-4bd9-8d77-4a50eb0a9000.png",
       githubUrl: "https://github.com/kr1shnasomani/ToneSense"
     },
     {
       title: "Sportiq",
-      description: "Player and ball tracking system for tennis using Mediapipe and custom TrackNet implementation",
+      description: "Designed a computer vision pipeline to track tennis players and ball trajectories using Mediapipe and a custom TrackNet model.",
       image: "/lovable-uploads/4126598b-6733-4a96-974e-2b9adf11ee6d.png",
       githubUrl: "https://github.com/kr1shnasomani/Sportiq"
     }
@@ -95,6 +94,7 @@ const Index = () => {
   const experiences = [
     {
       company: "PharmEasy",
+      city: "Bengaluru",
       role: "Data Science Intern",
       period: "Jun 2025 - Present",
       location: "Bengaluru, Karnataka, India • Hybrid",
@@ -103,6 +103,7 @@ const Index = () => {
     },
     {
       company: "Data Science Community SRM",
+      city: "Chennai",
       role: "AI/ML Technical Team Member",
       period: "Dec 2024 - Present",
       location: "Chennai, Tamil Nadu, India • On-site",
@@ -111,6 +112,7 @@ const Index = () => {
     },
     {
       company: "IEEE SRMIST Student Branch",
+      city: "Chennai", 
       role: "Research & Development Member", 
       period: "Nov 2024 - Present",
       location: "Chennai, Tamil Nadu, India • On-site",
@@ -119,6 +121,7 @@ const Index = () => {
     },
     {
       company: "ifYK",
+      city: "New York",
       role: "Machine Learning Intern",
       period: "Sep 2024 - Oct 2024",
       location: "New York, United States • Remote",
@@ -127,6 +130,7 @@ const Index = () => {
     },
     {
       company: "Accuracy",
+      city: "Hyderabad",
       role: "Python Developer",
       period: "Jun 2024 - Jul 2024",
       location: "Hyderabad, Telangana, India • Remote",
@@ -195,23 +199,23 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-slate-900 to-purple-950 text-white relative overflow-hidden font-apple">
-      {/* Enhanced background with animated elements */}
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 text-gray-900 relative overflow-hidden font-apple">
+      {/* Enhanced background with subtle animated elements */}
       <div className="fixed inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/5 to-purple-500/10 animate-pulse"></div>
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/20 rounded-full filter blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full filter blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-cyan-500/10 rounded-full filter blur-2xl animate-pulse delay-500"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-gray-100/30 via-white/20 to-gray-200/30"></div>
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gray-200/20 rounded-full filter blur-3xl"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gray-300/20 rounded-full filter blur-3xl"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gray-200/15 rounded-full filter blur-2xl"></div>
       </div>
 
       {/* Navigation */}
-      <nav className="fixed top-0 w-full z-50 bg-slate-900/80 backdrop-blur-xl border-b border-cyan-500/20">
+      <nav className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl border-b border-gray-200/50">
         <div className="container mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
-              className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent"
+              className="text-xl font-bold bg-gradient-to-r from-gray-800 to-black bg-clip-text text-transparent"
             >
               Krishna Somani
             </motion.div>
@@ -220,8 +224,8 @@ const Index = () => {
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}
-                  className={`hover:text-cyan-400 transition-colors font-medium ${
-                    activeSection === item.toLowerCase() ? 'text-cyan-400' : 'text-white/80'
+                  className={`hover:text-gray-800 transition-colors font-medium ${
+                    activeSection === item.toLowerCase() ? 'text-black' : 'text-gray-600'
                   }`}
                 >
                   {item}
@@ -238,27 +242,27 @@ const Index = () => {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.6 }}
           >
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-gray-800 via-black to-gray-700 bg-clip-text text-transparent">
               Krishna Somani
             </h1>
-            <p className="text-xl md:text-2xl mb-4 text-cyan-200 font-medium">
+            <p className="text-xl md:text-2xl mb-4 text-gray-700 font-medium">
               Artificial Intelligence, Machine Learning and Data Science Enthusiast
             </p>
-            <p className="text-lg mb-8 text-white/80 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-lg mb-8 text-gray-600 max-w-4xl mx-auto leading-relaxed">
               I'm passionate about Artificial Intelligence & Machine Learning, with a strong focus on solving real-world problems through intelligent, automated systems. I'm especially interested in AI-driven innovation, scalable solutions, and their impact across industries—from security to sustainability. I thrive in environments that challenge me to learn and build meaningful technology. Always open to discussions on artificial intelligence/machine learning and emerging tech.
             </p>
             
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               <Button
                 onClick={() => scrollToSection('experience')}
-                className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-3 rounded-full shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 transform hover:scale-105 font-medium"
+                className="bg-black hover:bg-gray-800 text-white px-8 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105 font-medium"
               >
                 Learn More
               </Button>
               <Button
-                className="bg-slate-700/50 hover:bg-slate-600/60 text-white border border-cyan-400/30 hover:border-cyan-400/50 px-8 py-3 rounded-full transition-all duration-300 shadow-lg backdrop-blur-sm transform hover:scale-105 font-medium"
+                className="bg-white hover:bg-gray-50 text-black border border-gray-300 hover:border-gray-400 px-8 py-3 rounded-full transition-all duration-200 shadow-lg backdrop-blur-sm transform hover:scale-105 font-medium"
               >
                 <Download className="mr-2 h-4 w-4" />
                 Download Resume
@@ -266,16 +270,16 @@ const Index = () => {
             </div>
 
             <div className="flex justify-center space-x-8">
-              <a href="mailto:krishnasomani272005@gmail.com" className="text-white/60 hover:text-cyan-400 transition-colors transform hover:scale-110 duration-300">
+              <a href="mailto:krishnasomani272005@gmail.com" className="text-gray-500 hover:text-black transition-colors transform hover:scale-110 duration-200">
                 <Mail size={32} />
               </a>
-              <a href="tel:+919940520537" className="text-white/60 hover:text-cyan-400 transition-colors transform hover:scale-110 duration-300">
+              <a href="tel:+919940520537" className="text-gray-500 hover:text-black transition-colors transform hover:scale-110 duration-200">
                 <Phone size={32} />
               </a>
-              <a href="https://github.com/kr1shnasomani" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-cyan-400 transition-colors transform hover:scale-110 duration-300">
+              <a href="https://github.com/kr1shnasomani" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-black transition-colors transform hover:scale-110 duration-200">
                 <Github size={32} />
               </a>
-              <a href="https://www.linkedin.com/in/kr1shnasomani" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-cyan-400 transition-colors transform hover:scale-110 duration-300">
+              <a href="https://www.linkedin.com/in/kr1shnasomani" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-black transition-colors transform hover:scale-110 duration-200">
                 <Linkedin size={32} />
               </a>
             </div>
@@ -290,7 +294,7 @@ const Index = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent"
+            className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-gray-800 to-black bg-clip-text text-transparent"
           >
             Experience
           </motion.h2>
@@ -302,11 +306,11 @@ const Index = () => {
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.2 }}
+                transition={{ delay: index * 0.1 }}
                 className="relative mb-6 last:mb-0"
               >
                 <div className="flex items-start mb-4">
-                  <div className="w-16 h-16 rounded-xl bg-slate-800/50 backdrop-blur-lg border border-cyan-500/30 flex items-center justify-center mr-6 flex-shrink-0 p-2">
+                  <div className="w-16 h-16 rounded-xl bg-white/90 backdrop-blur-xl border border-gray-200/50 flex items-center justify-center mr-6 flex-shrink-0 p-2 shadow-lg">
                     <img 
                       src={exp.logo} 
                       alt={`${exp.company} logo`} 
@@ -314,17 +318,17 @@ const Index = () => {
                     />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-semibold text-white leading-tight mb-1">{exp.role}</h3>
-                    <p className="text-cyan-300 font-medium leading-tight mb-1">{exp.company}</p>
-                    <p className="text-white/70 text-sm leading-tight mb-1">{exp.period}</p>
-                    <p className="text-white/60 text-sm leading-tight">{exp.location.split(',')[0]}</p>
+                    <h3 className="text-xl font-semibold text-black leading-tight mb-1">{exp.role}</h3>
+                    <p className="text-gray-700 font-medium leading-tight mb-1">{exp.company}, {exp.city}</p>
+                    <p className="text-gray-600 text-sm leading-tight mb-1">{exp.period}</p>
+                    <p className="text-gray-500 text-sm leading-tight">{exp.location.split(',')[0]}</p>
                     {exp.description && (
-                      <p className="text-white/70 text-sm leading-relaxed mt-3">{exp.description}</p>
+                      <p className="text-gray-600 text-sm leading-relaxed mt-3">{exp.description}</p>
                     )}
                   </div>
                 </div>
                 {index < experiences.length - 1 && (
-                  <div className="w-px h-6 bg-gradient-to-b from-cyan-500/50 to-transparent ml-8 mt-2"></div>
+                  <div className="w-px h-6 bg-gradient-to-b from-gray-300 to-transparent ml-8 mt-2"></div>
                 )}
               </motion.div>
             ))}
@@ -333,13 +337,13 @@ const Index = () => {
       </section>
 
       {/* Education Section */}
-      <section id="education" className="py-20 bg-slate-900/30 backdrop-blur-sm relative z-10">
+      <section id="education" className="py-20 bg-gray-50/50 backdrop-blur-sm relative z-10">
         <div className="container mx-auto px-6">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent"
+            className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-gray-800 to-black bg-clip-text text-transparent"
           >
             Education
           </motion.h2>
@@ -351,25 +355,25 @@ const Index = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.2 }}
+                transition={{ delay: index * 0.1 }}
                 className="relative mb-12 last:mb-0"
               >
-                <div className="flex items-start justify-center mb-4">
-                  <div className="w-16 h-16 rounded-xl bg-slate-800/50 backdrop-blur-lg border border-cyan-500/30 flex items-center justify-center mr-6 flex-shrink-0 p-2">
+                <div className="flex items-start mb-4">
+                  <div className="w-16 h-16 rounded-xl bg-white/90 backdrop-blur-xl border border-gray-200/50 flex items-center justify-center mr-6 flex-shrink-0 p-2 shadow-lg">
                     <img 
                       src={edu.logo} 
                       alt={`${edu.institution} logo`} 
                       className="w-full h-full object-contain"
                     />
                   </div>
-                  <div className="text-left">
-                    <h3 className="text-xl font-semibold text-white leading-tight mb-2">{edu.institution}</h3>
-                    <p className="text-white/70 text-sm leading-tight mb-4">{edu.period}</p>
-                    <p className="text-cyan-300 font-medium leading-tight">{edu.grade}</p>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-semibold text-black leading-tight mb-1">{edu.institution}</h3>
+                    <p className="text-gray-600 text-sm leading-tight mb-1">{edu.period}</p>
+                    <p className="text-gray-700 font-medium leading-tight">{edu.grade}</p>
                   </div>
                 </div>
                 {index < education.length - 1 && (
-                  <div className="w-px h-8 bg-gradient-to-b from-cyan-500/50 to-transparent mx-auto mt-6"></div>
+                  <div className="w-px h-8 bg-gradient-to-b from-gray-300 to-transparent ml-8 mt-6"></div>
                 )}
               </motion.div>
             ))}
@@ -384,7 +388,7 @@ const Index = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent"
+            className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-gray-800 to-black bg-clip-text text-transparent"
           >
             Certifications
           </motion.h2>
@@ -393,7 +397,7 @@ const Index = () => {
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
+            transition={{ delay: 0.1 }}
           >
             <CertificationCarousel certifications={certifications} />
           </motion.div>
@@ -401,13 +405,13 @@ const Index = () => {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-20 bg-slate-900/30 backdrop-blur-sm relative z-10">
+      <section id="projects" className="py-20 bg-gray-50/50 backdrop-blur-sm relative z-10">
         <div className="container mx-auto px-6">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent"
+            className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-gray-800 to-black bg-clip-text text-transparent"
           >
             Projects
           </motion.h2>
@@ -416,7 +420,7 @@ const Index = () => {
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
+            transition={{ delay: 0.1 }}
           >
             <ProjectCarousel projects={projects} />
           </motion.div>
@@ -430,7 +434,7 @@ const Index = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent"
+            className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-gray-800 to-black bg-clip-text text-transparent"
           >
             Skills
           </motion.h2>
@@ -439,7 +443,7 @@ const Index = () => {
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
+            transition={{ delay: 0.1 }}
           >
             <SkillsGrid />
           </motion.div>
@@ -447,13 +451,13 @@ const Index = () => {
       </section>
 
       {/* Achievements Section */}
-      <section id="achievements" className="py-20 bg-slate-900/30 backdrop-blur-sm relative z-10">
+      <section id="achievements" className="py-20 bg-gray-50/50 backdrop-blur-sm relative z-10">
         <div className="container mx-auto px-6">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent"
+            className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-gray-800 to-black bg-clip-text text-transparent"
           >
             Achievements
           </motion.h2>
@@ -465,19 +469,19 @@ const Index = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.2 }}
+                transition={{ delay: index * 0.1 }}
               >
-                <Card className="bg-slate-800/50 backdrop-blur-lg border-cyan-500/20 hover:bg-slate-800/70 hover:border-cyan-400/40 transition-all duration-300 group shadow-lg hover:shadow-cyan-500/10">
-                  <div className="relative overflow-hidden rounded-t-lg bg-gradient-to-br from-blue-600/20 to-purple-600/20 p-8 flex items-center justify-center">
+                <Card className="bg-white/90 backdrop-blur-xl border-gray-200/50 hover:bg-white hover:border-gray-300 transition-all duration-200 group shadow-lg hover:shadow-xl">
+                  <div className="relative overflow-hidden rounded-t-lg bg-gradient-to-br from-gray-100/50 to-gray-200/50 p-8 flex items-center justify-center">
                     <img
                       src={achievement.logo}
                       alt={achievement.title}
-                      className="w-full h-32 object-contain group-hover:scale-105 transition-transform duration-300"
+                      className="w-full h-32 object-contain group-hover:scale-105 transition-transform duration-200"
                     />
                   </div>
                   <CardHeader className="text-center">
-                    <CardTitle className="text-white font-semibold">{achievement.title}</CardTitle>
-                    <CardDescription className="text-white/70 text-base">
+                    <CardTitle className="text-black font-semibold">{achievement.title}</CardTitle>
+                    <CardDescription className="text-gray-600 text-base">
                       {achievement.description}
                     </CardDescription>
                   </CardHeader>
@@ -489,10 +493,10 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 border-t border-cyan-500/20 bg-slate-900/50 backdrop-blur-sm relative z-10">
+      <footer className="py-8 border-t border-gray-200/50 bg-white/50 backdrop-blur-sm relative z-10">
         <div className="container mx-auto px-6">
           <div className="text-center">
-            <p className="text-white/80 font-medium">
+            <p className="text-gray-600 font-medium">
               Made with ❤️ by Krishna Somani
             </p>
           </div>
