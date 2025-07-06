@@ -1,13 +1,13 @@
-
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { ChevronDown, Download, ExternalLink, Mail, Phone, Github, Linkedin } from 'lucide-react';
+import { ChevronDown, Download, Mail, Phone, Github, Linkedin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
+import ProjectCarousel from '@/components/ProjectCarousel';
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState('home');
@@ -43,31 +43,36 @@ const Index = () => {
       title: "BloodPrint",
       description: "Blood group prediction from fingerprints using deep learning with PyTorch, EfficientNetB0, and ResNet50",
       tech: ["PyTorch", "EfficientNetB0", "ResNet50", "Deep Learning"],
-      image: "/lovable-uploads/ce9f07a9-e7b0-433c-8536-990fbf35c5ab.png"
+      image: "/lovable-uploads/ce9f07a9-e7b0-433c-8536-990fbf35c5ab.png",
+      githubUrl: "https://github.com/kr1shnasomani/BloodPrint"
     },
     {
-      title: "CaptionCraft",
+      title: "CaptionCraft", 
       description: "Image caption generator using DenseNet201 + LSTM architecture for automated image understanding",
       tech: ["TensorFlow", "Keras", "DenseNet201", "LSTM"],
-      image: "/lovable-uploads/8e746e46-8b0a-409a-b356-e565c59eb2a8.png"
+      image: "/lovable-uploads/8e746e46-8b0a-409a-b356-e565c59eb2a8.png",
+      githubUrl: "https://github.com/kr1shnasomani/CaptionCraft"
     },
     {
       title: "SpeedVision",
       description: "Vehicle detection and speed estimation system using YOLOv8 and OpenCV for traffic monitoring",
       tech: ["YOLOv8", "OpenCV", "Computer Vision", "Python"],
-      image: "/lovable-uploads/07dfd706-2a40-495a-8e65-8f37f0d499c3.png"
+      image: "/lovable-uploads/07dfd706-2a40-495a-8e65-8f37f0d499c3.png",
+      githubUrl: "https://github.com/kr1shnasomani/SpeedVision"
     },
     {
       title: "ToneSense",
       description: "Speech emotion recognition system achieving 98%+ accuracy using TensorFlow and Librosa",
       tech: ["TensorFlow", "Librosa", "NLP", "Audio Processing"],
-      image: "/lovable-uploads/2d227abc-4cde-4bd9-8d77-4a50eb0a9000.png"
+      image: "/lovable-uploads/2d227abc-4cde-4bd9-8d77-4a50eb0a9000.png",
+      githubUrl: "https://github.com/kr1shnasomani/ToneSense"
     },
     {
       title: "Sportiq",
       description: "Player and ball tracking system for tennis using Mediapipe and custom TrackNet implementation",
       tech: ["Mediapipe", "TrackNet", "Computer Vision", "Sports Analytics"],
-      image: "/lovable-uploads/4126598b-6733-4a96-974e-2b9adf11ee6d.png"
+      image: "/lovable-uploads/4126598b-6733-4a96-974e-2b9adf11ee6d.png",
+      githubUrl: "https://github.com/kr1shnasomani/Sportiq"
     }
   ];
 
@@ -448,37 +453,14 @@ const Index = () => {
             Projects
           </motion.h2>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project, index) => (
-              <motion.div
-                key={project.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-              >
-                <Card className="bg-slate-800/50 backdrop-blur-lg border-cyan-500/20 hover:bg-slate-800/70 hover:border-cyan-400/40 transition-all duration-300 group shadow-lg hover:shadow-cyan-500/10">
-                  <div className="relative overflow-hidden rounded-t-lg">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
-                  </div>
-                  <CardHeader>
-                    <CardTitle className="text-white flex items-center justify-between">
-                      {project.title}
-                      <ExternalLink size={16} className="opacity-0 group-hover:opacity-100 transition-opacity text-cyan-400" />
-                    </CardTitle>
-                    <CardDescription className="text-white/70">
-                      {project.description}
-                    </CardDescription>
-                  </CardHeader>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+          >
+            <ProjectCarousel projects={projects} />
+          </motion.div>
         </div>
       </section>
 
