@@ -3,12 +3,10 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, Github } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
 
 interface Project {
   title: string;
   description: string;
-  tech: string[];
   image: string;
   githubUrl?: string;
 }
@@ -32,7 +30,7 @@ const ProjectCarousel = ({ projects }: ProjectCarouselProps) => {
     setCurrentSlide(index);
   };
 
-  // Auto-play functionality (optional)
+  // Auto-play functionality
   useEffect(() => {
     const interval = setInterval(nextSlide, 5000);
     return () => clearInterval(interval);
@@ -118,18 +116,6 @@ const ProjectCarousel = ({ projects }: ProjectCarouselProps) => {
                 index === currentSlide ? 'bg-cyan-400 scale-125' : 'bg-white/40 hover:bg-white/60'
               }`} 
             />
-          ))}
-        </div>
-
-        {/* Tech Stack Tags */}
-        <div className="absolute top-6 right-6 z-10 flex flex-wrap gap-2 max-w-xs">
-          {projects[currentSlide].tech.slice(0, 4).map((tech, index) => (
-            <Badge 
-              key={index} 
-              className="bg-black/30 text-white border-white/20 backdrop-blur-sm"
-            >
-              {tech}
-            </Badge>
           ))}
         </div>
       </div>

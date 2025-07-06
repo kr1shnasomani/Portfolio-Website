@@ -30,7 +30,7 @@ const CertificationCarousel = ({ certifications }: CertificationCarouselProps) =
 
   const scrollLeft = () => {
     if (scrollRef.current) {
-      const cardWidth = 166; // 150px width + 16px margin
+      const cardWidth = 200; // 180px width + 20px margin
       scrollRef.current.scrollBy({ left: -cardWidth * 3, behavior: 'smooth' });
       setTimeout(checkScrollButtons, 300);
     }
@@ -38,7 +38,7 @@ const CertificationCarousel = ({ certifications }: CertificationCarouselProps) =
 
   const scrollRight = () => {
     if (scrollRef.current) {
-      const cardWidth = 166; // 150px width + 16px margin
+      const cardWidth = 200; // 180px width + 20px margin
       scrollRef.current.scrollBy({ left: cardWidth * 3, behavior: 'smooth' });
       setTimeout(checkScrollButtons, 300);
     }
@@ -70,7 +70,7 @@ const CertificationCarousel = ({ certifications }: CertificationCarouselProps) =
       <div
         ref={scrollRef}
         onScroll={checkScrollButtons}
-        className="flex gap-4 overflow-x-auto scrollbar-hide px-12 py-4"
+        className="flex gap-5 overflow-x-auto scrollbar-hide px-12 py-4"
         style={{ scrollSnapType: 'x mandatory' }}
       >
         {certifications.map((cert, index) => (
@@ -80,11 +80,11 @@ const CertificationCarousel = ({ certifications }: CertificationCarouselProps) =
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: index * 0.1 }}
-            className="flex-shrink-0 w-[150px] h-[220px] bg-gradient-to-br from-slate-800/60 to-slate-900/80 backdrop-blur-lg border border-cyan-500/20 rounded-xl shadow-lg hover:shadow-cyan-500/10 hover:border-cyan-400/30 transition-all duration-300 p-4 flex flex-col items-center"
+            className="flex-shrink-0 w-[180px] h-[280px] bg-gradient-to-br from-slate-800/60 to-slate-900/80 backdrop-blur-lg border border-cyan-500/20 rounded-xl shadow-lg hover:shadow-cyan-500/10 hover:border-cyan-400/30 transition-all duration-300 p-6 flex flex-col items-center"
             style={{ scrollSnapAlign: 'start' }}
           >
             {/* Square Logo */}
-            <div className="w-16 h-16 rounded-lg bg-slate-700/50 border border-cyan-500/20 flex items-center justify-center mb-3 overflow-hidden">
+            <div className="w-20 h-20 rounded-lg bg-slate-700/50 border border-cyan-500/20 flex items-center justify-center mb-4 overflow-hidden">
               <img
                 src={cert.logo}
                 alt={`${cert.provider} logo`}
@@ -93,14 +93,14 @@ const CertificationCarousel = ({ certifications }: CertificationCarouselProps) =
             </div>
 
             {/* Content */}
-            <div className="text-center flex-1 flex flex-col justify-between">
-              <div>
-                <h3 className="text-sm font-bold text-white leading-tight mb-2 line-clamp-3">
-                  {cert.title}
-                </h3>
-                <p className="text-cyan-300 font-semibold text-xs mb-1">
+            <div className="text-center flex-1 flex flex-col">
+              <div className="mb-4">
+                <p className="text-cyan-300 font-bold text-sm mb-2">
                   {cert.provider}
                 </p>
+                <h3 className="text-sm font-medium text-white leading-tight mb-3">
+                  {cert.title}
+                </h3>
               </div>
               <p className="text-white/60 text-xs mt-auto">
                 {cert.date}
