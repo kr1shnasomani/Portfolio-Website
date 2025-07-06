@@ -8,6 +8,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
 import ProjectCarousel from '@/components/ProjectCarousel';
+import CertificationCarousel from '@/components/CertificationCarousel';
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState('home');
@@ -408,36 +409,14 @@ const Index = () => {
             Certifications
           </motion.h2>
           
-          <div className="max-w-4xl mx-auto space-y-6">
-            {certifications.map((cert, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-              >
-                <Card className="bg-slate-800/30 backdrop-blur-lg border border-cyan-500/20 hover:border-cyan-400/40 transition-all shadow-lg">
-                  <CardContent className="p-6">
-                    <div className="flex items-start">
-                      <div className="w-20 h-20 rounded-lg bg-slate-800/50 backdrop-blur-lg border border-cyan-500/30 flex items-center justify-center mr-6 flex-shrink-0 p-2">
-                        <img 
-                          src={cert.logo} 
-                          alt={`${cert.provider} logo`} 
-                          className="w-full h-full object-contain"
-                        />
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="text-lg font-bold text-white leading-tight">{cert.title}</h3>
-                        <p className="text-cyan-300 font-medium leading-tight">{cert.provider}</p>
-                        <p className="text-white/60 text-sm leading-tight">{cert.date}</p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+          >
+            <CertificationCarousel certifications={certifications} />
+          </motion.div>
         </div>
       </section>
 
