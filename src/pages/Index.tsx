@@ -41,18 +41,36 @@ const Index = () => {
     }
   };
 
-  // Calculate background color based on scroll position
+  // Calculate background gradient based on scroll position
   const getBackgroundStyle = () => {
     const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
     const scrollProgress = Math.min(scrollY / maxScroll, 1);
     
-    // Fade from gray (hsl(220, 13%, 91%)) to white (hsl(0, 0%, 100%))
-    const grayValue = 91 + (100 - 91) * scrollProgress;
-    const saturation = 13 * (1 - scrollProgress);
+    // RGB gradient from dark gray to white
+    const colors = [
+      [128, 128, 128], // Dark gray
+      [166, 166, 166], // Medium gray
+      [191, 191, 191], // Light gray
+      [217, 217, 217], // Lighter gray
+      [242, 242, 242]  // Near white
+    ];
+    
+    // Calculate current color based on scroll progress
+    const colorIndex = scrollProgress * (colors.length - 1);
+    const lowerIndex = Math.floor(colorIndex);
+    const upperIndex = Math.min(lowerIndex + 1, colors.length - 1);
+    const factor = colorIndex - lowerIndex;
+    
+    const lowerColor = colors[lowerIndex];
+    const upperColor = colors[upperIndex];
+    
+    const interpolatedColor = lowerColor.map((lower, i) => 
+      Math.round(lower + (upperColor[i] - lower) * factor)
+    );
     
     return {
-      backgroundColor: `hsl(220, ${saturation}%, ${grayValue}%)`,
-      transition: 'background-color 0.1s ease-out'
+      background: `linear-gradient(180deg, rgb(${interpolatedColor[0]}, ${interpolatedColor[1]}, ${interpolatedColor[2]}), rgb(${Math.min(interpolatedColor[0] + 20, 255)}, ${Math.min(interpolatedColor[1] + 20, 255)}, ${Math.min(interpolatedColor[2] + 20, 255)}))`,
+      transition: 'background 0.1s ease-out'
     };
   };
 
@@ -220,13 +238,13 @@ const Index = () => {
   return (
     <div className="min-h-screen text-gray-900 relative overflow-hidden font-apple" style={getBackgroundStyle()}>
       {/* Navigation */}
-      <nav className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl border-b border-gray-200/50">
+      <nav className="fixed top-0 w-full z-50 bg-black shadow-lg">
         <div className="container mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
-              className="text-xl font-bold text-black"
+              className="text-xl font-bold text-white"
             >
               Krishna Somani
             </motion.div>
@@ -235,9 +253,9 @@ const Index = () => {
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}
-                  className={`hover:text-gray-600 transition-colors font-medium ${
-                    activeSection === item.toLowerCase() ? 'text-black' : 'text-gray-800'
-                  }`}
+                  className={`text-gray-300 hover:text-white transition-all duration-200 font-medium relative ${
+                    activeSection === item.toLowerCase() ? 'text-white' : 'text-gray-300'
+                  } after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-white after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left`}
                 >
                   {item}
                 </button>
@@ -504,10 +522,10 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 border-t border-gray-200/50 bg-white/50 backdrop-blur-sm relative z-10">
+      <footer className="py-4 bg-black border-t border-gray-800 relative z-10">
         <div className="container mx-auto px-6">
           <div className="text-center">
-            <p className="text-black font-medium">
+            <p className="text-gray-100 font-medium">
               Made with ❤️ by Krishna Somani
             </p>
           </div>

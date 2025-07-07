@@ -59,39 +59,44 @@ const ProjectCarousel = ({ projects }: ProjectCarouselProps) => {
           <ChevronRight className="h-6 w-6 text-gray-800" />
         </Button>
 
-        {/* Slides */}
-        <div className="relative w-full h-full">
-          {/* Background Image */}
-          <div 
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-all duration-700 ease-in-out" 
-            style={{ backgroundImage: `url(${projects[currentSlide].image})` }} 
-          />
-          
-          {/* Dark Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/50 to-black/20" />
-          
-          {/* Content Overlay */}
-          <div className="absolute bottom-0 left-0 p-8 z-10 max-w-2xl">
-            <div className="transition-all duration-700 ease-in-out">
-              <h3 className="text-4xl font-bold text-white mb-4 leading-tight">
-                {projects[currentSlide].title}
-              </h3>
-              <p className="text-lg text-white/95 mb-6 leading-relaxed">
-                {projects[currentSlide].description}
-              </p>
-              <Button 
-                className="bg-black hover:bg-gray-800 text-white px-6 py-3 rounded-full font-semibold transition-all shadow-lg hover:shadow-xl border border-gray-700/30" 
-                onClick={() => {
-                  if (projects[currentSlide].githubUrl) {
-                    window.open(projects[currentSlide].githubUrl, '_blank');
-                  }
-                }}
-              >
-                <Github className="mr-2 h-5 w-5 fill-white" />
-                GitHub
-              </Button>
+        {/* Slides Container */}
+        <div 
+          className="flex w-full h-full transition-transform duration-[600ms] ease-in-out"
+          style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+        >
+          {projects.map((project, index) => (
+            <div key={index} className="min-w-full h-full relative">
+              {/* Background Image */}
+              <div 
+                className="absolute inset-0 bg-cover bg-center bg-no-repeat" 
+                style={{ backgroundImage: `url(${project.image})` }} 
+              />
+              
+              {/* Dark Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/50 to-black/20" />
+              
+              {/* Content Overlay */}
+              <div className="absolute bottom-0 left-0 p-8 z-10 max-w-2xl">
+                <h3 className="text-4xl font-bold text-white mb-4 leading-tight">
+                  {project.title}
+                </h3>
+                <p className="text-lg text-white/95 mb-6 leading-relaxed">
+                  {project.description}
+                </p>
+                <Button 
+                  className="bg-black hover:bg-gray-800 text-white px-6 py-3 rounded-full font-semibold transition-all shadow-lg hover:shadow-xl border border-gray-700/30" 
+                  onClick={() => {
+                    if (project.githubUrl) {
+                      window.open(project.githubUrl, '_blank');
+                    }
+                  }}
+                >
+                  <Github className="mr-2 h-5 w-5 fill-white" />
+                  GitHub
+                </Button>
+              </div>
             </div>
-          </div>
+          ))}
         </div>
 
         {/* Slide Indicators */}
