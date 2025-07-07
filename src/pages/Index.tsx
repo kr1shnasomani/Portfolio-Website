@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Download, Mail, Phone, Github, Linkedin } from 'lucide-react';
@@ -11,13 +10,10 @@ import SkillsGrid from '@/components/SkillsGrid';
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState('home');
-  const [scrollY, setScrollY] = useState(0);
   const { toast } = useToast();
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrollY(window.scrollY);
-      
       const sections = ['home', 'experience', 'education', 'certifications', 'projects', 'skills', 'achievements'];
       const current = sections.find(section => {
         const element = document.getElementById(section);
@@ -40,22 +36,6 @@ const Index = () => {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
-  };
-
-  // Calculate background color based on scroll position and active section
-  const getBackgroundColor = () => {
-    const sections = [
-      { id: 'home', color: 'rgb(128, 128, 128)' },
-      { id: 'experience', color: 'rgb(166, 166, 166)' },
-      { id: 'education', color: 'rgb(191, 191, 191)' },
-      { id: 'certifications', color: 'rgb(217, 217, 217)' },
-      { id: 'projects', color: 'rgb(242, 242, 242)' },
-      { id: 'skills', color: 'rgb(242, 242, 242)' },
-      { id: 'achievements', color: 'rgb(242, 242, 242)' }
-    ];
-
-    const currentSection = sections.find(section => section.id === activeSection);
-    return currentSection ? currentSection.color : 'rgb(128, 128, 128)';
   };
 
   const projects = [
@@ -223,10 +203,7 @@ const Index = () => {
   ];
 
   return (
-    <div 
-      className="min-h-screen text-gray-900 relative overflow-hidden font-apple transition-all duration-700 ease-out"
-      style={{ backgroundColor: getBackgroundColor() }}
-    >
+    <div className="min-h-screen bg-gray-50 text-gray-900 font-inter">
       {/* Navigation - Always Black */}
       <nav className="fixed top-0 w-full z-50 bg-black shadow-lg">
         <div className="container mx-auto px-6 py-4">
@@ -256,7 +233,7 @@ const Index = () => {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="min-h-screen flex items-center justify-center relative z-10">
+      <section id="home" className="min-h-screen flex items-center justify-center">
         <div className="container mx-auto px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -307,229 +284,241 @@ const Index = () => {
       </section>
 
       {/* Experience Section */}
-      <section id="experience" className="py-20 relative z-10">
+      <section id="experience" className="py-20">
         <div className="container mx-auto px-6">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-gray-800 to-black bg-clip-text text-transparent"
-          >
-            Experience
-          </motion.h2>
-          
-          <div className="max-w-4xl mx-auto">
-            {experiences.map((exp, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="relative mb-6 last:mb-0"
-              >
-                <div className="flex items-start mb-4">
-                  <div className="w-16 h-16 rounded-xl bg-transparent flex items-center justify-center mr-6 flex-shrink-0 p-2">
-                    <img 
-                      src={exp.logo} 
-                      alt={`${exp.company} logo`} 
-                      className="w-16 h-16 object-contain rounded-xl"
-                    />
+          <Card className="bg-white shadow-lg rounded-2xl p-8">
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-gray-800 to-black bg-clip-text text-transparent"
+            >
+              Experience
+            </motion.h2>
+            
+            <div className="max-w-4xl mx-auto">
+              {experiences.map((exp, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  className="relative mb-6 last:mb-0"
+                >
+                  <div className="flex items-start mb-4">
+                    <div className="w-16 h-16 rounded-xl bg-transparent flex items-center justify-center mr-6 flex-shrink-0 p-2">
+                      <img 
+                        src={exp.logo} 
+                        alt={`${exp.company} logo`} 
+                        className="w-16 h-16 object-contain rounded-xl"
+                      />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-xl font-semibold text-black leading-tight mb-1">{exp.role}</h3>
+                      <p className="text-gray-700 font-medium leading-tight mb-1">{exp.company}, {exp.city}</p>
+                      <p className="text-gray-600 text-sm leading-tight mb-1">{exp.period}</p>
+                      <p className="text-gray-500 text-sm leading-tight">{exp.location.split(',')[0]}</p>
+                      {exp.description && (
+                        <p className="text-gray-600 text-sm leading-relaxed mt-3">{exp.description}</p>
+                      )}
+                    </div>
                   </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-semibold text-black leading-tight mb-1">{exp.role}</h3>
-                    <p className="text-gray-700 font-medium leading-tight mb-1">{exp.company}, {exp.city}</p>
-                    <p className="text-gray-600 text-sm leading-tight mb-1">{exp.period}</p>
-                    <p className="text-gray-500 text-sm leading-tight">{exp.location.split(',')[0]}</p>
-                    {exp.description && (
-                      <p className="text-gray-600 text-sm leading-relaxed mt-3">{exp.description}</p>
-                    )}
-                  </div>
-                </div>
-                {index < experiences.length - 1 && (
-                  <div className="w-px h-6 bg-gradient-to-b from-gray-300 to-transparent ml-8 mt-2"></div>
-                )}
-              </motion.div>
-            ))}
-          </div>
+                  {index < experiences.length - 1 && (
+                    <div className="w-px h-6 bg-gradient-to-b from-gray-300 to-transparent ml-8 mt-2"></div>
+                  )}
+                </motion.div>
+              ))}
+            </div>
+          </Card>
         </div>
       </section>
 
       {/* Education Section */}
-      <section id="education" className="py-20 relative z-10">
+      <section id="education" className="py-20">
         <div className="container mx-auto px-6">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-gray-800 to-black bg-clip-text text-transparent"
-          >
-            Education
-          </motion.h2>
-          
-          <div className="max-w-4xl mx-auto">
-            {education.map((edu, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="relative mb-12 last:mb-0"
-              >
-                <div className="flex items-start mb-4">
-                  <div className="w-16 h-16 rounded-xl bg-transparent flex items-center justify-center mr-6 flex-shrink-0 p-2">
-                    <img 
-                      src={edu.logo} 
-                      alt={`${edu.institution} logo`} 
-                      className="w-16 h-16 object-contain rounded-xl"
-                    />
+          <Card className="bg-white shadow-lg rounded-2xl p-8">
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-gray-800 to-black bg-clip-text text-transparent"
+            >
+              Education
+            </motion.h2>
+            
+            <div className="max-w-4xl mx-auto">
+              {education.map((edu, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  className="relative mb-12 last:mb-0"
+                >
+                  <div className="flex items-start mb-4">
+                    <div className="w-16 h-16 rounded-xl bg-transparent flex items-center justify-center mr-6 flex-shrink-0 p-2">
+                      <img 
+                        src={edu.logo} 
+                        alt={`${edu.institution} logo`} 
+                        className="w-16 h-16 object-contain rounded-xl"
+                      />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-xl font-semibold text-black leading-tight mb-1">{edu.institution}</h3>
+                      <p className="text-gray-600 text-sm leading-tight mb-1">{edu.period}</p>
+                      <p className="text-gray-700 font-medium leading-tight">{edu.grade}</p>
+                    </div>
                   </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-semibold text-black leading-tight mb-1">{edu.institution}</h3>
-                    <p className="text-gray-600 text-sm leading-tight mb-1">{edu.period}</p>
-                    <p className="text-gray-700 font-medium leading-tight">{edu.grade}</p>
-                  </div>
-                </div>
-                {index < education.length - 1 && (
-                  <div className="w-px h-8 bg-gradient-to-b from-gray-300 to-transparent ml-8 mt-6"></div>
-                )}
-              </div>
-            ))}
-          </div>
+                  {index < education.length - 1 && (
+                    <div className="w-px h-8 bg-gradient-to-b from-gray-300 to-transparent ml-8 mt-6"></div>
+                  )}
+                </motion.div>
+              ))}
+            </div>
+          </Card>
         </div>
       </section>
 
       {/* Certifications Section */}
-      <section id="certifications" className="py-20 relative z-10">
+      <section id="certifications" className="py-20">
         <div className="container mx-auto px-6">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-gray-800 to-black bg-clip-text text-transparent"
-          >
-            Certifications
-          </motion.h2>
-          
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-          >
-            <CertificationCarousel certifications={certifications} />
-          </motion.div>
+          <Card className="bg-white shadow-lg rounded-2xl p-8">
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-gray-800 to-black bg-clip-text text-transparent"
+            >
+              Certifications
+            </motion.h2>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+            >
+              <CertificationCarousel certifications={certifications} />
+            </motion.div>
+          </Card>
         </div>
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-20 relative z-10">
+      <section id="projects" className="py-20">
         <div className="container mx-auto px-6">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-gray-800 to-black bg-clip-text text-transparent"
-          >
-            Projects
-          </motion.h2>
-          
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-          >
-            <ProjectCarousel projects={projects} />
-          </motion.div>
+          <Card className="bg-white shadow-lg rounded-2xl p-8">
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-gray-800 to-black bg-clip-text text-transparent"
+            >
+              Projects
+            </motion.h2>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+            >
+              <ProjectCarousel projects={projects} />
+            </motion.div>
+          </Card>
         </div>
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="py-20 relative z-10">
+      <section id="skills" className="py-20">
         <div className="container mx-auto px-6">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-gray-800 to-black bg-clip-text text-transparent"
-          >
-            Skills
-          </motion.h2>
-          
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-          >
-            <SkillsGrid />
-          </motion.div>
+          <Card className="bg-white shadow-lg rounded-2xl p-8">
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-gray-800 to-black bg-clip-text text-transparent"
+            >
+              Skills
+            </motion.h2>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+            >
+              <SkillsGrid />
+            </motion.div>
+          </Card>
         </div>
       </section>
 
       {/* Achievements Section */}
-      <section id="achievements" className="py-20 relative z-10">
+      <section id="achievements" className="py-20">
         <div className="container mx-auto px-6">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-gray-800 to-black bg-clip-text text-transparent"
-          >
-            Achievements
-          </motion.h2>
-          
-          <div className="max-w-4xl mx-auto">
-            {achievements.map((achievement, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1, duration: 0.6 }}
-                className="achievement-card"
-              >
-                <Card className="bg-white/95 backdrop-blur-xl border border-gray-200/50 hover:bg-white hover:border-gray-300 transition-all duration-300 group shadow-xl hover:shadow-2xl rounded-2xl overflow-hidden">
-                  <div className="relative overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100 p-8 flex items-center justify-center min-h-[200px]">
-                    <img
-                      src={achievement.logo}
-                      alt={achievement.title}
-                      className="w-full max-w-[300px] h-32 object-contain group-hover:scale-105 transition-transform duration-300"
-                    />
-                    <div className="absolute top-4 right-4 bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-sm font-semibold">
-                      🏆 Winner
+          <Card className="bg-white shadow-lg rounded-2xl p-8">
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-gray-800 to-black bg-clip-text text-transparent"
+            >
+              Achievements
+            </motion.h2>
+            
+            <div className="max-w-4xl mx-auto">
+              {achievements.map((achievement, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1, duration: 0.6 }}
+                  className="achievement-card"
+                >
+                  <Card className="bg-white/95 backdrop-blur-xl border border-gray-200/50 hover:bg-white hover:border-gray-300 transition-all duration-300 group shadow-xl hover:shadow-2xl rounded-2xl overflow-hidden">
+                    <div className="relative overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100 p-8 flex items-center justify-center min-h-[200px]">
+                      <img
+                        src={achievement.logo}
+                        alt={achievement.title}
+                        className="w-full max-w-[300px] h-32 object-contain group-hover:scale-105 transition-transform duration-300"
+                      />
+                      <div className="absolute top-4 right-4 bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-sm font-semibold">
+                        🏆 Winner
+                      </div>
                     </div>
-                  </div>
-                  <CardHeader className="text-center pb-4">
-                    <CardTitle className="text-2xl font-bold text-black mb-2">{achievement.title}</CardTitle>
-                    <div className="flex justify-center space-x-4 text-sm text-gray-600 mb-4">
-                      <span className="flex items-center">
-                        📅 {achievement.date}
-                      </span>
-                      <span className="flex items-center">
-                        📍 {achievement.location}
-                      </span>
-                    </div>
-                    <CardDescription className="text-gray-700 text-base leading-relaxed mb-4">
-                      {achievement.description}
-                    </CardDescription>
-                    <div className="bg-gradient-to-r from-green-50 to-blue-50 p-4 rounded-xl border border-green-200">
-                      <p className="font-semibold text-gray-800 flex items-center justify-center">
-                        🎁 Prize: {achievement.prize}
-                      </p>
-                    </div>
-                  </CardHeader>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
+                    <CardHeader className="text-center pb-4">
+                      <CardTitle className="text-2xl font-bold text-black mb-2">{achievement.title}</CardTitle>
+                      <div className="flex justify-center space-x-4 text-sm text-gray-600 mb-4">
+                        <span className="flex items-center">
+                          📅 {achievement.date}
+                        </span>
+                        <span className="flex items-center">
+                          📍 {achievement.location}
+                        </span>
+                      </div>
+                      <CardDescription className="text-gray-700 text-base leading-relaxed mb-4">
+                        {achievement.description}
+                      </CardDescription>
+                      <div className="bg-gradient-to-r from-green-50 to-blue-50 p-4 rounded-xl border border-green-200">
+                        <p className="font-semibold text-gray-800 flex items-center justify-center">
+                          🎁 Prize: {achievement.prize}
+                        </p>
+                      </div>
+                    </CardHeader>
+                  </Card>
+                </motion.div>
+              ))}
+            </div>
+          </Card>
         </div>
       </section>
 
       {/* Footer - Always Black */}
-      <footer className="py-8 bg-black border-t border-gray-800 relative z-10">
+      <footer className="py-8 bg-black border-t border-gray-800">
         <div className="container mx-auto px-6">
           <div className="text-center">
             <p className="text-gray-100 font-medium text-lg">
