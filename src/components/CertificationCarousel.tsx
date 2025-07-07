@@ -83,12 +83,12 @@ const CertificationCarousel = ({ certifications }: CertificationCarouselProps) =
             className="flex-shrink-0 w-[180px] h-[280px] bg-white/90 backdrop-blur-xl border border-gray-200/50 rounded-2xl shadow-lg hover:shadow-xl hover:border-gray-300 transition-all duration-200 p-6 flex flex-col items-center"
             style={{ scrollSnapAlign: 'start' }}
           >
-            {/* Square Logo */}
-            <div className="w-20 h-20 rounded-xl bg-gray-50/50 border border-gray-200/50 flex items-center justify-center mb-4 overflow-hidden">
+            {/* Square Logo Container */}
+            <div className="w-16 h-16 rounded-xl bg-transparent flex items-center justify-center mb-4 overflow-hidden">
               <img
                 src={cert.logo}
                 alt={`${cert.provider} logo`}
-                className="w-full h-full object-cover rounded-xl"
+                className="w-16 h-16 object-contain rounded-xl"
               />
             </div>
 

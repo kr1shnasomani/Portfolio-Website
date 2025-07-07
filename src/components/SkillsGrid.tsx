@@ -30,7 +30,11 @@ const SkillsGrid = () => {
     { name: 'OpenCV', icon: '/lovable-uploads/1a44c91b-d2b1-4fdd-afa7-2039308b595c.png' },
     { name: 'Seaborn', icon: '/lovable-uploads/a3013bfd-b1e9-4793-90ad-e1b1345e3a53.png' },
     { name: 'Matplotlib', icon: '/lovable-uploads/739d6afe-f3e9-461d-813e-990a8d2ecf51.png' },
-    { name: 'Scikit-learn', icon: '/lovable-uploads/f9f996bf-18d2-45bc-b3dd-1841ea4c0fef.png' }
+    { name: 'Scikit-learn', icon: '/lovable-uploads/f9f996bf-18d2-45bc-b3dd-1841ea4c0fef.png' },
+    { name: 'Transformers', icon: '/lovable-uploads/76d3b69e-6d2c-4e0b-a0db-dccb4dd429de.png' },
+    { name: 'GitHub', icon: '/lovable-uploads/3eb9aaa5-9b11-4652-8585-69de49724639.png' },
+    { name: 'Figma', icon: '/lovable-uploads/9fd3f12d-ae58-49bb-b147-14f220ca8f6a.png' },
+    { name: 'Git', icon: '/lovable-uploads/c08fa6d6-edfe-4cc2-bfdf-d52253f6bb6c.png' }
   ];
 
   return (
@@ -47,11 +51,11 @@ const SkillsGrid = () => {
             onMouseEnter={() => setHoveredSkill(skill.name)}
             onMouseLeave={() => setHoveredSkill(null)}
           >
-            <div className="w-16 h-16 bg-white/90 backdrop-blur-xl border border-gray-200/50 hover:border-gray-300 rounded-2xl flex items-center justify-center p-2.5 transition-all duration-200 hover:scale-110 hover:shadow-xl hover:shadow-black/5 group-hover:bg-white">
+            <div className="w-16 h-16 bg-gray-800/90 backdrop-blur-xl border border-gray-700/50 hover:border-gray-600 rounded-2xl flex items-center justify-center p-2.5 transition-all duration-200 hover:scale-110 hover:shadow-xl hover:shadow-black/20 group-hover:bg-gray-800">
               <img
                 src={skill.icon}
                 alt={skill.name}
-                className="w-full h-full object-contain transition-transform duration-200 group-hover:scale-110"
+                className="w-full h-full object-contain transition-transform duration-200 group-hover:scale-110 rounded-xl"
               />
             </div>
             
@@ -66,9 +70,9 @@ const SkillsGrid = () => {
               transition={{ duration: 0.15 }}
               className="absolute left-1/2 transform -translate-x-1/2 pointer-events-none z-20"
             >
-              <div className="bg-black/90 backdrop-blur-xl text-white text-xs font-medium px-3 py-2 rounded-lg shadow-2xl shadow-black/20 whitespace-nowrap">
+              <div className="bg-white/95 backdrop-blur-xl text-gray-900 text-xs font-medium px-3 py-2 rounded-lg shadow-2xl shadow-black/30 whitespace-nowrap border border-gray-200/50">
                 {skill.name}
-                <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-black/90"></div>
+                <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-white/95"></div>
               </div>
             </motion.div>
           </motion.div>

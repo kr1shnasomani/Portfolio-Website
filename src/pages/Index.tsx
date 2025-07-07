@@ -270,17 +270,17 @@ const Index = () => {
             </div>
 
             <div className="flex justify-center space-x-8">
-              <a href="mailto:krishnasomani272005@gmail.com" className="text-gray-500 hover:text-black transition-colors transform hover:scale-110 duration-200">
-                <Mail size={32} />
+              <a href="mailto:krishnasomani272005@gmail.com" className="text-gray-600 hover:text-gray-900 transition-all duration-200 transform hover:scale-110">
+                <Mail size={28} />
               </a>
-              <a href="tel:+919940520537" className="text-gray-500 hover:text-black transition-colors transform hover:scale-110 duration-200">
-                <Phone size={32} />
+              <a href="tel:+919940520537" className="text-gray-600 hover:text-gray-900 transition-all duration-200 transform hover:scale-110">
+                <Phone size={28} />
               </a>
-              <a href="https://github.com/kr1shnasomani" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-black transition-colors transform hover:scale-110 duration-200">
-                <Github size={32} />
+              <a href="https://github.com/kr1shnasomani" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 transition-all duration-200 transform hover:scale-110">
+                <Github size={28} />
               </a>
-              <a href="https://www.linkedin.com/in/kr1shnasomani" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-black transition-colors transform hover:scale-110 duration-200">
-                <Linkedin size={32} />
+              <a href="https://www.linkedin.com/in/kr1shnasomani" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 transition-all duration-200 transform hover:scale-110">
+                <Linkedin size={28} />
               </a>
             </div>
           </motion.div>
@@ -310,11 +310,11 @@ const Index = () => {
                 className="relative mb-6 last:mb-0"
               >
                 <div className="flex items-start mb-4">
-                  <div className="w-16 h-16 rounded-xl bg-white/90 backdrop-blur-xl border border-gray-200/50 flex items-center justify-center mr-6 flex-shrink-0 p-2 shadow-lg">
+                  <div className="w-16 h-16 rounded-xl bg-transparent flex items-center justify-center mr-6 flex-shrink-0 p-2">
                     <img 
                       src={exp.logo} 
                       alt={`${exp.company} logo`} 
-                      className="w-full h-full object-contain"
+                      className="w-16 h-16 object-contain rounded-xl"
                     />
                   </div>
                   <div className="flex-1">
@@ -359,11 +359,11 @@ const Index = () => {
                 className="relative mb-12 last:mb-0"
               >
                 <div className="flex items-start mb-4">
-                  <div className="w-16 h-16 rounded-xl bg-white/90 backdrop-blur-xl border border-gray-200/50 flex items-center justify-center mr-6 flex-shrink-0 p-2 shadow-lg">
+                  <div className="w-16 h-16 rounded-xl bg-transparent flex items-center justify-center mr-6 flex-shrink-0 p-2">
                     <img 
                       src={edu.logo} 
                       alt={`${edu.institution} logo`} 
-                      className="w-full h-full object-contain"
+                      className="w-16 h-16 object-contain rounded-xl"
                     />
                   </div>
                   <div className="flex-1">
@@ -427,14 +427,14 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Skills Section */}
-      <section id="skills" className="py-20 relative z-10">
+      {/* Skills Section with Dark Theme */}
+      <section id="skills" className="py-20 bg-gradient-to-br from-gray-900 via-black to-gray-800 relative z-10">
         <div className="container mx-auto px-6">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-gray-800 to-black bg-clip-text text-transparent"
+            className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent"
           >
             Skills
           </motion.h2>
