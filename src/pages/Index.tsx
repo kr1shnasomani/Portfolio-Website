@@ -31,6 +31,7 @@ const Index = () => {
     };
 
     window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Initial call
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -41,37 +42,20 @@ const Index = () => {
     }
   };
 
-  // Calculate background gradient based on scroll position
-  const getBackgroundStyle = () => {
-    const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-    const scrollProgress = Math.min(scrollY / maxScroll, 1);
-    
-    // RGB gradient from dark gray to white
-    const colors = [
-      [128, 128, 128], // Dark gray
-      [166, 166, 166], // Medium gray
-      [191, 191, 191], // Light gray
-      [217, 217, 217], // Lighter gray
-      [242, 242, 242]  // Near white
+  // Calculate background color based on scroll position and active section
+  const getBackgroundColor = () => {
+    const sections = [
+      { id: 'home', color: 'rgb(128, 128, 128)' },
+      { id: 'experience', color: 'rgb(166, 166, 166)' },
+      { id: 'education', color: 'rgb(191, 191, 191)' },
+      { id: 'certifications', color: 'rgb(217, 217, 217)' },
+      { id: 'projects', color: 'rgb(242, 242, 242)' },
+      { id: 'skills', color: 'rgb(242, 242, 242)' },
+      { id: 'achievements', color: 'rgb(242, 242, 242)' }
     ];
-    
-    // Calculate current color based on scroll progress
-    const colorIndex = scrollProgress * (colors.length - 1);
-    const lowerIndex = Math.floor(colorIndex);
-    const upperIndex = Math.min(lowerIndex + 1, colors.length - 1);
-    const factor = colorIndex - lowerIndex;
-    
-    const lowerColor = colors[lowerIndex];
-    const upperColor = colors[upperIndex];
-    
-    const interpolatedColor = lowerColor.map((lower, i) => 
-      Math.round(lower + (upperColor[i] - lower) * factor)
-    );
-    
-    return {
-      background: `linear-gradient(180deg, rgb(${interpolatedColor[0]}, ${interpolatedColor[1]}, ${interpolatedColor[2]}), rgb(${Math.min(interpolatedColor[0] + 20, 255)}, ${Math.min(interpolatedColor[1] + 20, 255)}, ${Math.min(interpolatedColor[2] + 20, 255)}))`,
-      transition: 'background 0.1s ease-out'
-    };
+
+    const currentSection = sections.find(section => section.id === activeSection);
+    return currentSection ? currentSection.color : 'rgb(128, 128, 128)';
   };
 
   const projects = [
@@ -230,14 +214,20 @@ const Index = () => {
   const achievements = [
     {
       title: "Temenos Tem-E-thon 2025 Hackathon Winner",
-      description: "Won 15 inch MacBook Air M3 (16GB RAM/256GB SSD)",
+      description: "Won the prestigious Temenos Tem-E-thon 2025 Hackathon, showcasing exceptional skills in fintech innovation and problem-solving. This achievement demonstrates excellence in collaborative development and cutting-edge technology implementation.",
+      prize: "15 inch MacBook Air M3 (16GB RAM/256GB SSD)",
+      date: "January 2025",
+      location: "Hyderabad, India",
       logo: "/lovable-uploads/27c43e0b-3168-4c93-9cf3-4112332b0f78.png"
     }
   ];
 
   return (
-    <div className="min-h-screen text-gray-900 relative overflow-hidden font-apple" style={getBackgroundStyle()}>
-      {/* Navigation */}
+    <div 
+      className="min-h-screen text-gray-900 relative overflow-hidden font-apple transition-all duration-700 ease-out"
+      style={{ backgroundColor: getBackgroundColor() }}
+    >
+      {/* Navigation - Always Black */}
       <nav className="fixed top-0 w-full z-50 bg-black shadow-lg">
         <div className="container mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
@@ -253,7 +243,7 @@ const Index = () => {
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}
-                  className={`text-gray-300 hover:text-white transition-all duration-200 font-medium relative ${
+                  className={`text-gray-300 hover:text-white transition-all duration-300 font-medium relative ${
                     activeSection === item.toLowerCase() ? 'text-white' : 'text-gray-300'
                   } after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-white after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left`}
                 >
@@ -271,7 +261,7 @@ const Index = () => {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.8 }}
           >
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-gray-800 via-black to-gray-700 bg-clip-text text-transparent">
               Krishna Somani
@@ -366,7 +356,7 @@ const Index = () => {
       </section>
 
       {/* Education Section */}
-      <section id="education" className="py-20 bg-gray-50/50 backdrop-blur-sm relative z-10">
+      <section id="education" className="py-20 relative z-10">
         <div className="container mx-auto px-6">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -404,7 +394,7 @@ const Index = () => {
                 {index < education.length - 1 && (
                   <div className="w-px h-8 bg-gradient-to-b from-gray-300 to-transparent ml-8 mt-6"></div>
                 )}
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -434,7 +424,7 @@ const Index = () => {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-20 bg-gray-50/50 backdrop-blur-sm relative z-10">
+      <section id="projects" className="py-20 relative z-10">
         <div className="container mx-auto px-6">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -456,14 +446,14 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Skills Section with Dark Theme */}
-      <section id="skills" className="py-20 bg-gradient-to-br from-gray-900 via-black to-gray-800 relative z-10">
+      {/* Skills Section */}
+      <section id="skills" className="py-20 relative z-10">
         <div className="container mx-auto px-6">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent"
+            className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-gray-800 to-black bg-clip-text text-transparent"
           >
             Skills
           </motion.h2>
@@ -480,7 +470,7 @@ const Index = () => {
       </section>
 
       {/* Achievements Section */}
-      <section id="achievements" className="py-20 bg-gray-50/50 backdrop-blur-sm relative z-10">
+      <section id="achievements" className="py-20 relative z-10">
         <div className="container mx-auto px-6">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -491,28 +481,45 @@ const Index = () => {
             Achievements
           </motion.h2>
           
-          <div className="max-w-2xl mx-auto">
+          <div className="max-w-4xl mx-auto">
             {achievements.map((achievement, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
+                transition={{ delay: index * 0.1, duration: 0.6 }}
+                className="achievement-card"
               >
-                <Card className="bg-white/90 backdrop-blur-xl border-gray-200/50 hover:bg-white hover:border-gray-300 transition-all duration-200 group shadow-lg hover:shadow-xl">
-                  <div className="relative overflow-hidden rounded-t-lg bg-gradient-to-br from-gray-100/50 to-gray-200/50 p-8 flex items-center justify-center">
+                <Card className="bg-white/95 backdrop-blur-xl border border-gray-200/50 hover:bg-white hover:border-gray-300 transition-all duration-300 group shadow-xl hover:shadow-2xl rounded-2xl overflow-hidden">
+                  <div className="relative overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100 p-8 flex items-center justify-center min-h-[200px]">
                     <img
                       src={achievement.logo}
                       alt={achievement.title}
-                      className="w-full h-32 object-contain group-hover:scale-105 transition-transform duration-200"
+                      className="w-full max-w-[300px] h-32 object-contain group-hover:scale-105 transition-transform duration-300"
                     />
+                    <div className="absolute top-4 right-4 bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-sm font-semibold">
+                      🏆 Winner
+                    </div>
                   </div>
-                  <CardHeader className="text-center">
-                    <CardTitle className="text-black font-semibold">{achievement.title}</CardTitle>
-                    <CardDescription className="text-gray-600 text-base">
+                  <CardHeader className="text-center pb-4">
+                    <CardTitle className="text-2xl font-bold text-black mb-2">{achievement.title}</CardTitle>
+                    <div className="flex justify-center space-x-4 text-sm text-gray-600 mb-4">
+                      <span className="flex items-center">
+                        📅 {achievement.date}
+                      </span>
+                      <span className="flex items-center">
+                        📍 {achievement.location}
+                      </span>
+                    </div>
+                    <CardDescription className="text-gray-700 text-base leading-relaxed mb-4">
                       {achievement.description}
                     </CardDescription>
+                    <div className="bg-gradient-to-r from-green-50 to-blue-50 p-4 rounded-xl border border-green-200">
+                      <p className="font-semibold text-gray-800 flex items-center justify-center">
+                        🎁 Prize: {achievement.prize}
+                      </p>
+                    </div>
                   </CardHeader>
                 </Card>
               </motion.div>
@@ -521,11 +528,11 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-4 bg-black border-t border-gray-800 relative z-10">
+      {/* Footer - Always Black */}
+      <footer className="py-8 bg-black border-t border-gray-800 relative z-10">
         <div className="container mx-auto px-6">
           <div className="text-center">
-            <p className="text-gray-100 font-medium">
+            <p className="text-gray-100 font-medium text-lg">
               Made with ❤️ by Krishna Somani
             </p>
           </div>
