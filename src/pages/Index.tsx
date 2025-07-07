@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Download, Mail, Phone, Github, Linkedin } from 'lucide-react';
@@ -10,10 +11,13 @@ import SkillsGrid from '@/components/SkillsGrid';
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState('home');
+  const [scrollY, setScrollY] = useState(0);
   const { toast } = useToast();
 
   useEffect(() => {
     const handleScroll = () => {
+      setScrollY(window.scrollY);
+      
       const sections = ['home', 'experience', 'education', 'certifications', 'projects', 'skills', 'achievements'];
       const current = sections.find(section => {
         const element = document.getElementById(section);
@@ -35,6 +39,21 @@ const Index = () => {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
+  };
+
+  // Calculate background color based on scroll position
+  const getBackgroundStyle = () => {
+    const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollProgress = Math.min(scrollY / maxScroll, 1);
+    
+    // Fade from gray (hsl(220, 13%, 91%)) to white (hsl(0, 0%, 100%))
+    const grayValue = 91 + (100 - 91) * scrollProgress;
+    const saturation = 13 * (1 - scrollProgress);
+    
+    return {
+      backgroundColor: `hsl(220, ${saturation}%, ${grayValue}%)`,
+      transition: 'background-color 0.1s ease-out'
+    };
   };
 
   const projects = [
@@ -199,15 +218,7 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 text-gray-900 relative overflow-hidden font-apple">
-      {/* Enhanced background with subtle animated elements */}
-      <div className="fixed inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-r from-gray-100/30 via-white/20 to-gray-200/30"></div>
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gray-200/20 rounded-full filter blur-3xl"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gray-300/20 rounded-full filter blur-3xl"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gray-200/15 rounded-full filter blur-2xl"></div>
-      </div>
-
+    <div className="min-h-screen text-gray-900 relative overflow-hidden font-apple" style={getBackgroundStyle()}>
       {/* Navigation */}
       <nav className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl border-b border-gray-200/50">
         <div className="container mx-auto px-6 py-4">
@@ -215,7 +226,7 @@ const Index = () => {
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
-              className="text-xl font-bold bg-gradient-to-r from-gray-800 to-black bg-clip-text text-transparent"
+              className="text-xl font-bold text-black"
             >
               Krishna Somani
             </motion.div>
@@ -224,8 +235,8 @@ const Index = () => {
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}
-                  className={`hover:text-gray-800 transition-colors font-medium ${
-                    activeSection === item.toLowerCase() ? 'text-black' : 'text-gray-600'
+                  className={`hover:text-gray-600 transition-colors font-medium ${
+                    activeSection === item.toLowerCase() ? 'text-black' : 'text-gray-800'
                   }`}
                 >
                   {item}
@@ -496,7 +507,7 @@ const Index = () => {
       <footer className="py-8 border-t border-gray-200/50 bg-white/50 backdrop-blur-sm relative z-10">
         <div className="container mx-auto px-6">
           <div className="text-center">
-            <p className="text-gray-600 font-medium">
+            <p className="text-black font-medium">
               Made with ❤️ by Krishna Somani
             </p>
           </div>

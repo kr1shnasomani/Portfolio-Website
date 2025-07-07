@@ -1,6 +1,5 @@
 
 import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, Github } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -17,48 +16,26 @@ interface ProjectCarouselProps {
 
 const ProjectCarousel = ({ projects }: ProjectCarouselProps) => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [direction, setDirection] = useState(1); // 1 for forward, -1 for backward
 
   const nextSlide = () => {
-    setDirection(1);
     setCurrentSlide(prev => (prev + 1) % projects.length);
   };
 
   const prevSlide = () => {
-    setDirection(-1);
     setCurrentSlide(prev => (prev - 1 + projects.length) % projects.length);
   };
 
   const goToSlide = (index: number) => {
-    setDirection(index > currentSlide ? 1 : -1);
     setCurrentSlide(index);
   };
 
   // Auto-play functionality with 7-second interval
   useEffect(() => {
     const interval = setInterval(() => {
-      setDirection(1);
       setCurrentSlide(prev => (prev + 1) % projects.length);
     }, 7000);
     return () => clearInterval(interval);
   }, [projects.length]);
-
-  const slideVariants = {
-    enter: (direction: number) => ({
-      x: direction > 0 ? 1000 : -1000,
-      opacity: 0
-    }),
-    center: {
-      zIndex: 1,
-      x: 0,
-      opacity: 1
-    },
-    exit: (direction: number) => ({
-      zIndex: 0,
-      x: direction < 0 ? 1000 : -1000,
-      opacity: 0
-    })
-  };
 
   return (
     <div className="relative w-full max-w-[1100px] mx-auto">
@@ -83,57 +60,39 @@ const ProjectCarousel = ({ projects }: ProjectCarouselProps) => {
         </Button>
 
         {/* Slides */}
-        <AnimatePresence initial={false} custom={direction} mode="wait">
-          <motion.div 
-            key={currentSlide} 
-            custom={direction}
-            variants={slideVariants}
-            initial="enter"
-            animate="center"
-            exit="exit"
-            transition={{
-              x: { type: "spring", stiffness: 300, damping: 30 },
-              opacity: { duration: 0.2 }
-            }}
-            className="absolute inset-0"
-          >
-            {/* Background Image */}
-            <div 
-              className="absolute inset-0 bg-cover bg-center bg-no-repeat" 
-              style={{ backgroundImage: `url(${projects[currentSlide].image})` }} 
-            />
-            
-            {/* Dark Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/50 to-black/20" />
-            
-            {/* Content Overlay */}
-            <div className="absolute bottom-0 left-0 p-8 z-10 max-w-2xl">
-              <motion.div 
-                initial={{ opacity: 0, y: 30 }} 
-                animate={{ opacity: 1, y: 0 }} 
-                transition={{ delay: 0.3, duration: 0.6 }}
+        <div className="relative w-full h-full">
+          {/* Background Image */}
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-all duration-700 ease-in-out" 
+            style={{ backgroundImage: `url(${projects[currentSlide].image})` }} 
+          />
+          
+          {/* Dark Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/50 to-black/20" />
+          
+          {/* Content Overlay */}
+          <div className="absolute bottom-0 left-0 p-8 z-10 max-w-2xl">
+            <div className="transition-all duration-700 ease-in-out">
+              <h3 className="text-4xl font-bold text-white mb-4 leading-tight">
+                {projects[currentSlide].title}
+              </h3>
+              <p className="text-lg text-white/95 mb-6 leading-relaxed">
+                {projects[currentSlide].description}
+              </p>
+              <Button 
+                className="bg-black hover:bg-gray-800 text-white px-6 py-3 rounded-full font-semibold transition-all shadow-lg hover:shadow-xl border border-gray-700/30" 
+                onClick={() => {
+                  if (projects[currentSlide].githubUrl) {
+                    window.open(projects[currentSlide].githubUrl, '_blank');
+                  }
+                }}
               >
-                <h3 className="text-4xl font-bold text-white mb-4 leading-tight">
-                  {projects[currentSlide].title}
-                </h3>
-                <p className="text-lg text-white/95 mb-6 leading-relaxed">
-                  {projects[currentSlide].description}
-                </p>
-                <Button 
-                  className="bg-black hover:bg-gray-800 text-white px-6 py-3 rounded-full font-semibold transition-all shadow-lg hover:shadow-xl border border-gray-700/30" 
-                  onClick={() => {
-                    if (projects[currentSlide].githubUrl) {
-                      window.open(projects[currentSlide].githubUrl, '_blank');
-                    }
-                  }}
-                >
-                  <Github className="mr-2 h-5 w-5 fill-white" />
-                  GitHub
-                </Button>
-              </motion.div>
+                <Github className="mr-2 h-5 w-5 fill-white" />
+                GitHub
+              </Button>
             </div>
-          </motion.div>
-        </AnimatePresence>
+          </div>
+        </div>
 
         {/* Slide Indicators */}
         <div className="absolute bottom-6 right-6 z-20 flex space-x-2">
