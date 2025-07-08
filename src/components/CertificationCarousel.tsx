@@ -88,7 +88,7 @@ const CertificationCarousel = ({ certifications }: CertificationCarouselProps) =
               <img
                 src={cert.logo}
                 alt={`${cert.provider} logo`}
-                className="w-16 h-16 object-contain rounded-xl"
+                className="w-16 h-16 object-cover rounded-xl"
               />
             </div>
 

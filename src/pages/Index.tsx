@@ -194,7 +194,7 @@ const Index = () => {
   const achievements = [
     {
       title: "Temenos Tem-E-thon 2025 Hackathon Winner",
-      description: "Won the prestigious Temenos Tem-E-thon 2025 Hackathon, showcasing exceptional skills in fintech innovation and problem-solving. This achievement demonstrates excellence in collaborative development and cutting-edge technology implementation.",
+      description: "Won a 15-inch MacBook Air M3 (16GB RAM/256GB SSD)",
       prize: "15 inch MacBook Air M3 (16GB RAM/256GB SSD)",
       date: "January 2025",
       location: "Hyderabad, India",
@@ -233,60 +233,71 @@ const Index = () => {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="min-h-screen flex items-center justify-center">
-        <div className="container mx-auto px-6 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-gray-800 via-black to-gray-700 bg-clip-text text-transparent">
-              Krishna Somani
-            </h1>
-            <p className="text-xl md:text-2xl mb-4 text-gray-700 font-medium">
-              Artificial Intelligence, Machine Learning and Data Science Enthusiast
-            </p>
-            <p className="text-lg mb-8 text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              I'm passionate about Artificial Intelligence & Machine Learning, with a strong focus on solving real-world problems through intelligent, automated systems. I'm especially interested in AI-driven innovation, scalable solutions, and their impact across industries—from security to sustainability. I thrive in environments that challenge me to learn and build meaningful technology. Always open to discussions on artificial intelligence/machine learning and emerging tech.
-            </p>
+      <section id="home" className="min-h-screen flex items-center justify-center py-20">
+        <div className="container mx-auto px-6">
+          <Card className="bg-white shadow-lg rounded-2xl p-8 max-w-5xl mx-auto text-center relative overflow-hidden">
+            {/* Background Animation */}
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-50/30 via-purple-50/20 to-pink-50/30 animate-pulse"></div>
+            <div className="absolute inset-0 bg-gradient-to-tl from-cyan-50/20 via-transparent to-yellow-50/20 animate-pulse" style={{animationDelay: '1s'}}></div>
             
-            <div className="flex flex-wrap justify-center gap-4 mb-8">
-              <Button
-                onClick={() => scrollToSection('experience')}
-                className="bg-black hover:bg-gray-800 text-white px-8 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105 font-medium"
-              >
-                Learn More
-              </Button>
-              <Button
-                className="bg-white hover:bg-gray-50 text-black border border-gray-300 hover:border-gray-400 px-8 py-3 rounded-full transition-all duration-200 shadow-lg backdrop-blur-sm transform hover:scale-105 font-medium"
-              >
-                <Download className="mr-2 h-4 w-4" />
-                Download Resume
-              </Button>
-            </div>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="relative z-10"
+            >
+              <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-gray-800 via-black to-gray-700 bg-clip-text text-transparent">
+                Krishna Somani
+              </h1>
+              <p className="text-xl md:text-2xl mb-4 text-gray-700 font-medium">
+                Artificial Intelligence, Machine Learning and Data Science Enthusiast
+              </p>
+              <p className="text-lg mb-8 text-gray-600 max-w-4xl mx-auto leading-relaxed">
+                I'm passionate about Artificial Intelligence & Machine Learning, with a strong focus on solving real-world problems through intelligent, automated systems. I'm especially interested in AI-driven innovation, scalable solutions, and their impact across industries—from security to sustainability. I thrive in environments that challenge me to learn and build meaningful technology. Always open to discussions on artificial intelligence/machine learning and emerging tech.
+              </p>
+              
+              <div className="flex flex-wrap justify-center gap-4 mb-8">
+                <Button
+                  onClick={() => scrollToSection('experience')}
+                  className="bg-black hover:bg-gray-800 text-white px-8 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105 font-medium"
+                >
+                  Learn More
+                </Button>
+                <Button
+                  className="bg-white hover:bg-gray-50 text-black border border-gray-300 hover:border-gray-400 px-8 py-3 rounded-full transition-all duration-200 shadow-lg backdrop-blur-sm transform hover:scale-105 font-medium"
+                >
+                  <Download className="mr-2 h-4 w-4" />
+                  Download Resume
+                </Button>
+              </div>
 
-            <div className="flex justify-center space-x-8">
-              <a href="mailto:krishnasomani272005@gmail.com" className="text-gray-600 hover:text-gray-900 transition-all duration-200 transform hover:scale-110">
-                <Mail size={28} />
-              </a>
-              <a href="tel:+919940520537" className="text-gray-600 hover:text-gray-900 transition-all duration-200 transform hover:scale-110">
-                <Phone size={28} />
-              </a>
-              <a href="https://github.com/kr1shnasomani" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 transition-all duration-200 transform hover:scale-110">
-                <Github size={28} />
-              </a>
-              <a href="https://www.linkedin.com/in/kr1shnasomani" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 transition-all duration-200 transform hover:scale-110">
-                <Linkedin size={28} />
-              </a>
-            </div>
-          </motion.div>
+              <div className="flex justify-center space-x-8">
+                <a href="mailto:krishnasomani272005@gmail.com" className="text-gray-600 hover:text-gray-900 transition-all duration-200 transform hover:scale-110">
+                  <Mail size={28} />
+                </a>
+                <a href="tel:+919940520537" className="text-gray-600 hover:text-gray-900 transition-all duration-200 transform hover:scale-110">
+                  <Phone size={28} />
+                </a>
+                <a href="https://github.com/kr1shnasomani" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 transition-all duration-200 transform hover:scale-110">
+                  <Github size={28} />
+                </a>
+                <a href="https://www.linkedin.com/in/kr1shnasomani" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 transition-all duration-200 transform hover:scale-110">
+                  <Linkedin size={28} />
+                </a>
+              </div>
+            </motion.div>
+          </Card>
         </div>
       </section>
 
       {/* Experience Section */}
       <section id="experience" className="py-20">
         <div className="container mx-auto px-6">
-          <Card className="bg-white shadow-lg rounded-2xl p-8">
+          <Card className="bg-white shadow-lg rounded-2xl p-8 relative overflow-hidden">
+            {/* Background Animation */}
+            <div className="absolute inset-0 bg-gradient-to-br from-green-50/20 via-blue-50/15 to-purple-50/20 animate-pulse"></div>
+            <div className="absolute inset-0 bg-gradient-to-tl from-orange-50/15 via-transparent to-cyan-50/15 animate-pulse" style={{animationDelay: '2s'}}></div>
+            <div className="relative z-10">
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -318,7 +329,7 @@ const Index = () => {
                       <h3 className="text-xl font-semibold text-black leading-tight mb-1">{exp.role}</h3>
                       <p className="text-gray-700 font-medium leading-tight mb-1">{exp.company}, {exp.city}</p>
                       <p className="text-gray-600 text-sm leading-tight mb-1">{exp.period}</p>
-                      <p className="text-gray-500 text-sm leading-tight">{exp.location.split(',')[0]}</p>
+                      <p className="text-gray-500 text-sm leading-tight">{exp.location}</p>
                       {exp.description && (
                         <p className="text-gray-600 text-sm leading-relaxed mt-3">{exp.description}</p>
                       )}
@@ -330,6 +341,7 @@ const Index = () => {
                 </motion.div>
               ))}
             </div>
+            </div>
           </Card>
         </div>
       </section>
@@ -337,7 +349,11 @@ const Index = () => {
       {/* Education Section */}
       <section id="education" className="py-20">
         <div className="container mx-auto px-6">
-          <Card className="bg-white shadow-lg rounded-2xl p-8">
+          <Card className="bg-white shadow-lg rounded-2xl p-8 relative overflow-hidden">
+            {/* Background Animation */}
+            <div className="absolute inset-0 bg-gradient-to-br from-amber-50/20 via-rose-50/15 to-indigo-50/20 animate-pulse"></div>
+            <div className="absolute inset-0 bg-gradient-to-tl from-teal-50/15 via-transparent to-pink-50/15 animate-pulse" style={{animationDelay: '3s'}}></div>
+            <div className="relative z-10">
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -377,6 +393,7 @@ const Index = () => {
                 </motion.div>
               ))}
             </div>
+            </div>
           </Card>
         </div>
       </section>
@@ -384,7 +401,11 @@ const Index = () => {
       {/* Certifications Section */}
       <section id="certifications" className="py-20">
         <div className="container mx-auto px-6">
-          <Card className="bg-white shadow-lg rounded-2xl p-8">
+          <Card className="bg-white shadow-lg rounded-2xl p-8 relative overflow-hidden">
+            {/* Background Animation */}
+            <div className="absolute inset-0 bg-gradient-to-br from-emerald-50/20 via-violet-50/15 to-sky-50/20 animate-pulse"></div>
+            <div className="absolute inset-0 bg-gradient-to-tl from-lime-50/15 via-transparent to-fuchsia-50/15 animate-pulse" style={{animationDelay: '4s'}}></div>
+            <div className="relative z-10">
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -402,6 +423,7 @@ const Index = () => {
             >
               <CertificationCarousel certifications={certifications} />
             </motion.div>
+            </div>
           </Card>
         </div>
       </section>
@@ -409,7 +431,11 @@ const Index = () => {
       {/* Projects Section */}
       <section id="projects" className="py-20">
         <div className="container mx-auto px-6">
-          <Card className="bg-white shadow-lg rounded-2xl p-8">
+          <Card className="bg-white shadow-lg rounded-2xl p-8 relative overflow-hidden">
+            {/* Background Animation */}
+            <div className="absolute inset-0 bg-gradient-to-br from-slate-50/20 via-stone-50/15 to-zinc-50/20 animate-pulse"></div>
+            <div className="absolute inset-0 bg-gradient-to-tl from-red-50/15 via-transparent to-blue-50/15 animate-pulse" style={{animationDelay: '5s'}}></div>
+            <div className="relative z-10">
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -427,6 +453,7 @@ const Index = () => {
             >
               <ProjectCarousel projects={projects} />
             </motion.div>
+            </div>
           </Card>
         </div>
       </section>
@@ -434,7 +461,11 @@ const Index = () => {
       {/* Skills Section */}
       <section id="skills" className="py-20">
         <div className="container mx-auto px-6">
-          <Card className="bg-white shadow-lg rounded-2xl p-8">
+          <Card className="bg-white shadow-lg rounded-2xl p-8 relative overflow-hidden">
+            {/* Background Animation */}
+            <div className="absolute inset-0 bg-gradient-to-br from-gray-50/20 via-neutral-50/15 to-slate-50/20 animate-pulse"></div>
+            <div className="absolute inset-0 bg-gradient-to-tl from-yellow-50/15 via-transparent to-green-50/15 animate-pulse" style={{animationDelay: '6s'}}></div>
+            <div className="relative z-10">
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -452,6 +483,7 @@ const Index = () => {
             >
               <SkillsGrid />
             </motion.div>
+            </div>
           </Card>
         </div>
       </section>

@@ -32,10 +32,10 @@ const ProjectCarousel = ({ projects }: ProjectCarouselProps) => {
   // Auto-play functionality with 7-second interval
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentSlide(prev => (prev + 1) % projects.length);
+      nextSlide();
     }, 7000);
     return () => clearInterval(interval);
-  }, [projects.length]);
+  }, []);
 
   return (
     <div className="relative w-full max-w-[1100px] mx-auto">
@@ -61,7 +61,7 @@ const ProjectCarousel = ({ projects }: ProjectCarouselProps) => {
 
         {/* Slides Container */}
         <div 
-          className="flex w-full h-full transition-transform duration-[600ms] ease-in-out"
+          className="flex w-full h-full transition-transform duration-[800ms] ease-in-out"
           style={{ transform: `translateX(-${currentSlide * 100}%)` }}
         >
           {projects.map((project, index) => (
