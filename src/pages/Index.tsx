@@ -98,7 +98,7 @@ const Index = () => {
       city: "Bengaluru",
       role: "Data Science Intern",
       period: "Jun 2025 - Present",
-      location: "Bengaluru, Karnataka, India • Hybrid",
+      location: "",
       description: "Developed a chatbot using Dify to recommend diagnostic tests and health packages based on user-reported issues, built a WhatsApp chatbot that brought key app features directly into the chat experience, and created an AI-powered content pipeline that generates short-form content weekly while identifying trending topics.",
       logo: "/lovable-uploads/fd6c3dad-b180-4cfa-a02e-87b22cd159d2.png"
     },
@@ -107,7 +107,7 @@ const Index = () => {
       city: "Chennai",
       role: "AI/ML Technical Team Member",
       period: "Dec 2024 - Present",
-      location: "Chennai, Tamil Nadu, India • On-site",
+      location: "",
       description: "",
       logo: "/lovable-uploads/0514ae2e-4cb9-46c0-a718-5bd83dd0c1bf.png"
     },
@@ -116,7 +116,7 @@ const Index = () => {
       city: "Chennai", 
       role: "Research & Development Member", 
       period: "Nov 2024 - Present",
-      location: "Chennai, Tamil Nadu, India • On-site",
+      location: "",
       description: "",
       logo: "/lovable-uploads/ea9139e1-3664-456e-a42f-e38ba734d92b.png"
     },
@@ -125,7 +125,7 @@ const Index = () => {
       city: "New York",
       role: "Machine Learning Intern",
       period: "Sep 2024 - Oct 2024",
-      location: "New York, United States • Remote",
+      location: "",
       description: "Engineered a chatbot powered by Hugging Face's Llama 3.1 (8B) model to efficiently extract event-specific data, leveraging NLP capabilities for accurate information retrieval. Designed and implemented web scraping pipelines to preprocess raw HTML into clean, structured text, optimizing data preparation for NLP tasks. Deployed the solution using FastAPI on Render, enabling real-time query handling and seamless user interaction. This system reduced manual effort in event information extraction, streamlining data processing workflows.",
       logo: "/lovable-uploads/1e76810f-7c22-4aa7-8cea-0fed648cd697.png"
     },
@@ -134,7 +134,7 @@ const Index = () => {
       city: "Hyderabad",
       role: "Python Developer",
       period: "Jun 2024 - Jul 2024",
-      location: "Hyderabad, Telangana, India • Remote",
+      location: "",
       description: "Streamlined data extraction from paginated, infinite scroll, and detail view pages into a unified script. Conducted textual analysis on over 1,000 extracted job postings to uncover in-demand and least sought-after roles, identify top required skills, and analyze geographic trends, providing actionable insights to enhance hiring strategies.",
       logo: "/lovable-uploads/9e65c59f-7d17-4627-a0f9-cd664c99bde6.png"
     }
@@ -194,10 +194,7 @@ const Index = () => {
   const achievements = [
     {
       title: "Temenos Tem-E-thon 2025 Hackathon Winner",
-      description: "Won a 15-inch MacBook Air M3 (16GB RAM/256GB SSD)",
-      prize: "15 inch MacBook Air M3 (16GB RAM/256GB SSD)",
-      date: "January 2025",
-      location: "Hyderabad, India",
+      description: "Won a 15-inch Apple MacBook Air M3 (16GB RAM/256GB SSD)",
       logo: "/lovable-uploads/27c43e0b-3168-4c93-9cf3-4112332b0f78.png"
     }
   ];
@@ -235,7 +232,7 @@ const Index = () => {
       {/* Hero Section */}
       <section id="home" className="min-h-screen flex items-center justify-center py-20">
         <div className="container mx-auto px-6">
-          <Card className="bg-white shadow-lg rounded-2xl p-8 max-w-5xl mx-auto text-center relative overflow-hidden">
+          <Card className="bg-white shadow-lg rounded-2xl p-12 max-w-6xl mx-auto text-center relative overflow-hidden">
             {/* Background Animation */}
             <div className="absolute inset-0 bg-gradient-to-br from-blue-50/30 via-purple-50/20 to-pink-50/30 animate-pulse"></div>
             <div className="absolute inset-0 bg-gradient-to-tl from-cyan-50/20 via-transparent to-yellow-50/20 animate-pulse" style={{animationDelay: '1s'}}></div>
@@ -252,19 +249,13 @@ const Index = () => {
               <p className="text-xl md:text-2xl mb-4 text-gray-700 font-medium">
                 Artificial Intelligence, Machine Learning and Data Science Enthusiast
               </p>
-              <p className="text-lg mb-8 text-gray-600 max-w-4xl mx-auto leading-relaxed">
+              <p className="text-lg mb-12 text-gray-600 max-w-5xl mx-auto leading-relaxed">
                 I'm passionate about Artificial Intelligence & Machine Learning, with a strong focus on solving real-world problems through intelligent, automated systems. I'm especially interested in AI-driven innovation, scalable solutions, and their impact across industries—from security to sustainability. I thrive in environments that challenge me to learn and build meaningful technology. Always open to discussions on artificial intelligence/machine learning and emerging tech.
               </p>
               
-              <div className="flex flex-wrap justify-center gap-4 mb-8">
+              <div className="flex justify-center mb-12">
                 <Button
-                  onClick={() => scrollToSection('experience')}
                   className="bg-black hover:bg-gray-800 text-white px-8 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105 font-medium"
-                >
-                  Learn More
-                </Button>
-                <Button
-                  className="bg-white hover:bg-gray-50 text-black border border-gray-300 hover:border-gray-400 px-8 py-3 rounded-full transition-all duration-200 shadow-lg backdrop-blur-sm transform hover:scale-105 font-medium"
                 >
                   <Download className="mr-2 h-4 w-4" />
                   Download Resume
@@ -329,7 +320,7 @@ const Index = () => {
                       <h3 className="text-xl font-semibold text-black leading-tight mb-1">{exp.role}</h3>
                       <p className="text-gray-700 font-medium leading-tight mb-1">{exp.company}, {exp.city}</p>
                       <p className="text-gray-600 text-sm leading-tight mb-1">{exp.period}</p>
-                      <p className="text-gray-500 text-sm leading-tight">{exp.location}</p>
+                      {exp.location && <p className="text-gray-500 text-sm leading-tight">{exp.location}</p>}
                       {exp.description && (
                         <p className="text-gray-600 text-sm leading-relaxed mt-3">{exp.description}</p>
                       )}
@@ -501,7 +492,7 @@ const Index = () => {
               Achievements
             </motion.h2>
             
-            <div className="max-w-4xl mx-auto">
+            <div className="max-w-3xl mx-auto">
               {achievements.map((achievement, index) => (
                 <motion.div
                   key={index}
@@ -516,7 +507,7 @@ const Index = () => {
                       <img
                         src={achievement.logo}
                         alt={achievement.title}
-                        className="w-full max-w-[300px] h-32 object-contain group-hover:scale-105 transition-transform duration-300"
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                       />
                       <div className="absolute top-4 right-4 bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-sm font-semibold">
                         🏆 Winner
@@ -524,22 +515,9 @@ const Index = () => {
                     </div>
                     <CardHeader className="text-center pb-4">
                       <CardTitle className="text-2xl font-bold text-black mb-2">{achievement.title}</CardTitle>
-                      <div className="flex justify-center space-x-4 text-sm text-gray-600 mb-4">
-                        <span className="flex items-center">
-                          📅 {achievement.date}
-                        </span>
-                        <span className="flex items-center">
-                          📍 {achievement.location}
-                        </span>
-                      </div>
-                      <CardDescription className="text-gray-700 text-base leading-relaxed mb-4">
+                      <CardDescription className="text-gray-700 text-base leading-relaxed">
                         {achievement.description}
                       </CardDescription>
-                      <div className="bg-gradient-to-r from-green-50 to-blue-50 p-4 rounded-xl border border-green-200">
-                        <p className="font-semibold text-gray-800 flex items-center justify-center">
-                          🎁 Prize: {achievement.prize}
-                        </p>
-                      </div>
                     </CardHeader>
                   </Card>
                 </motion.div>
