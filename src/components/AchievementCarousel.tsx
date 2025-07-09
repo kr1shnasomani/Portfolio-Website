@@ -47,42 +47,8 @@ const AchievementCarousel = ({ achievements }: AchievementCarouselProps) => {
                 src={achievement.images[currentImageIndex]}
                 alt={`${achievement.title} - Image ${currentImageIndex + 1}`}
                 className="w-full h-full object-cover"
-                style={{ transform: 'scale(0.75)' }}
               />
               
-              {/* Navigation Arrows */}
-              {achievement.images.length > 1 && (
-                <>
-                  <button
-                    onClick={prevImage}
-                    className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all duration-200 backdrop-blur-sm"
-                  >
-                    <ChevronLeft size={24} />
-                  </button>
-                  <button
-                    onClick={nextImage}
-                    className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all duration-200 backdrop-blur-sm"
-                  >
-                    <ChevronRight size={24} />
-                  </button>
-                </>
-              )}
-              
-              
-              {/* Image indicators */}
-              {achievement.images.length > 1 && (
-                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-                  {achievement.images.map((_, index) => (
-                    <button
-                      key={index}
-                      onClick={() => setCurrentImageIndex(index)}
-                      className={`w-2 h-2 rounded-full transition-all duration-200 ${
-                        index === currentImageIndex ? 'bg-white' : 'bg-white/50'
-                      }`}
-                    />
-                  ))}
-                </div>
-              )}
             </div>
             
             {/* Text Section - 1/4 width */}

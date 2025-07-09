@@ -197,16 +197,13 @@ const Index = () => {
       title: "Temenos Tem-E-thon 2025 Hackathon Winner",
       description: "Won a 15-inch Apple MacBook Air M3 (16GB RAM/256GB SSD)",
       images: [
-        "/lovable-uploads/f730cca5-1ac7-499f-bcb7-1cef39f19e49.png",
-        "/lovable-uploads/6a3b76e8-3c8f-4f5b-961e-18572aff6801.png",
-        "/lovable-uploads/228107a4-0e90-463e-9155-02db79fe2584.png",
-        "/lovable-uploads/ff882e40-f840-4feb-bdc2-ecc0313e58b6.png"
+        "/lovable-uploads/37d36c04-a2e6-4512-9f2a-311c56b6782c.png"
       ]
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50 text-gray-900 font-inter">
+    <div className="min-h-screen bg-gray-50 text-gray-900 font-inter" style={{ transform: 'scale(0.75)', transformOrigin: 'top left', width: '133.33%', height: '133.33%' }}>
       {/* Navigation - Always Black */}
       <nav className="fixed top-0 w-full z-50 bg-black shadow-lg">
         <div className="container mx-auto px-6 py-4">
