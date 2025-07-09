@@ -11,13 +11,13 @@ const SkillsGrid = () => {
   const [hoveredSkill, setHoveredSkill] = useState<string | null>(null);
 
   const skills: Skill[] = [
+    { name: 'HTML', icon: '/lovable-uploads/3bd69446-c36d-44b8-9469-eb196cfbc754.png' },
+    { name: 'CSS', icon: '/lovable-uploads/ddbe3989-181c-448e-9768-81a7f3f39c6a.png' },
+    { name: 'JavaScript', icon: '/lovable-uploads/a4e7f3d2-e451-4235-8059-4872a15ce057.png' },
+    { name: 'Python', icon: '/lovable-uploads/a2ee47ec-4d65-466d-a088-7405c57d341c.png' },
     { name: 'C', icon: '/lovable-uploads/ca87209a-648b-473e-aa91-ed04b4b7d828.png' },
     { name: 'C++', icon: '/lovable-uploads/d948e6b4-f887-4ccb-a40d-80a10ba2cb9e.png' },
     { name: 'Java', icon: '/lovable-uploads/122ffbbd-99d0-4074-b603-b2593c55083c.png' },
-    { name: 'Python', icon: '/lovable-uploads/a2ee47ec-4d65-466d-a088-7405c57d341c.png' },
-    { name: 'JavaScript', icon: '/lovable-uploads/a4e7f3d2-e451-4235-8059-4872a15ce057.png' },
-    { name: 'HTML', icon: '/lovable-uploads/3bd69446-c36d-44b8-9469-eb196cfbc754.png' },
-    { name: 'CSS', icon: '/lovable-uploads/ddbe3989-181c-448e-9768-81a7f3f39c6a.png' },
     { name: 'NumPy', icon: '/lovable-uploads/6167cf56-c729-46a2-9bc6-5a02716e4044.png' },
     { name: 'pandas', icon: '/lovable-uploads/05fbc891-10e3-49d6-8506-734f54f869cf.png' },
     { name: 'SciPy', icon: '/lovable-uploads/914a41fb-ae31-4011-93c3-efd801d8ab2f.png' },

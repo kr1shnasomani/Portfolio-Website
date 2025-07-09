@@ -1,8 +1,5 @@
 
-import { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { Button } from '@/components/ui/button';
 
 interface Certification {
   title: string;
@@ -16,63 +13,9 @@ interface CertificationCarouselProps {
 }
 
 const CertificationCarousel = ({ certifications }: CertificationCarouselProps) => {
-  const [canScrollLeft, setCanScrollLeft] = useState(false);
-  const [canScrollRight, setCanScrollRight] = useState(true);
-  const scrollRef = useRef<HTMLDivElement>(null);
-
-  const checkScrollButtons = () => {
-    if (scrollRef.current) {
-      const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
-      setCanScrollLeft(scrollLeft > 0);
-      setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 1);
-    }
-  };
-
-  const scrollLeft = () => {
-    if (scrollRef.current) {
-      const cardWidth = 200;
-      scrollRef.current.scrollBy({ left: -cardWidth * 3, behavior: 'smooth' });
-      setTimeout(checkScrollButtons, 300);
-    }
-  };
-
-  const scrollRight = () => {
-    if (scrollRef.current) {
-      const cardWidth = 200;
-      scrollRef.current.scrollBy({ left: cardWidth * 3, behavior: 'smooth' });
-      setTimeout(checkScrollButtons, 300);
-    }
-  };
-
   return (
-    <div className="relative">
-      {/* Left Arrow */}
-      <Button
-        onClick={scrollLeft}
-        disabled={!canScrollLeft}
-        className="absolute left-0 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white/90 hover:bg-white border border-gray-200/50 backdrop-blur-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl"
-        size="icon"
-      >
-        <ChevronLeft className="h-6 w-6 text-gray-800" />
-      </Button>
-
-      {/* Right Arrow */}
-      <Button
-        onClick={scrollRight}
-        disabled={!canScrollRight}
-        className="absolute right-0 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white/90 hover:bg-white border border-gray-200/50 backdrop-blur-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl"
-        size="icon"
-      >
-        <ChevronRight className="h-6 w-6 text-gray-800" />
-      </Button>
-
-      {/* Scrollable Container */}
-      <div
-        ref={scrollRef}
-        onScroll={checkScrollButtons}
-        className="flex gap-5 overflow-x-auto scrollbar-hide px-12 py-4"
-        style={{ scrollSnapType: 'x mandatory' }}
-      >
+    <div className="max-w-6xl mx-auto">
+      <div className="grid grid-cols-4 gap-6">
         {certifications.map((cert, index) => (
           <motion.div
             key={index}
@@ -80,8 +23,7 @@ const CertificationCarousel = ({ certifications }: CertificationCarouselProps) =
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: index * 0.05 }}
-            className="flex-shrink-0 w-[180px] h-[280px] bg-white/90 backdrop-blur-xl border border-gray-200/50 rounded-2xl shadow-lg hover:shadow-xl hover:border-gray-300 transition-all duration-200 p-6 flex flex-col items-center"
-            style={{ scrollSnapAlign: 'start' }}
+            className="bg-white/90 backdrop-blur-xl border border-gray-200/50 rounded-2xl shadow-lg hover:shadow-xl hover:border-gray-300 transition-all duration-200 p-6 flex flex-col items-center h-[280px]"
           >
             {/* Square Logo Container */}
             <div className="w-16 h-16 rounded-xl bg-transparent flex items-center justify-center mb-4 overflow-hidden">
