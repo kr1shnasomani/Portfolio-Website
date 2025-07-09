@@ -6,6 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { useToast } from '@/hooks/use-toast';
 import ProjectCarousel from '@/components/ProjectCarousel';
 import CertificationCarousel from '@/components/CertificationCarousel';
+import AchievementCarousel from '@/components/AchievementCarousel';
 import SkillsGrid from '@/components/SkillsGrid';
 
 const Index = () => {
@@ -195,7 +196,12 @@ const Index = () => {
     {
       title: "Temenos Tem-E-thon 2025 Hackathon Winner",
       description: "Won a 15-inch Apple MacBook Air M3 (16GB RAM/256GB SSD)",
-      logo: "/lovable-uploads/27c43e0b-3168-4c93-9cf3-4112332b0f78.png"
+      images: [
+        "/lovable-uploads/f730cca5-1ac7-499f-bcb7-1cef39f19e49.png",
+        "/lovable-uploads/6a3b76e8-3c8f-4f5b-961e-18572aff6801.png",
+        "/lovable-uploads/228107a4-0e90-463e-9155-02db79fe2584.png",
+        "/lovable-uploads/ff882e40-f840-4feb-bdc2-ecc0313e58b6.png"
+      ]
     }
   ];
 
@@ -232,7 +238,7 @@ const Index = () => {
       {/* Hero Section */}
       <section id="home" className="min-h-screen flex items-center justify-center py-20">
         <div className="container mx-auto px-6">
-          <Card className="bg-white shadow-lg rounded-2xl p-12 mx-auto text-center relative overflow-hidden">
+          <Card className="bg-white shadow-lg rounded-2xl p-16 mx-auto text-center relative overflow-hidden">
             {/* Background Animation */}
             <div className="absolute inset-0 bg-gradient-to-br from-blue-50/30 via-purple-50/20 to-pink-50/30 animate-pulse"></div>
             <div className="absolute inset-0 bg-gradient-to-tl from-cyan-50/20 via-transparent to-yellow-50/20 animate-pulse" style={{animationDelay: '1s'}}></div>
@@ -482,60 +488,30 @@ const Index = () => {
       {/* Achievements Section */}
       <section id="achievements" className="py-20">
         <div className="container mx-auto px-6">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-gray-800 to-black bg-clip-text text-transparent"
-          >
-            Achievements
-          </motion.h2>
-          
-          <div className="max-w-5xl mx-auto">
-            {achievements.map((achievement, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
+          <Card className="bg-white shadow-lg rounded-2xl p-8 relative overflow-hidden">
+            {/* Background Animation */}
+            <div className="absolute inset-0 bg-gradient-to-br from-yellow-50/20 via-orange-50/15 to-red-50/20 animate-pulse"></div>
+            <div className="absolute inset-0 bg-gradient-to-tl from-purple-50/15 via-transparent to-green-50/15 animate-pulse" style={{animationDelay: '7s'}}></div>
+            <div className="relative z-10">
+              <motion.h2
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.1, duration: 0.6 }}
+                className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-gray-800 to-black bg-clip-text text-transparent"
               >
-                <Card className="bg-black border-gray-800 overflow-hidden rounded-xl">
-                  <div className="flex h-[400px]">
-                    {/* Image Section - 3/4 width */}
-                    <div className="w-3/4 relative overflow-hidden bg-gray-900">
-                      <img
-                        src={achievement.logo}
-                        alt={achievement.title}
-                        className="w-full h-full object-cover"
-                      />
-                      <div className="absolute top-4 right-4 bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-sm font-semibold">
-                        🏆 Winner
-                      </div>
-                    </div>
-                    
-                    {/* Text Section - 1/4 width */}
-                    <div className="w-1/4 p-6 flex flex-col justify-center bg-black text-white">
-                      <div className="space-y-4">
-                        <p className="text-lg font-bold text-yellow-400">
-                          1000+ teams. 30 finalists. 1 winning team – Tem-E-thon 2025 Champions!
-                        </p>
-                        <p className="text-sm leading-relaxed text-gray-300">
-                          My team won Tem-E-thon 2025, a national level hackathon organized by Temenos at Anna University, Chennai, taking home an Apple MacBook Air M3 (15-inch) per team member from a ₹10,00,000 prize pool. It was an incredible experience, but the real win was proving how tech can drive sustainability.
-                        </p>
-                        <div className="flex flex-wrap gap-2 text-xs">
-                          <span className="text-blue-400">#Temenos</span>
-                          <span className="text-blue-400">#TemEthon2025</span>
-                          <span className="text-blue-400">#Hackathon</span>
-                          <span className="text-blue-400">#SustainableDevelopmentGoal</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </Card>
+                Achievements
+              </motion.h2>
+              
+              <motion.div
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 }}
+              >
+                <AchievementCarousel achievements={achievements} />
               </motion.div>
-            ))}
-          </div>
+            </div>
+          </Card>
         </div>
       </section>
 
