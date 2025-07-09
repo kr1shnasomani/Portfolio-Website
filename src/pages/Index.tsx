@@ -276,10 +276,10 @@ const Index = () => {
                   <Phone size={28} />
                 </a>
                 <a href="https://github.com/kr1shnasomani" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 transition-all duration-200 transform hover:scale-110">
-                  <Github size={28} />
+                  <img src="/lovable-uploads/f0cf739a-7c92-4772-879b-74f8e5bd16c0.png" alt="GitHub" className="w-7 h-7" />
                 </a>
                 <a href="https://www.linkedin.com/in/kr1shnasomani" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 transition-all duration-200 transform hover:scale-110">
-                  <Linkedin size={28} />
+                  <img src="/lovable-uploads/42e31f1e-d2f2-4665-8953-7ca1383b09f8.png" alt="LinkedIn" className="w-7 h-7" />
                 </a>
               </div>
             </motion.div>

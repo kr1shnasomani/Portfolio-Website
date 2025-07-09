@@ -47,6 +47,7 @@ const AchievementCarousel = ({ achievements }: AchievementCarouselProps) => {
                 src={achievement.images[currentImageIndex]}
                 alt={`${achievement.title} - Image ${currentImageIndex + 1}`}
                 className="w-full h-full object-cover"
+                style={{ transform: 'scale(0.75)' }}
               />
               
               {/* Navigation Arrows */}
@@ -67,9 +68,6 @@ const AchievementCarousel = ({ achievements }: AchievementCarouselProps) => {
                 </>
               )}
               
-              <div className="absolute top-4 right-4 bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-sm font-semibold">
-                🏆 Winner
-              </div>
               
               {/* Image indicators */}
               {achievement.images.length > 1 && (
