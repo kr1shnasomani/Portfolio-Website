@@ -203,7 +203,7 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50 text-gray-900 font-inter" style={{ transform: 'scale(0.75)', transformOrigin: 'top left', width: '133.33%', height: '133.33%' }}>
+    <div className="bg-gray-50 text-gray-900 font-inter" style={{ transform: 'scale(0.75)', transformOrigin: 'top left', width: '133.33%', height: '133.33%' }}>
       {/* Navigation - Always Black */}
       <nav className="fixed top-0 w-full z-50 bg-black shadow-lg">
         <div className="container mx-auto px-6 py-4">
@@ -265,18 +265,18 @@ const Index = () => {
                 </Button>
               </div>
 
-              <div className="flex justify-center space-x-8">
-                <a href="mailto:krishnasomani272005@gmail.com" className="text-gray-600 hover:text-gray-900 transition-all duration-200 transform hover:scale-110">
+              <div className="flex justify-center items-center space-x-8">
+                <a href="mailto:krishnasomani272005@gmail.com" className="text-gray-600 hover:text-gray-900 transition-all duration-200 transform hover:scale-110 p-2 rounded-full hover:bg-gray-100">
                   <Mail size={28} />
                 </a>
-                <a href="tel:+919940520537" className="text-gray-600 hover:text-gray-900 transition-all duration-200 transform hover:scale-110">
+                <a href="tel:+919940520537" className="text-gray-600 hover:text-gray-900 transition-all duration-200 transform hover:scale-110 p-2 rounded-full hover:bg-gray-100">
                   <Phone size={28} />
                 </a>
-                <a href="https://github.com/kr1shnasomani" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 transition-all duration-200 transform hover:scale-110">
-                  <img src="/lovable-uploads/f0cf739a-7c92-4772-879b-74f8e5bd16c0.png" alt="GitHub" className="w-7 h-7" />
+                <a href="https://github.com/kr1shnasomani" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 transition-all duration-200 transform hover:scale-110 p-2 rounded-full hover:bg-gray-100 flex items-center justify-center">
+                  <img src="/lovable-uploads/f0cf739a-7c92-4772-879b-74f8e5bd16c0.png" alt="GitHub" className="w-7 h-7 object-contain" />
                 </a>
-                <a href="https://www.linkedin.com/in/kr1shnasomani" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 transition-all duration-200 transform hover:scale-110">
-                  <img src="/lovable-uploads/42e31f1e-d2f2-4665-8953-7ca1383b09f8.png" alt="LinkedIn" className="w-7 h-7" />
+                <a href="https://www.linkedin.com/in/kr1shnasomani" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 transition-all duration-200 transform hover:scale-110 p-2 rounded-full hover:bg-gray-100 flex items-center justify-center">
+                  <img src="/lovable-uploads/42e31f1e-d2f2-4665-8953-7ca1383b09f8.png" alt="LinkedIn" className="w-7 h-7 object-contain" />
                 </a>
               </div>
             </motion.div>
@@ -516,8 +516,11 @@ const Index = () => {
       <footer className="py-8 bg-black border-t border-gray-800">
         <div className="container mx-auto px-6">
           <div className="text-center">
-            <p className="text-gray-100 font-medium text-lg">
+            <p className="text-gray-100 font-medium text-lg mb-2">
               Made with ❤️ by Krishna Somani
+            </p>
+            <p className="text-gray-300 text-sm">
+              © 2025 Krishna Somani. All rights reserved.
             </p>
           </div>
         </div>
