@@ -203,9 +203,9 @@ const Index = () => {
   ];
 
   return (
-    <div className="bg-gray-50 text-gray-900 font-inter flex flex-col min-h-screen" style={{ transform: 'scale(0.75)', transformOrigin: 'top left', width: '133.33%', height: '133.33%' }}>
+    <div className="bg-gray-50 text-gray-900 font-inter flex flex-col min-h-screen">
       {/* Navigation - Always Black */}
-      <nav className="fixed top-0 w-full z-50 bg-black shadow-lg">
+      <nav className="sticky top-0 w-full z-50 bg-black shadow-lg">
         <div className="container mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
             <motion.div
@@ -233,7 +233,7 @@ const Index = () => {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="min-h-screen flex items-center justify-center py-20">
+      <section id="home" className="min-h-screen flex items-center justify-center py-20 -mt-16 pt-36">
         <div className="container mx-auto px-6">
           <Card className="bg-white shadow-lg rounded-2xl p-12 mx-auto text-center relative overflow-hidden">
             {/* Background Animation */}
@@ -517,7 +517,7 @@ const Index = () => {
       </section>
 
       {/* Footer - Always Black */}
-      <footer className="py-8 bg-black border-t border-gray-800 mt-auto">
+      <footer className="py-6 bg-black border-t border-gray-800 mt-auto">
         <div className="container mx-auto px-6">
           <div className="text-center">
             <p className="text-gray-100 font-medium text-lg mb-2">
