@@ -261,26 +261,26 @@ const Index = () => {
               </p>
               
               <div className="flex justify-center mb-12">
-                <Button
-                  className="bg-black hover:bg-gray-800 text-white px-8 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105 font-medium"
+                <a 
+                  href="https://drive.google.com/file/d/1zrLOMuQTDsKnMG9tzos9pF0eaWBnn7iT/view?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center bg-black hover:bg-gray-800 text-white px-8 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105 font-medium"
                 >
                   <Download className="mr-2 h-4 w-4" />
                   Download Resume
-                </Button>
+                </a>
               </div>
 
               <div className="flex justify-center items-center space-x-8">
-                <a href="mailto:krishnasomani272005@gmail.com" className="text-gray-600 hover:text-gray-900 transition-all duration-200 transform hover:scale-110 p-2 rounded-full hover:bg-gray-100">
-                  <Mail size={28} />
-                </a>
-                <a href="tel:+919940520537" className="text-gray-600 hover:text-gray-900 transition-all duration-200 transform hover:scale-110 p-2 rounded-full hover:bg-gray-100">
-                  <Phone size={28} />
+                <a href="mailto:krishnasomani272005@gmail.com" className="text-gray-600 hover:text-gray-900 transition-all duration-200 transform hover:scale-110 p-2 rounded-full hover:bg-gray-100 flex items-center justify-center">
+                  <img src="/lovable-uploads/02df86ab-416d-4f5f-a467-0f3336bf54f0.png" alt="Email" className="w-7 h-7 object-contain" />
                 </a>
                 <a href="https://github.com/kr1shnasomani" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 transition-all duration-200 transform hover:scale-110 p-2 rounded-full hover:bg-gray-100 flex items-center justify-center">
-                  <img src="/lovable-uploads/f0cf739a-7c92-4772-879b-74f8e5bd16c0.png" alt="GitHub" className="w-7 h-7 object-contain" />
+                  <img src="/lovable-uploads/841e0d80-9121-4fe1-9671-8b3ac0ffc2c8.png" alt="GitHub" className="w-7 h-7 object-contain" />
                 </a>
                 <a href="https://www.linkedin.com/in/kr1shnasomani" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 transition-all duration-200 transform hover:scale-110 p-2 rounded-full hover:bg-gray-100 flex items-center justify-center">
-                  <img src="/lovable-uploads/42e31f1e-d2f2-4665-8953-7ca1383b09f8.png" alt="LinkedIn" className="w-7 h-7 object-contain" />
+                  <img src="/lovable-uploads/a6bf9787-498f-43cd-8c6e-1928638e8c51.png" alt="LinkedIn" className="w-7 h-7 object-contain" />
                 </a>
               </div>
             </motion.div>
