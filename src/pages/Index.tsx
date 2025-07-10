@@ -203,7 +203,7 @@ const Index = () => {
   ];
 
   return (
-    <div className="bg-gray-50 text-gray-900 font-inter" style={{ transform: 'scale(0.75)', transformOrigin: 'top left', width: '133.33%', height: '133.33%' }}>
+    <div className="bg-gray-50 text-gray-900 font-inter flex flex-col min-h-screen" style={{ transform: 'scale(0.75)', transformOrigin: 'top left', width: '133.33%', height: '133.33%' }}>
       {/* Navigation - Always Black */}
       <nav className="fixed top-0 w-full z-50 bg-black shadow-lg">
         <div className="container mx-auto px-6 py-4">
@@ -235,7 +235,7 @@ const Index = () => {
       {/* Hero Section */}
       <section id="home" className="min-h-screen flex items-center justify-center py-20">
         <div className="container mx-auto px-6">
-          <Card className="bg-white shadow-lg rounded-2xl p-16 mx-auto text-center relative overflow-hidden">
+          <Card className="bg-white shadow-lg rounded-2xl p-12 mx-auto text-center relative overflow-hidden">
             {/* Background Animation */}
             <div className="absolute inset-0 bg-gradient-to-br from-blue-50/30 via-purple-50/20 to-pink-50/30 animate-pulse"></div>
             <div className="absolute inset-0 bg-gradient-to-tl from-cyan-50/20 via-transparent to-yellow-50/20 animate-pulse" style={{animationDelay: '1s'}}></div>
@@ -246,14 +246,18 @@ const Index = () => {
               transition={{ duration: 0.8 }}
               className="relative z-10"
             >
+              <div className="w-32 h-32 mx-auto mb-8">
+                <img 
+                  src="/lovable-uploads/911bfdb1-2ce9-43c7-8e16-19b0f2b5f5f6.png" 
+                  alt="Krishna Somani" 
+                  className="w-full h-full object-cover rounded-full border-4 border-black shadow-lg"
+                />
+              </div>
               <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-gray-800 via-black to-gray-700 bg-clip-text text-transparent">
                 Krishna Somani
               </h1>
-              <p className="text-xl md:text-2xl mb-4 text-gray-700 font-medium">
-                Artificial Intelligence, Machine Learning and Data Science Enthusiast
-              </p>
-              <p className="text-lg mb-12 text-gray-600 max-w-5xl mx-auto leading-relaxed">
-                I'm passionate about Artificial Intelligence & Machine Learning, with a strong focus on solving real-world problems through intelligent, automated systems. I'm especially interested in AI-driven innovation, scalable solutions, and their impact across industries—from security to sustainability. I thrive in environments that challenge me to learn and build meaningful technology. Always open to discussions on artificial intelligence/machine learning and emerging tech.
+              <p className="text-xl md:text-2xl mb-12 text-gray-700 font-medium max-w-4xl mx-auto">
+                Artificial Intelligence & Machine Learning Enthusiast focused on real-world solutions, automation, and sustainable innovation.
               </p>
               
               <div className="flex justify-center mb-12">
@@ -287,7 +291,7 @@ const Index = () => {
       {/* Education Section */}
       <section id="education" className="py-20">
         <div className="container mx-auto px-6">
-          <Card className="bg-white shadow-lg rounded-2xl p-8 relative overflow-hidden">
+          <Card className="bg-white shadow-lg rounded-2xl p-12 relative overflow-hidden">
             {/* Background Animation */}
             <div className="absolute inset-0 bg-gradient-to-br from-amber-50/20 via-rose-50/15 to-indigo-50/20 animate-pulse"></div>
             <div className="absolute inset-0 bg-gradient-to-tl from-teal-50/15 via-transparent to-pink-50/15 animate-pulse" style={{animationDelay: '3s'}}></div>
@@ -339,7 +343,7 @@ const Index = () => {
       {/* Experience Section */}
       <section id="experience" className="py-20">
         <div className="container mx-auto px-6">
-          <Card className="bg-white shadow-lg rounded-2xl p-8 relative overflow-hidden">
+          <Card className="bg-white shadow-lg rounded-2xl p-12 relative overflow-hidden">
             {/* Background Animation */}
             <div className="absolute inset-0 bg-gradient-to-br from-green-50/20 via-blue-50/15 to-purple-50/20 animate-pulse"></div>
             <div className="absolute inset-0 bg-gradient-to-tl from-orange-50/15 via-transparent to-cyan-50/15 animate-pulse" style={{animationDelay: '2s'}}></div>
@@ -395,7 +399,7 @@ const Index = () => {
       {/* Skills Section */}
       <section id="skills" className="py-20">
         <div className="container mx-auto px-6">
-          <Card className="bg-white shadow-lg rounded-2xl p-8 relative overflow-hidden">
+          <Card className="bg-white shadow-lg rounded-2xl p-12 relative overflow-hidden">
             {/* Background Animation */}
             <div className="absolute inset-0 bg-gradient-to-br from-gray-50/20 via-neutral-50/15 to-slate-50/20 animate-pulse"></div>
             <div className="absolute inset-0 bg-gradient-to-tl from-yellow-50/15 via-transparent to-green-50/15 animate-pulse" style={{animationDelay: '6s'}}></div>
@@ -425,7 +429,7 @@ const Index = () => {
       {/* Projects Section */}
       <section id="projects" className="py-20">
         <div className="container mx-auto px-6">
-          <Card className="bg-white shadow-lg rounded-2xl p-8 relative overflow-hidden">
+          <Card className="bg-white shadow-lg rounded-2xl p-12 relative overflow-hidden">
             {/* Background Animation */}
             <div className="absolute inset-0 bg-gradient-to-br from-slate-50/20 via-stone-50/15 to-zinc-50/20 animate-pulse"></div>
             <div className="absolute inset-0 bg-gradient-to-tl from-red-50/15 via-transparent to-blue-50/15 animate-pulse" style={{animationDelay: '5s'}}></div>
@@ -455,7 +459,7 @@ const Index = () => {
       {/* Certifications Section */}
       <section id="certifications" className="py-20">
         <div className="container mx-auto px-6">
-          <Card className="bg-white shadow-lg rounded-2xl p-8 relative overflow-hidden">
+          <Card className="bg-white shadow-lg rounded-2xl p-12 relative overflow-hidden">
             {/* Background Animation */}
             <div className="absolute inset-0 bg-gradient-to-br from-emerald-50/20 via-violet-50/15 to-sky-50/20 animate-pulse"></div>
             <div className="absolute inset-0 bg-gradient-to-tl from-lime-50/15 via-transparent to-fuchsia-50/15 animate-pulse" style={{animationDelay: '4s'}}></div>
@@ -483,9 +487,9 @@ const Index = () => {
       </section>
 
       {/* Achievements Section */}
-      <section id="achievements" className="py-20">
+      <section id="achievements" className="py-20 flex-1">
         <div className="container mx-auto px-6">
-          <Card className="bg-white shadow-lg rounded-2xl p-8 relative overflow-hidden">
+          <Card className="bg-white shadow-lg rounded-2xl p-12 relative overflow-hidden">
             {/* Background Animation */}
             <div className="absolute inset-0 bg-gradient-to-br from-yellow-50/20 via-orange-50/15 to-red-50/20 animate-pulse"></div>
             <div className="absolute inset-0 bg-gradient-to-tl from-purple-50/15 via-transparent to-green-50/15 animate-pulse" style={{animationDelay: '7s'}}></div>
@@ -513,7 +517,7 @@ const Index = () => {
       </section>
 
       {/* Footer - Always Black */}
-      <footer className="py-8 bg-black border-t border-gray-800">
+      <footer className="py-8 bg-black border-t border-gray-800 mt-auto">
         <div className="container mx-auto px-6">
           <div className="text-center">
             <p className="text-gray-100 font-medium text-lg mb-2">
