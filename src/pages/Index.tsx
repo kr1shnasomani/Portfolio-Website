@@ -274,13 +274,22 @@ const Index = () => {
 
               <div className="flex justify-center items-center space-x-8">
                 <a href="mailto:krishnasomani272005@gmail.com" className="text-gray-600 hover:text-gray-900 transition-all duration-200 transform hover:scale-110 p-2 rounded-full hover:bg-gray-100 flex items-center justify-center">
-                  <img src="/lovable-uploads/02df86ab-416d-4f5f-a467-0f3336bf54f0.png" alt="Email" className="w-7 h-7 object-contain" />
+                  <img src="/lovable-uploads/3e4d23f6-ee05-4d9e-84c2-823636190624.png" alt="Email" className="w-7 h-7 object-contain" />
                 </a>
                 <a href="https://github.com/kr1shnasomani" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 transition-all duration-200 transform hover:scale-110 p-2 rounded-full hover:bg-gray-100 flex items-center justify-center">
                   <img src="/lovable-uploads/841e0d80-9121-4fe1-9671-8b3ac0ffc2c8.png" alt="GitHub" className="w-7 h-7 object-contain" />
                 </a>
                 <a href="https://www.linkedin.com/in/kr1shnasomani" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 transition-all duration-200 transform hover:scale-110 p-2 rounded-full hover:bg-gray-100 flex items-center justify-center">
                   <img src="/lovable-uploads/a6bf9787-498f-43cd-8c6e-1928638e8c51.png" alt="LinkedIn" className="w-7 h-7 object-contain" />
+                </a>
+                <a href="https://www.instagram.com/kr1shnasomani/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 transition-all duration-200 transform hover:scale-110 p-2 rounded-full hover:bg-gray-100 flex items-center justify-center">
+                  <img src="/lovable-uploads/72600596-33f7-4ec0-b5aa-cdbb0db470a2.png" alt="Instagram" className="w-7 h-7 object-contain" />
+                </a>
+                <a href="https://x.com/kr1shnasomani" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 transition-all duration-200 transform hover:scale-110 p-2 rounded-full hover:bg-gray-100 flex items-center justify-center">
+                  <img src="/lovable-uploads/cd16318f-af68-4197-8969-74894430cbc4.png" alt="X" className="w-7 h-7 object-contain" />
+                </a>
+                <a href="https://www.kaggle.com/kr1shnasomani" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 transition-all duration-200 transform hover:scale-110 p-2 rounded-full hover:bg-gray-100 flex items-center justify-center">
+                  <img src="/lovable-uploads/a7974db8-c3bf-42f4-a89d-6ca98dbfee6b.png" alt="Kaggle" className="w-7 h-7 object-contain" />
                 </a>
               </div>
             </motion.div>
