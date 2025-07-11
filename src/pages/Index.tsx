@@ -43,31 +43,31 @@ const Index = () => {
     {
       title: "BloodPrint",
       description: "Developed a deep learning model using PyTorch and TensorFlow to predict blood groups from fingerprint patterns, achieving up to 85% accuracy.",
-      image: "/lovable-uploads/ce9f07a9-e7b0-433c-8536-990fbf35c5ab.png",
+      image: "/uploads/ce9f07a9-e7b0-433c-8536-990fbf35c5ab.png",
       githubUrl: "https://github.com/kr1shnasomani/BloodPrint"
     },
     {
       title: "CaptionCraft", 
       description: "Built an image captioning system using DenseNet201 and LSTM to generate natural language descriptions from images with TensorFlow and Keras.",
-      image: "/lovable-uploads/8e746e46-8b0a-409a-b356-e565c59eb2a8.png",
+      image: "/uploads/8e746e46-8b0a-409a-b356-e565c59eb2a8.png",
       githubUrl: "https://github.com/kr1shnasomani/CaptionCraft"
     },
     {
       title: "SpeedVision",
       description: "Created a real-time vehicle speed detection system using YOLOv8, ByteTrack, and OpenCV to analyze and annotate traffic footage.",
-      image: "/lovable-uploads/07dfd706-2a40-495a-8e65-8f37f0d499c3.png",
+      image: "/uploads/07dfd706-2a40-495a-8e65-8f37f0d499c3.png",
       githubUrl: "https://github.com/kr1shnasomani/SpeedVision"
     },
     {
       title: "ToneSense",
       description: "Implemented a speech emotion recognition model with 98% accuracy using MFCC features and spectrograms for real-time audio emotion analysis.",
-      image: "/lovable-uploads/2d227abc-4cde-4bd9-8d77-4a50eb0a9000.png",
+      image: "uploads/2d227abc-4cde-4bd9-8d77-4a50eb0a9000.png",
       githubUrl: "https://github.com/kr1shnasomani/ToneSense"
     },
     {
       title: "Sportiq",
       description: "Designed a computer vision pipeline to track tennis players and ball trajectories using Mediapipe and a custom TrackNet model.",
-      image: "/lovable-uploads/4126598b-6733-4a96-974e-2b9adf11ee6d.png",
+      image: "/uploads/4126598b-6733-4a96-974e-2b9adf11ee6d.png",
       githubUrl: "https://github.com/kr1shnasomani/Sportiq"
     }
   ];
@@ -77,19 +77,19 @@ const Index = () => {
       institution: "SRM IST Chennai",
       period: "Aug 2023 - Apr 2027",
       grade: "CGPA: 8.97",
-      logo: "/lovable-uploads/3c301d09-c1de-44b1-9b02-a0a548cbbaa6.png"
+      logo: "/uploads/3c301d09-c1de-44b1-9b02-a0a548cbbaa6.png"
     },
     {
       institution: "St. John's Public School - India",
       period: "Jun 2021 - May 2023",
       grade: "Grade: 83.6%",
-      logo: "/lovable-uploads/864fd82d-826c-4093-80da-e90d6adf53a4.png"
+      logo: "/uploads/864fd82d-826c-4093-80da-e90d6adf53a4.png"
     },
     {
       institution: "The PSBB Millennium School",
       period: "Jun 2011 - Mar 2021",
       grade: "Grade: 87.6%",
-      logo: "/lovable-uploads/4fa761cb-54dc-429e-bee8-0ea38a29a7ed.png"
+      logo: "/uploads/4fa761cb-54dc-429e-bee8-0ea38a29a7ed.png"
     }
   ];
 
@@ -101,7 +101,7 @@ const Index = () => {
       period: "Jun 2025 - Present",
       location: "",
       description: "Developed a chatbot using Dify to recommend diagnostic tests and health packages based on user-reported issues, built a WhatsApp chatbot that brought key app features directly into the chat experience, and created an AI-powered content pipeline that generates short-form content weekly while identifying trending topics.",
-      logo: "/lovable-uploads/fd6c3dad-b180-4cfa-a02e-87b22cd159d2.png"
+      logo: "/uploads/fd6c3dad-b180-4cfa-a02e-87b22cd159d2.png"
     },
     {
       company: "Data Science Community SRM",
@@ -110,7 +110,7 @@ const Index = () => {
       period: "Dec 2024 - Present",
       location: "",
       description: "",
-      logo: "/lovable-uploads/0514ae2e-4cb9-46c0-a718-5bd83dd0c1bf.png"
+      logo: "/uploads/0514ae2e-4cb9-46c0-a718-5bd83dd0c1bf.png"
     },
     {
       company: "IEEE SRMIST Student Branch",
@@ -119,7 +119,7 @@ const Index = () => {
       period: "Nov 2024 - Present",
       location: "",
       description: "",
-      logo: "/lovable-uploads/ea9139e1-3664-456e-a42f-e38ba734d92b.png"
+      logo: "/uploads/ea9139e1-3664-456e-a42f-e38ba734d92b.png"
     },
     {
       company: "ifYK",
@@ -128,7 +128,7 @@ const Index = () => {
       period: "Sep 2024 - Oct 2024",
       location: "",
       description: "Engineered a chatbot powered by Hugging Face's Llama 3.1 (8B) model to efficiently extract event-specific data, leveraging NLP capabilities for accurate information retrieval. Designed and implemented web scraping pipelines to preprocess raw HTML into clean, structured text, optimizing data preparation for NLP tasks. Deployed the solution using FastAPI on Render, enabling real-time query handling and seamless user interaction. This system reduced manual effort in event information extraction, streamlining data processing workflows.",
-      logo: "/lovable-uploads/1e76810f-7c22-4aa7-8cea-0fed648cd697.png"
+      logo: "/uploads/1e76810f-7c22-4aa7-8cea-0fed648cd697.png"
     },
     {
       company: "Accuracy",
@@ -137,7 +137,7 @@ const Index = () => {
       period: "Jun 2024 - Jul 2024",
       location: "",
       description: "Streamlined data extraction from paginated, infinite scroll, and detail view pages into a unified script. Conducted textual analysis on over 1,000 extracted job postings to uncover in-demand and least sought-after roles, identify top required skills, and analyze geographic trends, providing actionable insights to enhance hiring strategies.",
-      logo: "/lovable-uploads/9e65c59f-7d17-4627-a0f9-cd664c99bde6.png"
+      logo: "/uploads/9e65c59f-7d17-4627-a0f9-cd664c99bde6.png"
     }
   ];
 
@@ -146,49 +146,49 @@ const Index = () => {
       title: "DBMS Course - Master the Fundamentals and Advanced Concepts",
       provider: "Scaler",
       date: "Issued Feb 2025",
-      logo: "/lovable-uploads/29d087cb-3685-4551-a4ba-8d6ad368a4f6.png"
+      logo: "/uploads/29d087cb-3685-4551-a4ba-8d6ad368a4f6.png"
     },
     {
       title: "Neural Networks and Deep Learning",
       provider: "DeepLearning.AI",
       date: "Issued Dec 2024",
-      logo: "/lovable-uploads/4597d5ab-e9a1-4cc2-a228-2cfd3c9643fb.png"
+      logo: "/uploads/4597d5ab-e9a1-4cc2-a228-2cfd3c9643fb.png"
     },
     {
       title: "Introduction to Computer Vision and Image Processing",
       provider: "IBM",
       date: "Issued Nov 2024",
-      logo: "/lovable-uploads/8e0955d6-c265-4747-acc7-e12500adf0bb.png"
+      logo: "/uploads/8e0955d6-c265-4747-acc7-e12500adf0bb.png"
     },
     {
       title: "Programming in Java",
       provider: "NPTEL",
       date: "Issued Nov 2024",
-      logo: "/lovable-uploads/6f2e2224-f9c0-4e0b-ad95-39f9d71d221d.png"
+      logo: "/uploads/6f2e2224-f9c0-4e0b-ad95-39f9d71d221d.png"
     },
     {
       title: "Artificial Intelligence with Python",
       provider: "Great Learning",
       date: "Issued Oct 2024",
-      logo: "/lovable-uploads/a7c46861-960a-49b6-bcb9-3f76b323256a.png"
+      logo: "/uploads/a7c46861-960a-49b6-bcb9-3f76b323256a.png"
     },
     {
       title: "Machine Learning with Python",
       provider: "IBM",
       date: "Issued Jun 2024",
-      logo: "/lovable-uploads/b6bf63d5-04db-421b-bb14-301fb87ec120.png"
+      logo: "/uploads/b6bf63d5-04db-421b-bb14-301fb87ec120.png"
     },
     {
       title: "Crash Course on Python",
       provider: "Google",
       date: "Issued May 2024",
-      logo: "/lovable-uploads/f08d310e-c1a1-4819-83d2-bd74284cb5e1.png"
+      logo: "/uploads/f08d310e-c1a1-4819-83d2-bd74284cb5e1.png"
     },
     {
       title: "Accelerated Computer Science Fundamentals",
       provider: "University of Illinois Urbana-Champaign",
       date: "Issued Mar 2024",
-      logo: "/lovable-uploads/7c0a365f-499f-4bd8-b18d-911dc065fe5d.png"
+      logo: "/uploads/7c0a365f-499f-4bd8-b18d-911dc065fe5d.png"
     }
   ];
 
@@ -197,7 +197,7 @@ const Index = () => {
       title: "Temenos Tem-E-thon 2025 Hackathon Winner",
       description: "Won a 15-inch Apple MacBook Air M3 (16GB RAM/256GB SSD)",
       images: [
-        "/lovable-uploads/37d36c04-a2e6-4512-9f2a-311c56b6782c.png"
+        "/uploads/37d36c04-a2e6-4512-9f2a-311c56b6782c.png"
       ]
     }
   ];
@@ -248,7 +248,7 @@ const Index = () => {
             >
               <div className="w-32 h-32 mx-auto mb-8">
                 <img 
-                  src="/lovable-uploads/911bfdb1-2ce9-43c7-8e16-19b0f2b5f5f6.png" 
+                  src="/uploads/911bfdb1-2ce9-43c7-8e16-19b0f2b5f5f6.png" 
                   alt="Krishna Somani" 
                   className="w-full h-full object-cover rounded-full border-4 border-black shadow-lg"
                 />
@@ -274,22 +274,22 @@ const Index = () => {
 
               <div className="flex justify-center items-center space-x-8">
                 <a href="mailto:krishnasomani272005@gmail.com" className="text-gray-600 hover:text-gray-900 transition-all duration-200 transform hover:scale-110 p-2 rounded-full hover:bg-gray-100 flex items-center justify-center">
-                  <img src="/lovable-uploads/3e4d23f6-ee05-4d9e-84c2-823636190624.png" alt="Email" className="w-7 h-7 object-contain" />
+                  <img src="/uploads/3e4d23f6-ee05-4d9e-84c2-823636190624.png" alt="Email" className="w-7 h-7 object-contain" />
                 </a>
                 <a href="https://github.com/kr1shnasomani" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 transition-all duration-200 transform hover:scale-110 p-2 rounded-full hover:bg-gray-100 flex items-center justify-center">
-                  <img src="/lovable-uploads/841e0d80-9121-4fe1-9671-8b3ac0ffc2c8.png" alt="GitHub" className="w-7 h-7 object-contain" />
+                  <img src="/uploads/841e0d80-9121-4fe1-9671-8b3ac0ffc2c8.png" alt="GitHub" className="w-7 h-7 object-contain" />
                 </a>
                 <a href="https://www.linkedin.com/in/kr1shnasomani" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 transition-all duration-200 transform hover:scale-110 p-2 rounded-full hover:bg-gray-100 flex items-center justify-center">
-                  <img src="/lovable-uploads/a6bf9787-498f-43cd-8c6e-1928638e8c51.png" alt="LinkedIn" className="w-7 h-7 object-contain" />
+                  <img src="/uploads/a6bf9787-498f-43cd-8c6e-1928638e8c51.png" alt="LinkedIn" className="w-7 h-7 object-contain" />
                 </a>
                 <a href="https://www.instagram.com/kr1shnasomani/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 transition-all duration-200 transform hover:scale-110 p-2 rounded-full hover:bg-gray-100 flex items-center justify-center">
-                  <img src="/lovable-uploads/72600596-33f7-4ec0-b5aa-cdbb0db470a2.png" alt="Instagram" className="w-7 h-7 object-contain" />
+                  <img src="/uploads/72600596-33f7-4ec0-b5aa-cdbb0db470a2.png" alt="Instagram" className="w-7 h-7 object-contain" />
                 </a>
                 <a href="https://x.com/kr1shnasomani" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 transition-all duration-200 transform hover:scale-110 p-2 rounded-full hover:bg-gray-100 flex items-center justify-center">
-                  <img src="/lovable-uploads/cd16318f-af68-4197-8969-74894430cbc4.png" alt="X" className="w-7 h-7 object-contain" />
+                  <img src="/uploads/cd16318f-af68-4197-8969-74894430cbc4.png" alt="X" className="w-7 h-7 object-contain" />
                 </a>
                 <a href="https://www.kaggle.com/kr1shnasomani" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 transition-all duration-200 transform hover:scale-110 p-2 rounded-full hover:bg-gray-100 flex items-center justify-center">
-                  <img src="/lovable-uploads/a7974db8-c3bf-42f4-a89d-6ca98dbfee6b.png" alt="Kaggle" className="w-7 h-7 object-contain" />
+                  <img src="/uploads/a7974db8-c3bf-42f4-a89d-6ca98dbfee6b.png" alt="Kaggle" className="w-7 h-7 object-contain" />
                 </a>
               </div>
             </motion.div>
