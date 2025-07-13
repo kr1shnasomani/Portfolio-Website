@@ -1,6 +1,5 @@
 <h2 align="center">here is everything about my portfolio website!</h2>
 
-
 ### Execution Guide:
 Run the following commands in the terminal:
 1. Clone the repository:
@@ -16,10 +15,6 @@ Run the following commands in the terminal:
 3. Install npm:
    ```
    npm install
-   ```
-   If already installed, check the version:
-   ```
-   npm --version
    ```
 
 4. Start the development server:
