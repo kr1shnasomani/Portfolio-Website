@@ -248,7 +248,7 @@ const Index = () => {
             >
               <div className="w-32 h-32 mx-auto mb-8">
                 <img 
-                  src="/image-uploads/Krishna Profile Photo.png.png" 
+                  src="/image-uploads/Krishna Profile Photo.png" 
                   alt="Krishna Somani" 
                   className="w-full h-full object-cover rounded-full border-4 border-black shadow-lg"
                 />
