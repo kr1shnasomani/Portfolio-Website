@@ -39,47 +39,15 @@ const SkillsGrid = () => {
   return (
     <div className="max-w-6xl mx-auto">
       <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-6 justify-items-center">
-        {skills.map((skill, index) => (
-          <motion.div
-            key={skill.name}
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: index * 0.05, duration: 0.4 }}
-            className="group relative"
-            onMouseEnter={() => setHoveredSkill(skill.name)}
-            onMouseLeave={() => setHoveredSkill(null)}
-          >
-            <div className="w-20 h-20 bg-white border border-gray-200 hover:border-gray-300 rounded-2xl flex items-center justify-center p-3 transition-all duration-300 hover:scale-110 hover:shadow-xl shadow-sm group-hover:bg-gray-50">
-              <img
-                src={skill.icon}
-                alt={skill.name}
-                className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-110 rounded-lg"
-              />
-            </div>
-            
-            {/* Tooltip */}
-            <motion.div
-              initial={{ opacity: 0, y: 15, scale: 0.9 }}
-              animate={{
-                opacity: hoveredSkill === skill.name ? 1 : 0,
-                y: hoveredSkill === skill.name ? -65 : 15,
-                scale: hoveredSkill === skill.name ? 1 : 0.9
-              }}
-              transition={{ duration: 0.2 }}
-              className="absolute left-1/2 transform -translate-x-1/2 pointer-events-none z-20"
-            >
-              <div className="bg-gray-800/95 backdrop-blur-xl text-white text-sm font-medium px-4 py-2 rounded-lg shadow-2xl shadow-black/40 whitespace-nowrap border border-gray-700/50">
-                {skill.name}
-                <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-800/95"></div>
-              </div>
-            </motion.div>
-            
-            {/* Skill name below icon */}
-            <p className="text-center text-sm font-medium text-gray-700 mt-3 group-hover:text-black transition-colors duration-300">
-              {skill.name}
-            </p>
-          </motion.div>
+        {skills.map((skill) => (
+          <div key={skill.name} className="flex flex-col items-center">
+            <img
+              src={skill.icon}
+              alt={skill.name}
+              className="h-12 w-12 transition-transform duration-200 hover:scale-110"
+            />
+            <span className="mt-2 text-sm text-muted-foreground">{skill.name}</span>
+          </div>
         ))}
       </div>
     </div>
