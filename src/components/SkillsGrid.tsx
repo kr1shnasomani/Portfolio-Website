@@ -13,10 +13,10 @@ const SkillsGrid = () => {
     { name: 'HTML', icon: '/image-uploads/3bd69446-c36d-44b8-9469-eb196cfbc754.png' },
     { name: 'CSS', icon: '/image-uploads/ddbe3989-181c-448e-9768-81a7f3f39c6a.png' },
     { name: 'JavaScript', icon: '/image-uploads/a4e7f3d2-e451-4235-8059-4872a15ce057.png' },
-    { name: 'Python', icon: '/image-uploads/a2ee47ec-4d65-466d-a088-7405c57d341c.png' },
     { name: 'C', icon: '/image-uploads/ca87209a-648b-473e-aa91-ed04b4b7d828.png' },
     { name: 'C++', icon: '/image-uploads/d948e6b4-f887-4ccb-a40d-80a10ba2cb9e.png' },
     { name: 'Java', icon: '/image-uploads/122ffbbd-99d0-4074-b603-b2593c55083c.png' },
+    { name: 'Python', icon: '/image-uploads/a2ee47ec-4d65-466d-a088-7405c57d341c.png' },
     { name: 'NumPy', icon: '/image-uploads/6167cf56-c729-46a2-9bc6-5a02716e4044.png' },
     { name: 'pandas', icon: '/image-uploads/05fbc891-10e3-49d6-8506-734f54f869cf.png' },
     { name: 'SciPy', icon: '/image-uploads/914a41fb-ae31-4011-93c3-efd801d8ab2f.png' },
@@ -33,6 +33,12 @@ const SkillsGrid = () => {
     { name: 'Matplotlib', icon: '/image-uploads/739d6afe-f3e9-461d-813e-990a8d2ecf51.png' },
     { name: 'PyPi', icon: '/image-uploads/3eb9aaa5-9b11-4652-8585-69de49724639.png' },
     { name: 'Git', icon: '/image-uploads/c08fa6d6-edfe-4cc2-bfdf-d52253f6bb6c.png' },
+    { name: 'GitHub', icon: '/image-uploads/c08fa6d6-edfe-4cc2-bfdf-d52253f6bb6c.png' },
+    { name: 'PostgreSQL', icon: '/image-uploads/PostgreSQL.png' },
+    { name: 'Dify', icon: '/image-uploads/Dify.jpeg' },
+    { name: 'n8n', icon: '/image-uploads/n8n.png' },
+    { name: 'LangChain', icon: '/image-uploads/LangChain.webp' },
+    { name: 'Postman', icon: '/image-uploads/Postman.webp' },
     { name: 'Figma', icon: '/image-uploads/9fd3f12d-ae58-49bb-b147-14f220ca8f6a.png' }
   ];
 
