@@ -77,19 +77,19 @@ const Index = () => {
       institution: "SRM IST Chennai",
       period: "Aug 2023 - Apr 2027",
       grade: "CGPA: 8.95",
-      logo: "/image-uploads/3c301d09-c1de-44b1-9b02-a0a548cbbaa6.png"
+      logo: "/image-uploads/SRM IST Chennai.png"
     },
     {
       institution: "St. John's Public School - India",
       period: "Jun 2021 - May 2023",
       grade: "Grade: 83.6%",
-      logo: "/image-uploads/864fd82d-826c-4093-80da-e90d6adf53a4.png"
+      logo: "/image-uploads/St. John's Public School - India.png"
     },
     {
       institution: "The PSBB Millennium School",
       period: "Jun 2011 - Mar 2021",
       grade: "Grade: 87.6%",
-      logo: "/image-uploads/4fa761cb-54dc-429e-bee8-0ea38a29a7ed.png"
+      logo: "/image-uploads/The PSBB Millennium School.png"
     }
   ];
 
@@ -101,7 +101,7 @@ const Index = () => {
       period: "Jun 2025 - Present",
       location: "",
       description: "Designed and deployed two AI-powered chatbots using Dify, integrating core app features into WhatsApp. The first enabled product browsing and ordering via chat, while the second facilitated diagnostic test bookings directly through chat.",
-      logo: "/image-uploads/fd6c3dad-b180-4cfa-a02e-87b22cd159d2.png"
+      logo: "/image-uploads/PharmEasy.png"
     },
     {
       company: "Data Science Community SRM",
@@ -110,7 +110,7 @@ const Index = () => {
       period: "Dec 2024 - Present",
       location: "",
       description: "",
-      logo: "/image-uploads/0514ae2e-4cb9-46c0-a718-5bd83dd0c1bf.png"
+      logo: "/image-uploads/Data Science Community SRM.png"
     },
     {
       company: "IEEE SRMIST Student Branch",
@@ -119,7 +119,7 @@ const Index = () => {
       period: "Nov 2024 - Present",
       location: "",
       description: "Developed a project that automates tree segmentation from geospatial images using detectron2’s Mask R-CNN. The workflow involved downloading and processing TIFF images, performing instance segmentation, and generating visual outputs with both default and custom visualizations. The system highlights trees in yellow and backgrounds in purple, with results saved for further environmental analysis.",
-      logo: "/image-uploads/ea9139e1-3664-456e-a42f-e38ba734d92b.png"
+      logo: "/image-uploads/IEEE SRMIST Student Branch.png"
     },
     {
       company: "ifYK",
@@ -128,7 +128,7 @@ const Index = () => {
       period: "Sep 2024 - Oct 2024",
       location: "",
       description: "Engineered a chatbot powered by Hugging Face's Llama 3.1 (8B) model to efficiently extract event-specific data, leveraging NLP capabilities for accurate information retrieval. Designed and implemented web scraping pipelines to preprocess raw HTML into clean, structured text, optimizing data preparation for NLP tasks. Deployed the solution using FastAPI on Render, enabling real-time query handling and seamless user interaction. This system reduced manual effort in event information extraction, streamlining data processing workflows.",
-      logo: "/image-uploads/1e76810f-7c22-4aa7-8cea-0fed648cd697.png"
+      logo: "/image-uploads/ifYK.png"
     },
     {
       company: "Accuracy",
@@ -137,7 +137,7 @@ const Index = () => {
       period: "Jun 2024 - Jul 2024",
       location: "",
       description: "Streamlined data extraction from paginated, infinite scroll, and detail view pages into a unified script. Conducted textual analysis on over 1,000 extracted job postings to uncover in-demand and least sought-after roles, identify top required skills, and analyze geographic trends, providing actionable insights to enhance hiring strategies.",
-      logo: "/image-uploads/9e65c59f-7d17-4627-a0f9-cd664c99bde6.png"
+      logo: "/image-uploads/Accuracy.png"
     }
   ];
 
@@ -146,49 +146,49 @@ const Index = () => {
       title: "DBMS Course - Master the Fundamentals and Advanced Concepts",
       provider: "Scaler",
       date: "Issued Feb 2025",
-      logo: "/image-uploads/29d087cb-3685-4551-a4ba-8d6ad368a4f6.png"
+      logo: "/image-uploads/DBMS Course - Master the Fundamentals and Advanced Concepts.png"
     },
     {
       title: "Neural Networks and Deep Learning",
       provider: "DeepLearning.AI",
       date: "Issued Dec 2024",
-      logo: "/image-uploads/4597d5ab-e9a1-4cc2-a228-2cfd3c9643fb.png"
+      logo: "/image-uploads/Neural Networks and Deep Learning.png"
     },
     {
       title: "Introduction to Computer Vision and Image Processing",
       provider: "IBM",
       date: "Issued Nov 2024",
-      logo: "/image-uploads/8e0955d6-c265-4747-acc7-e12500adf0bb.png"
+      logo: "/image-uploads/Introduction to Computer Vision and Image Processing.png"
     },
     {
       title: "Programming in Java",
       provider: "NPTEL",
       date: "Issued Nov 2024",
-      logo: "/image-uploads/6f2e2224-f9c0-4e0b-ad95-39f9d71d221d.png"
+      logo: "/image-uploads/Programming in Java.png"
     },
     {
       title: "Artificial Intelligence with Python",
       provider: "Great Learning",
       date: "Issued Oct 2024",
-      logo: "/image-uploads/a7c46861-960a-49b6-bcb9-3f76b323256a.png"
+      logo: "/image-uploads/Artificial Intelligence with Python.png"
     },
     {
       title: "Machine Learning with Python",
       provider: "IBM",
       date: "Issued Jun 2024",
-      logo: "/image-uploads/b6bf63d5-04db-421b-bb14-301fb87ec120.png"
+      logo: "/image-uploads/Machine Learning with Python.png"
     },
     {
       title: "Crash Course on Python",
       provider: "Google",
       date: "Issued May 2024",
-      logo: "/image-uploads/f08d310e-c1a1-4819-83d2-bd74284cb5e1.png"
+      logo: "/image-uploads/Crash Course on Python.png"
     },
     {
       title: "Accelerated Computer Science Fundamentals",
       provider: "University of Illinois Urbana-Champaign",
       date: "Issued Mar 2024",
-      logo: "/image-uploads/7c0a365f-499f-4bd8-b18d-911dc065fe5d.png"
+      logo: "/image-uploads/Accelerated Computer Science Fundamentals.png"
     }
   ];
 
@@ -197,7 +197,7 @@ const Index = () => {
       title: "Temenos Tem-E-thon 2025 Hackathon Winner",
       description: "Won a 15-inch Apple MacBook Air M3 (16GB RAM/256GB SSD)",
       images: [
-        "/image-uploads/37d36c04-a2e6-4512-9f2a-311c56b6782c.png"
+        "/image-uploads/Temenos Tem-E-thon 2025 Hackathon Winner.png"
       ]
     }
   ];
@@ -248,7 +248,7 @@ const Index = () => {
             >
               <div className="w-32 h-32 mx-auto mb-8">
                 <img 
-                  src="/image-uploads/911bfdb1-2ce9-43c7-8e16-19b0f2b5f5f6.png" 
+                  src="/image-uploads/Krishna Profile Photo.png.png" 
                   alt="Krishna Somani" 
                   className="w-full h-full object-cover rounded-full border-4 border-black shadow-lg"
                 />
@@ -274,22 +274,22 @@ const Index = () => {
 
               <div className="flex justify-center items-center space-x-8">
                 <a href="mailto:krishnasomani272005@gmail.com" className="text-gray-600 hover:text-gray-900 transition-all duration-200 transform hover:scale-110 p-2 rounded-full hover:bg-gray-100 flex items-center justify-center">
-                  <img src="/image-uploads/3e4d23f6-ee05-4d9e-84c2-823636190624.png" alt="Email" className="w-7 h-7 object-contain" />
+                  <img src="/image-uploads/Mail.png" alt="Email" className="w-7 h-7 object-contain" />
                 </a>
                 <a href="https://github.com/kr1shnasomani" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 transition-all duration-200 transform hover:scale-110 p-2 rounded-full hover:bg-gray-100 flex items-center justify-center">
-                  <img src="/image-uploads/841e0d80-9121-4fe1-9671-8b3ac0ffc2c8.png" alt="GitHub" className="w-7 h-7 object-contain" />
+                  <img src="/image-uploads/GitHub Profile.png" alt="GitHub" className="w-7 h-7 object-contain" />
                 </a>
                 <a href="https://www.linkedin.com/in/kr1shnasomani" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 transition-all duration-200 transform hover:scale-110 p-2 rounded-full hover:bg-gray-100 flex items-center justify-center">
-                  <img src="/image-uploads/a6bf9787-498f-43cd-8c6e-1928638e8c51.png" alt="LinkedIn" className="w-7 h-7 object-contain" />
+                  <img src="/image-uploads/LinkedIn.png" alt="LinkedIn" className="w-7 h-7 object-contain" />
                 </a>
                 <a href="https://www.instagram.com/kr1shnasomani/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 transition-all duration-200 transform hover:scale-110 p-2 rounded-full hover:bg-gray-100 flex items-center justify-center">
-                  <img src="/image-uploads/72600596-33f7-4ec0-b5aa-cdbb0db470a2.png" alt="Instagram" className="w-7 h-7 object-contain" />
+                  <img src="/image-uploads/Instagram.png" alt="Instagram" className="w-7 h-7 object-contain" />
                 </a>
                 <a href="https://x.com/kr1shnasomani" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 transition-all duration-200 transform hover:scale-110 p-2 rounded-full hover:bg-gray-100 flex items-center justify-center">
-                  <img src="/image-uploads/cd16318f-af68-4197-8969-74894430cbc4.png" alt="X" className="w-7 h-7 object-contain" />
+                  <img src="/image-uploads/X.png" alt="X" className="w-7 h-7 object-contain" />
                 </a>
                 <a href="https://www.kaggle.com/kr1shnasomani" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 transition-all duration-200 transform hover:scale-110 p-2 rounded-full hover:bg-gray-100 flex items-center justify-center">
-                  <img src="/image-uploads/a7974db8-c3bf-42f4-a89d-6ca98dbfee6b.png" alt="Kaggle" className="w-7 h-7 object-contain" />
+                  <img src="/image-uploads/Kaggle.png" alt="Kaggle" className="w-7 h-7 object-contain" />
                 </a>
               </div>
             </motion.div>
