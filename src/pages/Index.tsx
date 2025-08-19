@@ -43,31 +43,31 @@ const Index = () => {
     {
       title: "BloodPrint",
       description: "Developed a deep learning model using PyTorch and TensorFlow to predict blood groups from fingerprint patterns, achieving up to 85% accuracy.",
-      image: "/image-uploads/ce9f07a9-e7b0-433c-8536-990fbf35c5ab.png",
+      image: "/image-uploads/BloodPrint.png",
       githubUrl: "https://github.com/kr1shnasomani/BloodPrint"
     },
     {
       title: "CaptionCraft", 
       description: "Built an image captioning system using DenseNet201 and LSTM to generate natural language descriptions from images with TensorFlow and Keras.",
-      image: "/image-uploads/8e746e46-8b0a-409a-b356-e565c59eb2a8.png",
+      image: "/image-uploads/CaptionCraft.png",
       githubUrl: "https://github.com/kr1shnasomani/CaptionCraft"
     },
     {
       title: "SpeedVision",
       description: "Created a real-time vehicle speed detection system using YOLOv8, ByteTrack, and OpenCV to analyze and annotate traffic footage.",
-      image: "/image-uploads/07dfd706-2a40-495a-8e65-8f37f0d499c3.png",
+      image: "/image-uploads/SpeedVision.png",
       githubUrl: "https://github.com/kr1shnasomani/SpeedVision"
     },
     {
       title: "ToneSense",
       description: "Implemented a speech emotion recognition model with 98% accuracy using MFCC features and spectrograms for real-time audio emotion analysis.",
-      image: "/image-uploads/2d227abc-4cde-4bd9-8d77-4a50eb0a9000.png",
+      image: "/image-uploads/ToneSense.png",
       githubUrl: "https://github.com/kr1shnasomani/ToneSense"
     },
     {
       title: "Sportiq",
       description: "Designed a computer vision pipeline to track tennis players and ball trajectories using Mediapipe and a custom TrackNet model.",
-      image: "/image-uploads/4126598b-6733-4a96-974e-2b9adf11ee6d.png",
+      image: "/image-uploads/Sportiq.png",
       githubUrl: "https://github.com/kr1shnasomani/Sportiq"
     }
   ];
