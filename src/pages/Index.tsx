@@ -109,7 +109,7 @@ const Index = () => {
       role: "AI/ML Technical Team Member",
       period: "Dec 2024 - Present",
       location: "",
-      description: "",
+      description: "Built a cold email generator for a services company using Groq, LangChain, and Streamlit. It allows users to input the URL of a company's careers page. The tool then extracts job listings from that page and generates personalized cold emails. These emails include relevant portfolio links, sourced from a vector database, based on the specific job descriptions.",
       logo: "/image-uploads/Data Science Community SRM.png"
     },
     {
