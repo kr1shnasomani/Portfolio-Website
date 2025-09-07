@@ -195,9 +195,28 @@ const Index = () => {
   const achievements = [
     {
       title: "Temenos Tem-E-thon 2025 Hackathon Winner",
-      description: "Won a 15-inch Apple MacBook Air M3 (16GB RAM/256GB SSD)",
+      highlight: "1000+ teams. 30 finalists. 1 winning team – Tem-E-thon 2025 Champions!",
+      description: "My team won Tem-E-thon 2025, a national level hackathon organized by Temenos at Anna University, Chennai, taking home an Apple MacBook Air M3 (15-inch) per team member from a ₹10,00,000 prize pool. It was an incredible experience, but the real win was proving how tech can drive sustainability.",
       images: [
         "/image-uploads/Temenos Tem-E-thon 2025 Hackathon Winner.png"
+      ],
+      hashtags: ["#Temenos", "#TemEthon2025", "#Hackathon", "#SustainableDevelopmentGoal"]
+    },
+    {
+      title: "FinShield Hackathon 2025 Finalist (Top 5)",
+      highlight: "Top 5 at FinShield Hackathon 2025!",
+      description: "Thrilled to share that our team secured a spot in the Top 5 at FinShield Hackathon 2025, part of the PSBs Hackathon Series 2025 – an initiative by the Government of India, Ministry of Finance & Department of Financial Services, hosted by Bank of India and IIT Hyderabad.\n\nCountless hours of debugging, fine-tuning, and late nights taught us so much! While we didn’t win a cash prize from the ₹20,00,000 prize pool, the real takeaway was proving how machine learning and alternative data can predict credit defaults and track potential defaulters more effectively.\n\nGrateful to my amazing teammates – Sarthak Lal, Prabhav Singh and Vatsala Singh. Immense thanks to Bank of India, Indian Institute of Technology Hyderabad, and our college SRM IST Chennai.",
+      images: [
+        "/image-uploads/FinShield Hackathon 2025.jpeg"
+      ],
+      hashtags: [
+        "#FinShield2025",
+        "#PSBsHackathonSeries2025",
+        "#GovernmentOfIndia",
+        "#IITHyderabad",
+        "#BankOfIndia",
+        "#FinTech",
+        "#CreditRisk"
       ]
     }
   ];
@@ -262,7 +281,7 @@ const Index = () => {
               
               <div className="flex justify-center mb-12">
                 <a 
-                  href="https://drive.google.com/file/d/1zrLOMuQTDsKnMG9tzos9pF0eaWBnn7iT/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1bk0AQKQui3UT4YU-Y6Px4UDHXLzkzFPd/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center bg-black hover:bg-gray-800 text-white px-8 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105 font-medium"
