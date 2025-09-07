@@ -201,25 +201,24 @@ const Index = () => {
         "/image-uploads/Temenos Tem-E-thon 2025 Hackathon Winner.png"
       ],
       hashtags: ["#Temenos", "#TemEthon2025", "#Hackathon", "#SustainableDevelopmentGoal"]
-    },
-    {
-      title: "FinShield Hackathon 2025 Finalist (Top 5)",
-      highlight: "Top 5 at FinShield Hackathon 2025!",
-      description: "Thrilled to share that our team secured a spot in the Top 5 at FinShield Hackathon 2025, part of the PSBs Hackathon Series 2025 – an initiative by the Government of India, Ministry of Finance & Department of Financial Services, hosted by Bank of India and IIT Hyderabad.\n\nCountless hours of debugging, fine-tuning, and late nights taught us so much! While we didn’t win a cash prize from the ₹20,00,000 prize pool, the real takeaway was proving how machine learning and alternative data can predict credit defaults and track potential defaulters more effectively.\n\nGrateful to my amazing teammates – Sarthak Lal, Prabhav Singh and Vatsala Singh. Immense thanks to Bank of India, Indian Institute of Technology Hyderabad, and our college SRM IST Chennai.",
-      images: [
-        "/image-uploads/FinShield Hackathon 2025.jpeg"
-      ],
-      hashtags: [
-        "#FinShield2025",
-        "#PSBsHackathonSeries2025",
-        "#GovernmentOfIndia",
-        "#IITHyderabad",
-        "#BankOfIndia",
-        "#FinTech",
-        "#CreditRisk"
-      ]
     }
   ];
+
+  const finshieldAchievement = {
+    title: "FinShield Hackathon 2025 Finalist (Top 5)",
+    highlight: "Top 5 at FinShield Hackathon 2025!",
+    description: "My team and I secured a spot in the Top 5 at FinShield Hackathon 2025, part of the PSBs Hackathon Series 2025 – an initiative by the Government of India, Ministry of Finance & Department of Financial Services, hosted by Bank of India and IIT Hyderabad. While we didn’t win a cash prize from the ₹20,00,000 prize pool, the countless hours of debugging, fine-tuning, and late nights taught us so much!",
+    image: "/image-uploads/FinShield Hackathon 2025.jpeg",
+    hashtags: [
+      "#FinShield2025",
+      "#PSBsHackathonSeries2025",
+      "#GovernmentOfIndia",
+      "#IITHyderabad",
+      "#BankOfIndia",
+      "#FinTech",
+      "#CreditRisk"
+    ]
+  };
 
   return (
     <div className="bg-gray-50 text-gray-900 font-inter flex flex-col min-h-screen">
@@ -537,7 +536,43 @@ const Index = () => {
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
               >
-                <AchievementCarousel achievements={achievements} />
+                <div className="space-y-12">
+                  {/* Tem-E-thon Achievement (Carousel Component) */}
+                  <AchievementCarousel achievements={achievements} />
+
+                  {/* FinShield Achievement Card */}
+                  <div className="max-w-5xl mx-auto">
+                    <div className="bg-black border border-gray-800 overflow-hidden rounded-xl">
+                      <div className="flex" style={{ aspectRatio: '16/9' }}>
+                        {/* Image Section */}
+                        <div className="w-3/4 relative overflow-hidden bg-gray-900">
+                          <img
+                            src={finshieldAchievement.image}
+                            alt={finshieldAchievement.title}
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+
+                        {/* Text Section */}
+                        <div className="w-1/4 p-6 flex flex-col justify-center bg-black text-white">
+                          <div className="space-y-4">
+                            <p className="text-lg font-bold text-yellow-400 leading-snug">
+                              {finshieldAchievement.highlight}
+                            </p>
+                            <p className="text-sm leading-relaxed text-white whitespace-pre-line">
+                              {finshieldAchievement.description}
+                            </p>
+                            <div className="flex flex-wrap gap-2 text-xs pt-1">
+                              {finshieldAchievement.hashtags.map(tag => (
+                                <span key={tag} className="text-blue-400">{tag}</span>
+                              ))}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </motion.div>
             </div>
           </Card>

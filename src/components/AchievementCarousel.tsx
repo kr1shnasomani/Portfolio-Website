@@ -105,7 +105,6 @@ const AchievementCarousel = ({ achievements }: AchievementCarouselProps) => {
             {/* Text Section */}
             <div className="w-1/4 p-6 flex flex-col justify-center bg-black text-white">
               <div className="space-y-4">
-                <p className="text-sm font-semibold uppercase tracking-wide text-gray-400">{achievement.title}</p>
                 <p className="text-lg font-bold text-yellow-400 leading-snug">
                   {achievement.highlight}
                 </p>
