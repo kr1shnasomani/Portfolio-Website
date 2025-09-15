@@ -264,12 +264,15 @@ const Index = () => {
               transition={{ duration: 0.8 }}
               className="relative z-10"
             >
-              <div className="w-32 h-32 mx-auto mb-8">
-                <img 
-                  src="/image-uploads/Krishna Profile Photo.png" 
-                  alt="Krishna Somani" 
-                  className="w-full h-full object-cover rounded-full border-4 border-black shadow-lg"
-                />
+              <div className="mx-auto mb-8">
+                <div className="w-[220px] h-[220px] md:w-[260px] md:h-[260px] lg:w-[300px] lg:h-[300px] rounded-full overflow-hidden border-4 border-black mx-auto">
+                  <img
+                    src="/image-uploads/Krishna Profile Photo.jpeg"
+                    alt="Krishna Somani"
+                    className="block h-full w-auto min-w-full min-h-full object-cover"
+                    style={{objectPosition: 'center 35%'}}
+                  />
+                </div>
               </div>
               <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-gray-800 via-black to-gray-700 bg-clip-text text-transparent">
                 Krishna Somani
