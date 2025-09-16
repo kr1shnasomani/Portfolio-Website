@@ -1,29 +1,35 @@
+# Vite cache / generated artifacts
+.vite/
+vite.config.ts.timestamp-*
+
+# Build outputs
+dist/
+dist-ssr/
+
+# Node / lockfile policy 
+node_modules/
+bun.lockb
+
+# Env / secrets
+.env
+.env.*
+
 # Logs
 logs
 *.log
 npm-debug.log*
 yarn-debug.log*
-yarn-error.log*
 pnpm-debug.log*
-lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
-
-# Editor directories and files
-.vscode/*
+# Editor / OS
+.vscode/
 !.vscode/extensions.json
-.idea
+.idea/
 .DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+Thumbs.db
 
-dist/
-
-.env
-node_modules/
+# Tooling caches / test output
+.cache/
+coverage/
+.nyc_output/
+.eslintcache
