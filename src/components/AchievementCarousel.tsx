@@ -58,9 +58,9 @@ const AchievementCarousel = ({ achievements }: AchievementCarouselProps) => {
         transition={{ delay: 0.1, duration: 0.6 }}
       >
         <div className="bg-black border border-gray-800 overflow-hidden rounded-xl">
-          <div className="flex" style={{ aspectRatio: '16/9' }}>
+          <div className="flex flex-col md:flex-row">
             {/* Image Section */}
-            <div className="w-3/4 relative overflow-hidden bg-gray-900">
+            <div className="md:w-3/4 w-full relative overflow-hidden bg-gray-900" style={{ aspectRatio: '16/9' }}>
               <img
                 src={achievement.images[currentImageIndex]}
                 alt={`${achievement.title} - Image ${currentImageIndex + 1}`}
@@ -103,7 +103,7 @@ const AchievementCarousel = ({ achievements }: AchievementCarouselProps) => {
             </div>
 
             {/* Text Section */}
-            <div className="w-1/4 p-6 flex flex-col justify-center bg-black text-white">
+            <div className="md:w-1/4 w-full p-6 flex flex-col justify-center bg-black text-white">
               <div className="space-y-4">
                 <p className="text-lg font-bold text-yellow-400 leading-snug">
                   {achievement.highlight}

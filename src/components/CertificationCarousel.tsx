@@ -15,7 +15,7 @@ interface CertificationCarouselProps {
 const CertificationCarousel = ({ certifications }: CertificationCarouselProps) => {
   return (
     <div className="max-w-6xl mx-auto">
-      <div className="grid grid-cols-4 gap-6">
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {certifications.map((cert, index) => (
           <motion.div
             key={index}
@@ -23,7 +23,7 @@ const CertificationCarousel = ({ certifications }: CertificationCarouselProps) =
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: index * 0.05 }}
-            className="bg-black border border-gray-800 rounded-2xl transition-all duration-200 p-6 flex flex-col items-center h-[280px]"
+            className="bg-black border border-gray-800 rounded-2xl transition-all duration-200 p-6 flex flex-col items-center min-h-[220px]"
           >
             {/* Square Logo Container */}
             <div className="w-16 h-16 rounded-xl bg-transparent flex items-center justify-center mb-4 overflow-hidden">

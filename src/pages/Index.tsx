@@ -233,6 +233,8 @@ const Index = () => {
             >
               Krishna Somani
             </motion.div>
+
+            {/* Desktop Links */}
             <div className="hidden md:flex space-x-8">
               {['Home', 'Education', 'Experience', 'Skills', 'Projects', 'Certifications', 'Achievements'].map((item) => (
                 <button
@@ -241,6 +243,37 @@ const Index = () => {
                   className={`text-gray-300 hover:text-white transition-all duration-300 font-medium relative ${
                     activeSection === item.toLowerCase() ? 'text-white' : 'text-gray-300'
                   } after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-white after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left`}
+                >
+                  {item}
+                </button>
+              ))}
+            </div>
+
+            {/* Mobile Hamburger */}
+            <div className="md:hidden">
+              <button
+                aria-label="Open menu"
+                onClick={() => {
+                  const el = document.getElementById('mobile-menu');
+                  if (el) el.classList.toggle('hidden');
+                }}
+                className="p-2 rounded-md bg-white/5 hover:bg-white/10 text-white"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          {/* Mobile Menu - hidden by default */}
+          <div id="mobile-menu" className="hidden mt-3 md:hidden">
+            <div className="flex flex-col space-y-2">
+              {['Home', 'Education', 'Experience', 'Skills', 'Projects', 'Certifications', 'Achievements'].map((item) => (
+                <button
+                  key={item}
+                  onClick={() => { scrollToSection(item.toLowerCase()); const el = document.getElementById('mobile-menu'); if (el) el.classList.add('hidden'); }}
+                  className={`text-gray-300 hover:text-white text-left px-3 py-2 rounded-md font-medium ${activeSection === item.toLowerCase() ? 'text-white bg-white/5' : ''}`}
                 >
                   {item}
                 </button>
@@ -293,24 +326,24 @@ const Index = () => {
                 </a>
               </div>
 
-              <div className="flex justify-center items-center space-x-8">
+              <div className="flex justify-center items-center gap-4 flex-wrap z-20">
                 <a href="mailto:krishnasomani272005@gmail.com" className="text-gray-600 hover:text-gray-900 transition-all duration-200 transform hover:scale-110 p-2 rounded-full hover:bg-gray-100 flex items-center justify-center">
-                  <img src="/image-uploads/Mail.png" alt="Email" className="w-7 h-7 object-contain" />
+                  <img src="/image-uploads/Mail.png" alt="Email" className="w-6 h-6 sm:w-7 sm:h-7 object-contain" />
                 </a>
                 <a href="https://github.com/kr1shnasomani" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 transition-all duration-200 transform hover:scale-110 p-2 rounded-full hover:bg-gray-100 flex items-center justify-center">
-                  <img src="/image-uploads/GitHub Profile.png" alt="GitHub" className="w-7 h-7 object-contain" />
+                  <img src="/image-uploads/GitHub Profile.png" alt="GitHub" className="w-6 h-6 sm:w-7 sm:h-7 object-contain" />
                 </a>
                 <a href="https://www.linkedin.com/in/kr1shnasomani" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 transition-all duration-200 transform hover:scale-110 p-2 rounded-full hover:bg-gray-100 flex items-center justify-center">
-                  <img src="/image-uploads/LinkedIn.png" alt="LinkedIn" className="w-7 h-7 object-contain" />
+                  <img src="/image-uploads/LinkedIn.png" alt="LinkedIn" className="w-6 h-6 sm:w-7 sm:h-7 object-contain" />
                 </a>
                 <a href="https://www.instagram.com/kr1shnasomani/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 transition-all duration-200 transform hover:scale-110 p-2 rounded-full hover:bg-gray-100 flex items-center justify-center">
-                  <img src="/image-uploads/Instagram.png" alt="Instagram" className="w-7 h-7 object-contain" />
+                  <img src="/image-uploads/Instagram.png" alt="Instagram" className="w-6 h-6 sm:w-7 sm:h-7 object-contain" />
                 </a>
                 <a href="https://x.com/kr1shnasomani" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 transition-all duration-200 transform hover:scale-110 p-2 rounded-full hover:bg-gray-100 flex items-center justify-center">
-                  <img src="/image-uploads/X.png" alt="X" className="w-7 h-7 object-contain" />
+                  <img src="/image-uploads/X.png" alt="X" className="w-6 h-6 sm:w-7 sm:h-7 object-contain" />
                 </a>
                 <a href="https://www.kaggle.com/kr1shnasomani" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 transition-all duration-200 transform hover:scale-110 p-2 rounded-full hover:bg-gray-100 flex items-center justify-center">
-                  <img src="/image-uploads/Kaggle.png" alt="Kaggle" className="w-7 h-7 object-contain" />
+                  <img src="/image-uploads/Kaggle.png" alt="Kaggle" className="w-6 h-6 sm:w-7 sm:h-7 object-contain" />
                 </a>
               </div>
             </motion.div>
@@ -546,9 +579,9 @@ const Index = () => {
                   {/* FinShield Achievement Card */}
                   <div className="max-w-5xl mx-auto">
                     <div className="bg-black border border-gray-800 overflow-hidden rounded-xl">
-                      <div className="flex" style={{ aspectRatio: '16/9' }}>
+                      <div className="flex flex-col md:flex-row">
                         {/* Image Section */}
-                        <div className="w-3/4 relative overflow-hidden bg-gray-900">
+                        <div className="md:w-3/4 w-full relative overflow-hidden bg-gray-900" style={{ aspectRatio: '16/9' }}>
                           <img
                             src={finshieldAchievement.image}
                             alt={finshieldAchievement.title}
@@ -557,7 +590,7 @@ const Index = () => {
                         </div>
 
                         {/* Text Section */}
-                        <div className="w-1/4 p-6 flex flex-col justify-center bg-black text-white">
+                        <div className="md:w-1/4 w-full p-6 flex flex-col justify-center bg-black text-white">
                           <div className="space-y-4">
                             <p className="text-lg font-bold text-yellow-400 leading-snug">
                               {finshieldAchievement.highlight}
