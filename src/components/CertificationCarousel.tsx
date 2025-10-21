@@ -15,15 +15,23 @@ interface CertificationCarouselProps {
 const CertificationCarousel = ({ certifications }: CertificationCarouselProps) => {
   return (
     <div className="max-w-6xl mx-auto">
-  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        {certifications.map((cert, index) => (
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 justify-items-center">
+        {certifications.map((cert, index) => {
+          const total = certifications.length;
+          const isRemainderTwo = total % 4 === 2;
+          const isLastTwo = isRemainderTwo && index >= total - 2;
+          const colStartClass = isLastTwo
+            ? (index === total - 2 ? 'md:col-start-2' : 'md:col-start-3')
+            : '';
+
+          return (
           <motion.div
             key={index}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: index * 0.05 }}
-            className="bg-black border border-gray-800 rounded-2xl transition-all duration-200 p-6 flex flex-col items-center min-h-[220px]"
+            className={`bg-black border border-gray-800 rounded-2xl transition-all duration-200 p-6 flex flex-col items-center min-h-[220px] w-full ${colStartClass}`}
           >
             {/* Square Logo Container */}
             <div className="w-16 h-16 rounded-xl bg-transparent flex items-center justify-center mb-4 overflow-hidden">
@@ -49,7 +57,7 @@ const CertificationCarousel = ({ certifications }: CertificationCarouselProps) =
               </p>
             </div>
           </motion.div>
-        ))}
+        );})}
       </div>
     </div>
   );

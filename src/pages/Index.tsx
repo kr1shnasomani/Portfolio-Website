@@ -143,52 +143,64 @@ const Index = () => {
 
   const certifications = [
     {
+      title: "Computer Networking Course: Master Computer Networking",
+      provider: "Scaler",
+      date: "Issued Oct 2025",
+      logo: "/image-uploads/Scaler.png"
+    },
+    {
+      title: "Introduction to Machine Learning",
+      provider: "NPTEL",
+      date: "Issued Sep 2025",
+      logo: "/image-uploads/NPTEL.png"
+    },
+    {
       title: "DBMS Course - Master the Fundamentals and Advanced Concepts",
       provider: "Scaler",
       date: "Issued Feb 2025",
-      logo: "/image-uploads/DBMS Course - Master the Fundamentals and Advanced Concepts.png"
+      logo: "/image-uploads/Scaler.png"
     },
     {
       title: "Neural Networks and Deep Learning",
       provider: "DeepLearning.AI",
       date: "Issued Dec 2024",
-      logo: "/image-uploads/Neural Networks and Deep Learning.png"
+      logo: "/image-uploads/DeepLearning.AI.png"
     },
     {
       title: "Introduction to Computer Vision and Image Processing",
       provider: "IBM",
       date: "Issued Nov 2024",
-      logo: "/image-uploads/Introduction to Computer Vision and Image Processing.png"
+      logo: "/image-uploads/IBM.png"
     },
     {
       title: "Programming in Java",
       provider: "NPTEL",
       date: "Issued Nov 2024",
-      logo: "/image-uploads/Programming in Java.png"
+      logo: "/image-uploads/NPTEL.png"
     },
     {
       title: "Artificial Intelligence with Python",
       provider: "Great Learning",
       date: "Issued Oct 2024",
-      logo: "/image-uploads/Artificial Intelligence with Python.png"
+      logo: "/image-uploads/Great Learning.png"
     },
     {
       title: "Machine Learning with Python",
       provider: "IBM",
       date: "Issued Jun 2024",
-      logo: "/image-uploads/Machine Learning with Python.png"
+      logo: "/image-uploads/IBM.png"
     },
     {
       title: "Crash Course on Python",
       provider: "Google",
       date: "Issued May 2024",
-      logo: "/image-uploads/Crash Course on Python.png"
+      logo: "/image-uploads/Google.png"
     },
     {
       title: "Accelerated Computer Science Fundamentals",
       provider: "University of Illinois Urbana-Champaign",
       date: "Issued Mar 2024",
-      logo: "/image-uploads/Accelerated Computer Science Fundamentals.png"
+      logo: "/image-uploads/University of Illinois Urbana-Champaign.png"
     }
   ];
 
