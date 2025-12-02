@@ -10,21 +10,16 @@ const SkillsGrid = () => {
   const [hoveredSkill, setHoveredSkill] = useState<string | null>(null);
 
   const skills: Skill[] = [
-    { name: 'HTML', icon: '/image-uploads/HTML.png' },
-    { name: 'CSS', icon: '/image-uploads/CSS.png' },
-    { name: 'JavaScript', icon: '/image-uploads/JavaScript.png' },
     { name: 'C', icon: '/image-uploads/C.png' },
     { name: 'C++', icon: '/image-uploads/C++.png' },
-    { name: 'Java', icon: '/image-uploads/Java.png' },
     { name: 'Python', icon: '/image-uploads/Python.png' },
     { name: 'NumPy', icon: '/image-uploads/NumPy.png' },
     { name: 'pandas', icon: '/image-uploads/pandas.png' },
-    { name: 'SciPy', icon: '/image-uploads/SciPy.png' },
     { name: 'PyTorch', icon: '/image-uploads/PyTorch.png' },
     { name: 'TensorFlow', icon: '/image-uploads/TensorFlow.png' },
     { name: 'Keras', icon: '/image-uploads/Keras.png' },
     { name: 'scikit-learn', icon: '/image-uploads/scikit-learn.png' },
-    { name: 'Transformers', icon: '/image-uploads/Transformers.png' },
+    { name: 'Hugging Face', icon: '/image-uploads/Transformers.png' },
     { name: 'spaCy', icon: '/image-uploads/spaCy.png' },
     { name: 'OpenCV', icon: '/image-uploads/OpenCV.png' },
     { name: 'Selenium', icon: '/image-uploads/Selenium.png' },
@@ -38,8 +33,7 @@ const SkillsGrid = () => {
     { name: 'Dify', icon: '/image-uploads/Dify.jpeg' },
     { name: 'n8n', icon: '/image-uploads/n8n.png' },
     { name: 'LangChain', icon: '/image-uploads/LangChain.webp' },
-    { name: 'Postman', icon: '/image-uploads/Postman.webp' },
-    { name: 'Figma', icon: '/image-uploads/Figma.png' }
+    { name: 'Postman', icon: '/image-uploads/Postman.webp' }
   ];
 
   return (

@@ -57,14 +57,14 @@ const AchievementCarousel = ({ achievements }: AchievementCarouselProps) => {
         viewport={{ once: true }}
         transition={{ delay: 0.1, duration: 0.6 }}
       >
-        <div className="bg-black border border-gray-800 overflow-hidden rounded-xl">
+        <div className="bg-black border border-gray-800 overflow-hidden rounded-xl shadow-2xl hover:shadow-blue-900/20 transition-shadow duration-300">
           <div className="flex flex-col md:flex-row">
             {/* Image Section */}
             <div className="md:w-3/4 w-full relative overflow-hidden bg-gray-900" style={{ aspectRatio: '16/9' }}>
               <img
                 src={achievement.images[currentImageIndex]}
                 alt={`${achievement.title} - Image ${currentImageIndex + 1}`}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
               />
 
               {/* Image navigation (only if multiple images) */}

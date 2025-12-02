@@ -98,9 +98,14 @@ const Index = () => {
       company: "PharmEasy",
       city: "Bengaluru",
       role: "Data Science Intern",
-      period: "Jun 2025 - Present",
+      period: "June 2025 - November 2025",
       location: "",
-      description: "Designed and deployed two AI-powered chatbots using Dify, integrating core app features into WhatsApp. The first enabled product browsing and ordering via chat, while the second facilitated diagnostic test bookings directly through chat.",
+      points: [
+        "Architected and deployed two AI-powered chatbots using Dify on WhatsApp, reducing code maintenance effort by 70%.",
+        "Pharma Bot: Enabled users to search and browse healthcare products, view product details, upload prescription, manage their cart, select delivery addresses, and place orders.",
+        "Diagnostics Bot: Allowed users to search diagnostic tests and packages, view details, manage their cart, choose slot dates/timings and addresses, and complete bookings seamlessly.",
+        "Engineered the system using Agentic Workflows and LLM Function Calling to handle complex transactional APIs, while implementing RAG pipelines for accurate retrieval of medical product and test data."
+      ],
       logo: "/image-uploads/PharmEasy.png"
     },
     {
@@ -125,18 +130,25 @@ const Index = () => {
       company: "ifYK",
       city: "New York",
       role: "Machine Learning Intern",
-      period: "Sep 2024 - Oct 2024",
+      period: "September 2024 - October 2024",
       location: "",
-      description: "Engineered a chatbot powered by Hugging Face's Llama 3.1 (8B) model to efficiently extract event-specific data, leveraging NLP capabilities for accurate information retrieval. Designed and implemented web scraping pipelines to preprocess raw HTML into clean, structured text, optimizing data preparation for NLP tasks. Deployed the solution using FastAPI on Render, enabling real-time query handling and seamless user interaction. This system reduced manual effort in event information extraction, streamlining data processing workflows.",
+      points: [
+        "Engineered an LLM-powered Extraction Agent using Hugging Face’s Llama 3.1 (8B) to parse & retrieve event-specific data.",
+        "Developed web scraping ETL pipelines to preprocess raw HTML into clean, structured text for NLP tasks.",
+        "Deployed the solution using FastAPI on Render and reduced manual effort by 60%."
+      ],
       logo: "/image-uploads/ifYK.png"
     },
     {
       company: "Accuracy",
       city: "Hyderabad",
       role: "Python Developer",
-      period: "Jun 2024 - Jul 2024",
+      period: "June 2024 - July 2024",
       location: "",
-      description: "Streamlined data extraction from paginated, infinite scroll, and detail view pages into a unified script. Conducted textual analysis on over 1,000 extracted job postings to uncover in-demand and least sought-after roles, identify top required skills, and analyze geographic trends, providing actionable insights to enhance hiring strategies.",
+      points: [
+        "Streamlined data extraction from paginated, infinite scroll, and detail view pages into a single script, reducing code maintenance effort by 40%.",
+        "Performed EDA on a dataset of 1,000+ job listings, deriving actionable insights on skill demand & geographic hiring trends."
+      ],
       logo: "/image-uploads/Accuracy.png"
     }
   ];
@@ -207,8 +219,9 @@ const Index = () => {
   const achievements = [
     {
       title: "Temenos Tem-E-thon 2025 Hackathon Winner",
-      highlight: "1000+ teams. 30 finalists. 1 winning team – Tem-E-thon 2025 Champions!",
-      description: "My team won Tem-E-thon 2025, a national level hackathon organized by Temenos at Anna University, Chennai, taking home an Apple MacBook Air M3 (15-inch) per team member from a ₹10,00,000 prize pool. It was an incredible experience, but the real win was proving how tech can drive sustainability.",
+      highlight: "First Hackathon, FIrst Win!",
+      date: "9 Feb 2025",
+      description: "From 1,000+ teams to 30 finalists and ultimately 1 winning team, VChamps emerged as the champions of Tem-E-thon 2025, a national-level 24-hour hackathon organized by Temenos at Anna University, Chennai. The 24 hours were intense, filled with debugging, refining detection, and ensuring everything ran smoothly. From the ₹10,00,000 prize pool, each of the three team members took home a 15-inch Apple MacBook Air M3.",
       images: [
         "/image-uploads/Temenos Tem-E-thon 2025 Hackathon Winner.png"
       ],
@@ -217,9 +230,10 @@ const Index = () => {
   ];
 
   const finshieldAchievement = {
-    title: "FinShield Hackathon 2025 Finalist (Top 5)",
-    highlight: "Top 5 at FinShield Hackathon 2025!",
-    description: "My team and I secured a spot in the Top 5 at FinShield Hackathon 2025, part of the PSBs Hackathon Series 2025 – an initiative by the Government of India, Ministry of Finance & Department of Financial Services, hosted by Bank of India and IIT Hyderabad. While we didn’t win a cash prize from the ₹20,00,000 prize pool, the countless hours of debugging, fine-tuning, and late nights taught us so much!",
+    title: "FinShield Hackathon 2025 Finalist (Top 9)",
+    highlight: "Top 9 at FinShield Hackathon 2025!",
+    date: "3 Sep 2025",
+    description: "From 1,000+ teams to 30 finalists and ultimately 1 winning team, VChamps emerged as the champions of Tem-E-thon 2025, a national-level 24-hour hackathon organized by Temenos at Anna University, Chennai. The 24 hours were intense, filled with debugging, refining detection, and ensuring everything ran smoothly. From the ₹10,00,000 prize pool, each of the three team members took home a 15-inch Apple MacBook Air M3.",
     image: "/image-uploads/FinShield Hackathon 2025.jpeg",
     hashtags: [
       "#FinShield2025",
@@ -340,22 +354,22 @@ const Index = () => {
 
               <div className="flex justify-center items-center gap-4 flex-wrap z-20">
                 <a href="mailto:krishnasomani272005@gmail.com" className="text-gray-600 hover:text-gray-900 transition-all duration-200 transform hover:scale-110 p-2 rounded-full hover:bg-gray-100 flex items-center justify-center">
-                  <img src="/image-uploads/Mail.png" alt="Email" className="w-6 h-6 sm:w-7 sm:h-7 object-contain" />
+                  <img src="/image-uploads/Mail.png" alt="Email" className="w-6 h-6 sm:w-7 sm:h-7 object-contain" width="28" height="28" loading="eager" />
                 </a>
                 <a href="https://github.com/kr1shnasomani" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 transition-all duration-200 transform hover:scale-110 p-2 rounded-full hover:bg-gray-100 flex items-center justify-center">
-                  <img src="/image-uploads/GitHub Profile.png" alt="GitHub" className="w-6 h-6 sm:w-7 sm:h-7 object-contain" />
+                  <img src="/image-uploads/GitHub Profile.png" alt="GitHub" className="w-6 h-6 sm:w-7 sm:h-7 object-contain" width="28" height="28" loading="eager" />
                 </a>
                 <a href="https://www.linkedin.com/in/kr1shnasomani" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 transition-all duration-200 transform hover:scale-110 p-2 rounded-full hover:bg-gray-100 flex items-center justify-center">
-                  <img src="/image-uploads/LinkedIn.png" alt="LinkedIn" className="w-6 h-6 sm:w-7 sm:h-7 object-contain" />
+                  <img src="/image-uploads/LinkedIn.png" alt="LinkedIn" className="w-6 h-6 sm:w-7 sm:h-7 object-contain" width="28" height="28" loading="eager" />
                 </a>
                 <a href="https://www.instagram.com/kr1shnasomani/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 transition-all duration-200 transform hover:scale-110 p-2 rounded-full hover:bg-gray-100 flex items-center justify-center">
-                  <img src="/image-uploads/Instagram.png" alt="Instagram" className="w-6 h-6 sm:w-7 sm:h-7 object-contain" />
+                  <img src="/image-uploads/Instagram.png" alt="Instagram" className="w-6 h-6 sm:w-7 sm:h-7 object-contain" width="28" height="28" loading="eager" />
                 </a>
                 <a href="https://x.com/kr1shnasomani" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 transition-all duration-200 transform hover:scale-110 p-2 rounded-full hover:bg-gray-100 flex items-center justify-center">
-                  <img src="/image-uploads/X.png" alt="X" className="w-6 h-6 sm:w-7 sm:h-7 object-contain" />
+                  <img src="/image-uploads/X.png" alt="X" className="w-6 h-6 sm:w-7 sm:h-7 object-contain" width="28" height="28" loading="eager" />
                 </a>
                 <a href="https://www.kaggle.com/kr1shnasomani" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 transition-all duration-200 transform hover:scale-110 p-2 rounded-full hover:bg-gray-100 flex items-center justify-center">
-                  <img src="/image-uploads/Kaggle.png" alt="Kaggle" className="w-6 h-6 sm:w-7 sm:h-7 object-contain" />
+                  <img src="/image-uploads/Kaggle.png" alt="Kaggle" className="w-6 h-6 sm:w-7 sm:h-7 object-contain" width="28" height="28" loading="eager" />
                 </a>
               </div>
             </motion.div>
@@ -457,6 +471,15 @@ const Index = () => {
                       {exp.location && <p className="text-gray-500 text-sm leading-tight">{exp.location}</p>}
                       {exp.description && (
                         <p className="text-gray-600 text-sm leading-relaxed mt-3">{exp.description}</p>
+                      )}
+                      {/* @ts-ignore */}
+                      {exp.points && (
+                        <ul className="list-disc pl-5 mt-3 space-y-1">
+                          {/* @ts-ignore */}
+                          {exp.points.map((point, i) => (
+                            <li key={i} className="text-gray-600 text-sm leading-relaxed">{point}</li>
+                          ))}
+                        </ul>
                       )}
                     </div>
                   </div>
@@ -577,47 +600,71 @@ const Index = () => {
               >
                 Achievements
               </motion.h2>
-              
+
               <motion.div
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
+                className="relative max-w-6xl mx-auto px-4"
               >
-                <div className="space-y-12">
-                  {/* Tem-E-thon Achievement (Carousel Component) */}
-                  <AchievementCarousel achievements={achievements} />
+                <div className="space-y-8">
+                  {/* Tem-E-thon Achievement */}
+                  <div className="relative md:pl-16">
+                    {/* Connecting Line */}
+                    <div className="hidden md:block absolute left-4 md:left-8 top-2 w-0.5 bg-black -translate-x-1/2 h-[calc(100%+2rem)] z-0" />
+                    
+                    {/* Dot on Vertical Line */}
+                    <div className="hidden md:block absolute left-4 md:left-8 top-2 w-4 h-4 bg-black rounded-full ring-4 ring-white -translate-x-1/2 z-10" />
+                    
+                    {/* Date & Content */}
+                    <div className="flex flex-col gap-4">
+                        <span className="text-xl font-bold text-black">9 February 2025</span>
+                        <AchievementCarousel achievements={achievements} />
+                    </div>
+                  </div>
 
-                  {/* FinShield Achievement Card */}
-                  <div className="max-w-5xl mx-auto">
-                    <div className="bg-black border border-gray-800 overflow-hidden rounded-xl">
-                      <div className="flex flex-col md:flex-row">
-                        {/* Image Section */}
-                        <div className="md:w-3/4 w-full relative overflow-hidden bg-gray-900" style={{ aspectRatio: '16/9' }}>
-                          <img
-                            src={finshieldAchievement.image}
-                            alt={finshieldAchievement.title}
-                            className="w-full h-full object-cover"
-                          />
-                        </div>
+                  {/* FinShield Achievement */}
+                  <div className="relative md:pl-16">
+                    {/* Dot on Vertical Line */}
+                    <div className="hidden md:block absolute left-4 md:left-8 top-2 w-4 h-4 bg-black rounded-full ring-4 ring-white -translate-x-1/2 z-10" />
 
-                        {/* Text Section */}
-                        <div className="md:w-1/4 w-full p-6 flex flex-col justify-center bg-black text-white">
-                          <div className="space-y-4">
-                            <p className="text-lg font-bold text-yellow-400 leading-snug">
-                              {finshieldAchievement.highlight}
-                            </p>
-                            <p className="text-sm leading-relaxed text-white whitespace-pre-line">
-                              {finshieldAchievement.description}
-                            </p>
-                            <div className="flex flex-wrap gap-2 text-xs pt-1">
-                              {finshieldAchievement.hashtags.map(tag => (
-                                <span key={tag} className="text-blue-400">{tag}</span>
-                              ))}
+                    {/* Date & Content */}
+                    <div className="flex flex-col gap-4">
+                        <span className="text-xl font-bold text-black">3 September 2025</span>
+                        
+                        {/* FinShield Card */}
+                        <div className="max-w-5xl mx-auto">
+                          <div className="bg-black border border-gray-800 overflow-hidden rounded-xl shadow-2xl hover:shadow-blue-900/20 transition-shadow duration-300">
+                            <div className="flex flex-col md:flex-row">
+                              {/* Image Section */}
+                              <div className="md:w-3/4 w-full relative overflow-hidden bg-gray-900" style={{ aspectRatio: '16/9' }}>
+                                <img
+                                  src={finshieldAchievement.image}
+                                  alt={finshieldAchievement.title}
+                                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                                />
+                              </div>
+
+                              {/* Text Section */}
+                              <div className="md:w-1/4 w-full p-6 flex flex-col justify-center bg-black text-white">
+                                <div className="space-y-4">
+                                  <p className="text-lg font-bold text-yellow-400 leading-snug">
+                                    {finshieldAchievement.highlight}
+                                  </p>
+                                  <p className="text-sm leading-relaxed text-white whitespace-pre-line">
+                                    {finshieldAchievement.description}
+                                  </p>
+                                  <div className="flex flex-wrap gap-2 text-xs pt-1">
+                                    {finshieldAchievement.hashtags.map(tag => (
+                                      <span key={tag} className="text-blue-400">{tag}</span>
+                                    ))}
+                                  </div>
+                                </div>
+                              </div>
                             </div>
                           </div>
                         </div>
-                      </div>
                     </div>
                   </div>
                 </div>
