@@ -233,7 +233,7 @@ const Index = () => {
     title: "FinShield Hackathon 2025 Finalist (Top 9)",
     highlight: "Top 9 at FinShield Hackathon 2025!",
     date: "3 Sep 2025",
-    description: "From 1,000+ teams to 30 finalists and ultimately 1 winning team, VChamps emerged as the champions of Tem-E-thon 2025, a national-level 24-hour hackathon organized by Temenos at Anna University, Chennai. The 24 hours were intense, filled with debugging, refining detection, and ensuring everything ran smoothly. From the ₹10,00,000 prize pool, each of the three team members took home a 15-inch Apple MacBook Air M3.",
+    description: "My team, Deterium, secured a Top 9 finalist position at FinShield Hackathon 2025, a national-level hackathon under the PSBs Hackathon Series 2025. The event was led by the Government of India and hosted by Bank of India and IIT Hyderabad. The challenge was intense, involving extensive debugging and refinement. Our solution used machine learning and alternative data to improve credit default prediction and tracking.",
     image: "/image-uploads/FinShield Hackathon 2025.jpeg",
     hashtags: [
       "#FinShield2025",
@@ -619,7 +619,7 @@ const Index = () => {
                     
                     {/* Date & Content */}
                     <div className="flex flex-col gap-4">
-                        <span className="text-xl font-bold text-black">9 February 2025</span>
+                        <span className="text-xl font-bold text-black">9 February, 2025</span>
                         <AchievementCarousel achievements={achievements} />
                     </div>
                   </div>
@@ -631,7 +631,7 @@ const Index = () => {
 
                     {/* Date & Content */}
                     <div className="flex flex-col gap-4">
-                        <span className="text-xl font-bold text-black">3 September 2025</span>
+                        <span className="text-xl font-bold text-black">3 September, 2025</span>
                         
                         {/* FinShield Card */}
                         <div className="max-w-5xl mx-auto">
