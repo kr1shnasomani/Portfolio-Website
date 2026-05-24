@@ -14,6 +14,7 @@ Welcome to the **Portfolio Website**! This repository is optimized for autonomou
 This repository is equipped with specialized skills located in the `.agents/skills` directory. **Agents MUST invoke or reference these skills** whenever performing related tasks to guarantee high-quality outputs:
 
 ### 🎨 Design & UI/UX
+- **`hallmark`**: Anti-AI-slop design skill for greenfield pages, audits, redesigns, and design extraction. Use when building a new app or landing page, or redesigning something to ensure the UI looks human-made rather than generated.
 - **`ui-ux-pro-max`**: Use this for high-level design intelligence, color palettes, spacing, layout, and crafting state-of-the-art UI elements across various design trends (glassmorphism, bento grids, etc.).
 - **`emil-design-eng`**: Apply this for detailed interaction design, micro-animations, and the "invisible details" that make software feel incredibly premium and responsive.
 - **`web-design-guidelines`**: Use this to audit UI code for accessibility, Web Interface Guidelines compliance, and rigorous UX reviews.
