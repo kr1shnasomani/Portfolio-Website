@@ -47,7 +47,7 @@ const Index = () => {
       githubUrl: "https://github.com/kr1shnasomani/BloodPrint"
     },
     {
-      title: "CaptionCraft", 
+      title: "CaptionCraft",
       description: "Built an image captioning system using DenseNet201 and LSTM to generate natural language descriptions from images with TensorFlow and Keras.",
       image: "/image-uploads/CaptionCraft.png",
       githubUrl: "https://github.com/kr1shnasomani/CaptionCraft"
@@ -119,8 +119,8 @@ const Index = () => {
     },
     {
       company: "IEEE SRMIST Student Branch",
-      city: "Chennai", 
-      role: "Research & Development Member", 
+      city: "Chennai",
+      role: "Research & Development Member",
       period: "Nov 2024 - Present",
       location: "",
       description: "Developed a project that automates tree segmentation from geospatial images using detectron2’s Mask R-CNN. The workflow involved downloading and processing TIFF images, performing instance segmentation, and generating visual outputs with both default and custom visualizations. The system highlights trees in yellow and backgrounds in purple, with results saved for further environmental analysis.",
@@ -266,9 +266,8 @@ const Index = () => {
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}
-                  className={`text-gray-300 hover:text-white transition-all duration-300 font-medium relative ${
-                    activeSection === item.toLowerCase() ? 'text-white' : 'text-gray-300'
-                  } after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-white after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left`}
+                  className={`text-gray-300 hover:text-white transition-all duration-300 font-medium relative ${activeSection === item.toLowerCase() ? 'text-white' : 'text-gray-300'
+                    } after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-white after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left`}
                 >
                   {item}
                 </button>
@@ -315,8 +314,8 @@ const Index = () => {
           <Card className="bg-white shadow-lg rounded-2xl p-12 mx-auto text-center relative overflow-hidden">
             {/* Background Animation */}
             <div className="absolute inset-0 bg-gradient-to-br from-blue-50/30 via-purple-50/20 to-pink-50/30 animate-pulse"></div>
-            <div className="absolute inset-0 bg-gradient-to-tl from-cyan-50/20 via-transparent to-yellow-50/20 animate-pulse" style={{animationDelay: '1s'}}></div>
-            
+            <div className="absolute inset-0 bg-gradient-to-tl from-cyan-50/20 via-transparent to-yellow-50/20 animate-pulse" style={{ animationDelay: '1s' }}></div>
+
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -329,7 +328,7 @@ const Index = () => {
                     src="/image-uploads/Krishna Profile Photo.jpeg"
                     alt="Krishna Somani"
                     className="block h-full w-auto min-w-full min-h-full object-cover"
-                    style={{objectPosition: 'center 35%'}}
+                    style={{ objectPosition: 'center 35%' }}
                   />
                 </div>
               </div>
@@ -339,9 +338,9 @@ const Index = () => {
               <p className="text-xl md:text-2xl mb-12 text-gray-700 font-medium max-w-4xl mx-auto">
                 Artificial Intelligence & Machine Learning Enthusiast focused on real-world solutions, automation, and sustainable innovation.
               </p>
-              
+
               <div className="flex justify-center mb-12">
-                <a 
+                <a
                   href="https://drive.google.com/file/d/1bk0AQKQui3UT4YU-Y6Px4UDHXLzkzFPd/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -383,47 +382,47 @@ const Index = () => {
           <Card className="bg-white shadow-lg rounded-2xl p-12 relative overflow-hidden">
             {/* Background Animation */}
             <div className="absolute inset-0 bg-gradient-to-br from-amber-50/20 via-rose-50/15 to-indigo-50/20 animate-pulse"></div>
-            <div className="absolute inset-0 bg-gradient-to-tl from-teal-50/15 via-transparent to-pink-50/15 animate-pulse" style={{animationDelay: '3s'}}></div>
+            <div className="absolute inset-0 bg-gradient-to-tl from-teal-50/15 via-transparent to-pink-50/15 animate-pulse" style={{ animationDelay: '3s' }}></div>
             <div className="relative z-10">
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-gray-800 to-black bg-clip-text text-transparent"
-            >
-              Education
-            </motion.h2>
-            
-            <div className="max-w-4xl mx-auto">
-              {education.map((edu, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="relative mb-12 last:mb-0"
-                >
-                  <div className="flex items-start mb-4">
-                    <div className="w-16 h-16 rounded-xl bg-transparent flex items-center justify-center mr-6 flex-shrink-0 p-2">
-                      <img 
-                        src={edu.logo} 
-                        alt={`${edu.institution} logo`} 
-                        className="w-16 h-16 object-contain rounded-xl"
-                      />
+              <motion.h2
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-gray-800 to-black bg-clip-text text-transparent"
+              >
+                Education
+              </motion.h2>
+
+              <div className="max-w-4xl mx-auto">
+                {education.map((edu, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.1 }}
+                    className="relative mb-12 last:mb-0"
+                  >
+                    <div className="flex items-start mb-4">
+                      <div className="w-16 h-16 rounded-xl bg-transparent flex items-center justify-center mr-6 flex-shrink-0 p-2">
+                        <img
+                          src={edu.logo}
+                          alt={`${edu.institution} logo`}
+                          className="w-16 h-16 object-contain rounded-xl"
+                        />
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-xl font-semibold text-black leading-tight mb-1">{edu.institution}</h3>
+                        <p className="text-gray-600 text-sm leading-tight mb-1">{edu.period}</p>
+                        <p className="text-gray-700 font-medium leading-tight">{edu.grade}</p>
+                      </div>
                     </div>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-semibold text-black leading-tight mb-1">{edu.institution}</h3>
-                      <p className="text-gray-600 text-sm leading-tight mb-1">{edu.period}</p>
-                      <p className="text-gray-700 font-medium leading-tight">{edu.grade}</p>
-                    </div>
-                  </div>
-                  {index < education.length - 1 && (
-                    <div className="w-px h-8 bg-gradient-to-b from-gray-300 to-transparent ml-8 mt-6"></div>
-                  )}
-                </motion.div>
-              ))}
-            </div>
+                    {index < education.length - 1 && (
+                      <div className="w-px h-8 bg-gradient-to-b from-gray-300 to-transparent ml-8 mt-6"></div>
+                    )}
+                  </motion.div>
+                ))}
+              </div>
             </div>
           </Card>
         </div>
@@ -435,60 +434,60 @@ const Index = () => {
           <Card className="bg-white shadow-lg rounded-2xl p-12 relative overflow-hidden">
             {/* Background Animation */}
             <div className="absolute inset-0 bg-gradient-to-br from-green-50/20 via-blue-50/15 to-purple-50/20 animate-pulse"></div>
-            <div className="absolute inset-0 bg-gradient-to-tl from-orange-50/15 via-transparent to-cyan-50/15 animate-pulse" style={{animationDelay: '2s'}}></div>
+            <div className="absolute inset-0 bg-gradient-to-tl from-orange-50/15 via-transparent to-cyan-50/15 animate-pulse" style={{ animationDelay: '2s' }}></div>
             <div className="relative z-10">
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-gray-800 to-black bg-clip-text text-transparent"
-            >
-              Experience
-            </motion.h2>
-            
-            <div className="max-w-4xl mx-auto">
-              {experiences.map((exp, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="relative mb-6 last:mb-0"
-                >
-                  <div className="flex items-start mb-4">
-                    <div className="w-16 h-16 rounded-xl bg-transparent flex items-center justify-center mr-6 flex-shrink-0 p-2">
-                      <img 
-                        src={exp.logo} 
-                        alt={`${exp.company} logo`} 
-                        className="w-16 h-16 object-contain rounded-xl"
-                      />
+              <motion.h2
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-gray-800 to-black bg-clip-text text-transparent"
+              >
+                Experience
+              </motion.h2>
+
+              <div className="max-w-4xl mx-auto">
+                {experiences.map((exp, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.1 }}
+                    className="relative mb-6 last:mb-0"
+                  >
+                    <div className="flex items-start mb-4">
+                      <div className="w-16 h-16 rounded-xl bg-transparent flex items-center justify-center mr-6 flex-shrink-0 p-2">
+                        <img
+                          src={exp.logo}
+                          alt={`${exp.company} logo`}
+                          className="w-16 h-16 object-contain rounded-xl"
+                        />
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-xl font-semibold text-black leading-tight mb-1">{exp.role}</h3>
+                        <p className="text-gray-700 font-medium leading-tight mb-1">{exp.company}, {exp.city}</p>
+                        <p className="text-gray-600 text-sm leading-tight mb-1">{exp.period}</p>
+                        {exp.location && <p className="text-gray-500 text-sm leading-tight">{exp.location}</p>}
+                        {exp.description && (
+                          <p className="text-gray-600 text-sm leading-relaxed mt-3">{exp.description}</p>
+                        )}
+                        {/* @ts-ignore */}
+                        {exp.points && (
+                          <ul className="list-disc pl-5 mt-3 space-y-1">
+                            {/* @ts-ignore */}
+                            {exp.points.map((point, i) => (
+                              <li key={i} className="text-gray-600 text-sm leading-relaxed">{point}</li>
+                            ))}
+                          </ul>
+                        )}
+                      </div>
                     </div>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-semibold text-black leading-tight mb-1">{exp.role}</h3>
-                      <p className="text-gray-700 font-medium leading-tight mb-1">{exp.company}, {exp.city}</p>
-                      <p className="text-gray-600 text-sm leading-tight mb-1">{exp.period}</p>
-                      {exp.location && <p className="text-gray-500 text-sm leading-tight">{exp.location}</p>}
-                      {exp.description && (
-                        <p className="text-gray-600 text-sm leading-relaxed mt-3">{exp.description}</p>
-                      )}
-                      {/* @ts-ignore */}
-                      {exp.points && (
-                        <ul className="list-disc pl-5 mt-3 space-y-1">
-                          {/* @ts-ignore */}
-                          {exp.points.map((point, i) => (
-                            <li key={i} className="text-gray-600 text-sm leading-relaxed">{point}</li>
-                          ))}
-                        </ul>
-                      )}
-                    </div>
-                  </div>
-                  {index < experiences.length - 1 && (
-                    <div className="w-px h-6 bg-gradient-to-b from-gray-300 to-transparent ml-8 mt-2"></div>
-                  )}
-                </motion.div>
-              ))}
-            </div>
+                    {index < experiences.length - 1 && (
+                      <div className="w-px h-6 bg-gradient-to-b from-gray-300 to-transparent ml-8 mt-2"></div>
+                    )}
+                  </motion.div>
+                ))}
+              </div>
             </div>
           </Card>
         </div>
@@ -500,25 +499,25 @@ const Index = () => {
           <Card className="bg-white shadow-lg rounded-2xl p-12 relative overflow-hidden">
             {/* Background Animation */}
             <div className="absolute inset-0 bg-gradient-to-br from-gray-50/20 via-neutral-50/15 to-slate-50/20 animate-pulse"></div>
-            <div className="absolute inset-0 bg-gradient-to-tl from-yellow-50/15 via-transparent to-green-50/15 animate-pulse" style={{animationDelay: '6s'}}></div>
+            <div className="absolute inset-0 bg-gradient-to-tl from-yellow-50/15 via-transparent to-green-50/15 animate-pulse" style={{ animationDelay: '6s' }}></div>
             <div className="relative z-10">
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-gray-800 to-black bg-clip-text text-transparent"
-            >
-              Skills
-            </motion.h2>
-            
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-            >
-              <SkillsGrid />
-            </motion.div>
+              <motion.h2
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-gray-800 to-black bg-clip-text text-transparent"
+              >
+                Skills
+              </motion.h2>
+
+              <motion.div
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 }}
+              >
+                <SkillsGrid />
+              </motion.div>
             </div>
           </Card>
         </div>
@@ -530,25 +529,25 @@ const Index = () => {
           <Card className="bg-white shadow-lg rounded-2xl p-12 relative overflow-hidden">
             {/* Background Animation */}
             <div className="absolute inset-0 bg-gradient-to-br from-slate-50/20 via-stone-50/15 to-zinc-50/20 animate-pulse"></div>
-            <div className="absolute inset-0 bg-gradient-to-tl from-red-50/15 via-transparent to-blue-50/15 animate-pulse" style={{animationDelay: '5s'}}></div>
+            <div className="absolute inset-0 bg-gradient-to-tl from-red-50/15 via-transparent to-blue-50/15 animate-pulse" style={{ animationDelay: '5s' }}></div>
             <div className="relative z-10">
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-gray-800 to-black bg-clip-text text-transparent"
-            >
-              Projects
-            </motion.h2>
-            
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-            >
-              <ProjectCarousel projects={projects} />
-            </motion.div>
+              <motion.h2
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-gray-800 to-black bg-clip-text text-transparent"
+              >
+                Projects
+              </motion.h2>
+
+              <motion.div
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 }}
+              >
+                <ProjectCarousel projects={projects} />
+              </motion.div>
             </div>
           </Card>
         </div>
@@ -560,25 +559,25 @@ const Index = () => {
           <Card className="bg-white shadow-lg rounded-2xl p-12 relative overflow-hidden">
             {/* Background Animation */}
             <div className="absolute inset-0 bg-gradient-to-br from-emerald-50/20 via-violet-50/15 to-sky-50/20 animate-pulse"></div>
-            <div className="absolute inset-0 bg-gradient-to-tl from-lime-50/15 via-transparent to-fuchsia-50/15 animate-pulse" style={{animationDelay: '4s'}}></div>
+            <div className="absolute inset-0 bg-gradient-to-tl from-lime-50/15 via-transparent to-fuchsia-50/15 animate-pulse" style={{ animationDelay: '4s' }}></div>
             <div className="relative z-10">
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-gray-800 to-black bg-clip-text text-transparent"
-            >
-              Certifications
-            </motion.h2>
-            
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-            >
-              <CertificationCarousel certifications={certifications} />
-            </motion.div>
+              <motion.h2
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-gray-800 to-black bg-clip-text text-transparent"
+              >
+                Certifications
+              </motion.h2>
+
+              <motion.div
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 }}
+              >
+                <CertificationCarousel certifications={certifications} />
+              </motion.div>
             </div>
           </Card>
         </div>
@@ -590,7 +589,7 @@ const Index = () => {
           <Card className="bg-white shadow-lg rounded-2xl p-12 relative overflow-hidden">
             {/* Background Animation */}
             <div className="absolute inset-0 bg-gradient-to-br from-yellow-50/20 via-orange-50/15 to-red-50/20 animate-pulse"></div>
-            <div className="absolute inset-0 bg-gradient-to-tl from-purple-50/15 via-transparent to-green-50/15 animate-pulse" style={{animationDelay: '7s'}}></div>
+            <div className="absolute inset-0 bg-gradient-to-tl from-purple-50/15 via-transparent to-green-50/15 animate-pulse" style={{ animationDelay: '7s' }}></div>
             <div className="relative z-10">
               <motion.h2
                 initial={{ opacity: 0, y: 20 }}
@@ -613,14 +612,14 @@ const Index = () => {
                   <div className="relative md:pl-16">
                     {/* Connecting Line */}
                     <div className="hidden md:block absolute left-4 md:left-8 top-2 w-0.5 bg-black -translate-x-1/2 h-[calc(100%+2rem)] z-0" />
-                    
+
                     {/* Dot on Vertical Line */}
                     <div className="hidden md:block absolute left-4 md:left-8 top-2 w-4 h-4 bg-black rounded-full ring-4 ring-white -translate-x-1/2 z-10" />
-                    
+
                     {/* Date & Content */}
                     <div className="flex flex-col gap-4">
-                        <span className="text-xl font-bold text-black">9 February, 2025</span>
-                        <AchievementCarousel achievements={achievements} />
+                      <span className="text-xl font-bold text-black">9 February, 2025</span>
+                      <AchievementCarousel achievements={achievements} />
                     </div>
                   </div>
 
@@ -631,40 +630,40 @@ const Index = () => {
 
                     {/* Date & Content */}
                     <div className="flex flex-col gap-4">
-                        <span className="text-xl font-bold text-black">3 September, 2025</span>
-                        
-                        {/* FinShield Card */}
-                        <div className="max-w-5xl mx-auto">
-                          <div className="bg-black border border-gray-800 overflow-hidden rounded-xl shadow-2xl hover:shadow-blue-900/20 transition-shadow duration-300">
-                            <div className="flex flex-col md:flex-row">
-                              {/* Image Section */}
-                              <div className="md:w-3/4 w-full relative overflow-hidden bg-gray-900" style={{ aspectRatio: '16/9' }}>
-                                <img
-                                  src={finshieldAchievement.image}
-                                  alt={finshieldAchievement.title}
-                                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
-                                />
-                              </div>
+                      <span className="text-xl font-bold text-black">3 September, 2025</span>
 
-                              {/* Text Section */}
-                              <div className="md:w-1/4 w-full p-6 flex flex-col justify-center bg-black text-white">
-                                <div className="space-y-4">
-                                  <p className="text-lg font-bold text-yellow-400 leading-snug">
-                                    {finshieldAchievement.highlight}
-                                  </p>
-                                  <p className="text-sm leading-relaxed text-white whitespace-pre-line">
-                                    {finshieldAchievement.description}
-                                  </p>
-                                  <div className="flex flex-wrap gap-2 text-xs pt-1">
-                                    {finshieldAchievement.hashtags.map(tag => (
-                                      <span key={tag} className="text-blue-400">{tag}</span>
-                                    ))}
-                                  </div>
+                      {/* FinShield Card */}
+                      <div className="max-w-5xl mx-auto">
+                        <div className="bg-black border border-gray-800 overflow-hidden rounded-xl shadow-2xl hover:shadow-blue-900/20 transition-shadow duration-300">
+                          <div className="flex flex-col md:flex-row">
+                            {/* Image Section */}
+                            <div className="md:w-3/4 w-full relative overflow-hidden bg-gray-900" style={{ aspectRatio: '16/9' }}>
+                              <img
+                                src={finshieldAchievement.image}
+                                alt={finshieldAchievement.title}
+                                className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                              />
+                            </div>
+
+                            {/* Text Section */}
+                            <div className="md:w-1/4 w-full p-6 flex flex-col justify-center bg-black text-white">
+                              <div className="space-y-4">
+                                <p className="text-lg font-bold text-yellow-400 leading-snug">
+                                  {finshieldAchievement.highlight}
+                                </p>
+                                <p className="text-sm leading-relaxed text-white whitespace-pre-line">
+                                  {finshieldAchievement.description}
+                                </p>
+                                <div className="flex flex-wrap gap-2 text-xs pt-1">
+                                  {finshieldAchievement.hashtags.map(tag => (
+                                    <span key={tag} className="text-blue-400">{tag}</span>
+                                  ))}
                                 </div>
                               </div>
                             </div>
                           </div>
                         </div>
+                      </div>
                     </div>
                   </div>
                 </div>
