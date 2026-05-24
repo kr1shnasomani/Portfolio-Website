@@ -242,7 +242,36 @@ const Index = () => {
       "#IITHyderabad",
       "#BankOfIndia",
       "#FinTech",
-      "#CreditRisk"
+    ]
+  };
+
+  const impactAiThonAchievement = {
+    title: "Impact-AI-thon 2026 Second Place",
+    highlight: "Won ₹30,000 at Impact-AI-thon 2026!",
+    date: "24 Feb 2026",
+    description: "My team Deterium and I secured second place at the 24 hours hackathon that was hosted by Data Analytics Club ADS and St. Joseph's College Of Engineering, and sponsored by Wareef and CODEWORK PRO LEARNING CENTRE (CPLC). For the problem statement, \"Intelligent Claims Processing Platform for Insurance & BFSI\", we built Lexora, a neuro-symbolic claims intelligent processing platform.",
+    image: "/image-uploads/Impact-AI-thon.jpeg",
+    hashtags: [
+      "#ImpactAIthon2026",
+      "#Hackathon",
+      "#SustainableDevelopmentGoal",
+      "#Insurance",
+    ]
+  };
+
+  const srijanAchievement = {
+    title: "SRiJAN 2026 Data & AI Track Winner",
+    highlight: "First place and ₹10,000 cash prize.",
+    date: "2 May 2026",
+    description: "My team and I won the Data & AI track at SRiJAN 2026 national-level hackathon organised by Atos. We built Argus, an AI system that automatically resolves IT support tickets using a confidence-based decision pipeline backed by vector search, LLM reasoning, and live sandbox validation. It auto-resolves tickets only when three independent signals agree it is safe, and it escalates all other cases to human agents with full explainability, candidate fixes, and a cryptographically auditable decision trail.",
+    image: "/image-uploads/SRiJAN 2026.jpeg",
+    hashtags: [
+      "#SRiJAN2026",
+      "#Atos",
+      "#Hackathon",
+      "#IT",
+      "#AI",
+      "#HITL"
     ]
   };
 
@@ -625,6 +654,9 @@ const Index = () => {
 
                   {/* FinShield Achievement */}
                   <div className="relative md:pl-16">
+                    {/* Connecting Line */}
+                    <div className="hidden md:block absolute left-4 md:left-8 top-2 w-0.5 bg-black -translate-x-1/2 h-[calc(100%+2rem)] z-0" />
+
                     {/* Dot on Vertical Line */}
                     <div className="hidden md:block absolute left-4 md:left-8 top-2 w-4 h-4 bg-black rounded-full ring-4 ring-white -translate-x-1/2 z-10" />
 
@@ -656,6 +688,99 @@ const Index = () => {
                                 </p>
                                 <div className="flex flex-wrap gap-2 text-xs pt-1">
                                   {finshieldAchievement.hashtags.map(tag => (
+                                    <span key={tag} className="text-blue-400">{tag}</span>
+                                  ))}
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Impact AI-thon Achievement */}
+                  <div className="relative md:pl-16">
+                    {/* Connecting Line */}
+                    <div className="hidden md:block absolute left-4 md:left-8 top-2 w-0.5 bg-black -translate-x-1/2 h-[calc(100%+2rem)] z-0" />
+
+                    {/* Dot on Vertical Line */}
+                    <div className="hidden md:block absolute left-4 md:left-8 top-2 w-4 h-4 bg-black rounded-full ring-4 ring-white -translate-x-1/2 z-10" />
+
+                    {/* Date & Content */}
+                    <div className="flex flex-col gap-4">
+                      <span className="text-xl font-bold text-black">24 February, 2026</span>
+
+                      {/* Impact AI-thon Card */}
+                      <div className="max-w-5xl mx-auto">
+                        <div className="bg-black border border-gray-800 overflow-hidden rounded-xl shadow-2xl hover:shadow-blue-900/20 transition-shadow duration-300">
+                          <div className="flex flex-col md:flex-row">
+                            {/* Image Section */}
+                            <div className="md:w-3/4 w-full relative overflow-hidden bg-gray-900" style={{ aspectRatio: '16/9' }}>
+                              <img
+                                src={impactAiThonAchievement.image}
+                                alt={impactAiThonAchievement.title}
+                                className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                                style={{ objectPosition: 'center 20%' }}
+                              />
+                            </div>
+
+                            {/* Text Section */}
+                            <div className="md:w-1/4 w-full p-6 flex flex-col justify-center bg-black text-white">
+                              <div className="space-y-4">
+                                <p className="text-lg font-bold text-yellow-400 leading-snug">
+                                  {impactAiThonAchievement.highlight}
+                                </p>
+                                <p className="text-sm leading-relaxed text-white whitespace-pre-line">
+                                  {impactAiThonAchievement.description}
+                                </p>
+                                <div className="flex flex-wrap gap-2 text-xs pt-1">
+                                  {impactAiThonAchievement.hashtags.map(tag => (
+                                    <span key={tag} className="text-blue-400">{tag}</span>
+                                  ))}
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* SRiJAN Achievement */}
+                  <div className="relative md:pl-16">
+                    {/* Dot on Vertical Line */}
+                    <div className="hidden md:block absolute left-4 md:left-8 top-2 w-4 h-4 bg-black rounded-full ring-4 ring-white -translate-x-1/2 z-10" />
+
+                    {/* Date & Content */}
+                    <div className="flex flex-col gap-4">
+                      <span className="text-xl font-bold text-black">2 May, 2026</span>
+
+                      {/* SRiJAN Card */}
+                      <div className="max-w-5xl mx-auto">
+                        <div className="bg-black border border-gray-800 overflow-hidden rounded-xl shadow-2xl hover:shadow-blue-900/20 transition-shadow duration-300">
+                          <div className="flex flex-col md:flex-row">
+                            {/* Image Section */}
+                            <div className="md:w-3/4 w-full relative overflow-hidden bg-gray-900" style={{ aspectRatio: '16/9' }}>
+                              <img
+                                src={srijanAchievement.image}
+                                alt={srijanAchievement.title}
+                                className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                                style={{ objectPosition: 'center 20%' }}
+                              />
+                            </div>
+
+                            {/* Text Section */}
+                            <div className="md:w-1/4 w-full p-6 flex flex-col justify-center bg-black text-white">
+                              <div className="space-y-4">
+                                <p className="text-lg font-bold text-yellow-400 leading-snug">
+                                  {srijanAchievement.highlight}
+                                </p>
+                                <p className="text-sm leading-relaxed text-white whitespace-pre-line">
+                                  {srijanAchievement.description}
+                                </p>
+                                <div className="flex flex-wrap gap-2 text-xs pt-1">
+                                  {srijanAchievement.hashtags.map(tag => (
                                     <span key={tag} className="text-blue-400">{tag}</span>
                                   ))}
                                 </div>
